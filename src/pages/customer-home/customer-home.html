@@ -1,0 +1,119 @@
+<!--
+  Generated template for the CustomerHome page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="appheader">
+  <button ion-button menuToggle start>
+         <ion-icon name="menu" ></ion-icon>
+  </button>
+   
+
+<ion-searchbar (ionInput)="getItems($event)" placeholder="Search Business">
+	
+</ion-searchbar>
+
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content >
+<div class="no-cat" *ngIf="nosalon=='true'">
+<img src="assets/icon/smile.png">
+<div >SORRY!</div>
+<div>No Salon Exist In this Category</div>
+</div>
+<div *ngFor="let list of salonlist ">
+
+<div class="outer-div">
+    <div class="img-div" *ngIf="list.salon_image!=null">
+	<img (click)="detail(list.salon_id,list.salon_image,list.salon_name,list.latitude,list.longitude)" src ="http://gagandeepsethi.com/salonDirectory/img/salonimage/{{list.salon_image}}">
+	</div>
+	<div class="img-div" *ngIf="list.salon_image==null">
+	<img (click)="detail(list.salon_id,list.salon_image,list.salon_name,list.latitude,list.longitude)" src ="assets/img/no-image.jpg">
+	</div>
+	<div class="inner-div" (click)="detail(list.salon_id,list.salon_image,list.salon_name,list.latitude,list.longitude)">
+		<span style="text-transform:uppercase"><b>{{list.salon_name}}</b></span><br>
+		<span>{{list.address}}</span>
+		<br>
+		
+           
+              <div *ngIf="list.averagerating>=4.5 && list.averagerating<=5.0">
+              <span class="star">
+                <ion-icon name="star" style="color:#ffb400"></ion-icon>  
+                <ion-icon name="star" style="color:#ffb400"></ion-icon> 
+                <ion-icon name="star" style="color:#ffb400"></ion-icon>
+                <ion-icon name="star" style="color:#ffb400"></ion-icon>
+               <ion-icon name="star" style="color:#ffb400"></ion-icon>
+               </span>({{list.review}} Reviews)
+               </div>
+               <div *ngIf="list.averagerating>=4.0 && list.averagerating< 4.5">
+              <span class="star">
+                <ion-icon name="star" style="color:#ffb400"></ion-icon>  
+                <ion-icon name="star" style="color:#ffb400"></ion-icon> 
+                <ion-icon name="star" style="color:#ffb400"></ion-icon>
+                <ion-icon name="star" style="color:#ffb400"></ion-icon>
+               </span>({{list.review}} Reviews)
+               </div>
+                <div *ngIf="list.averagerating>=3.5 && list.averagerating<4.0">
+              <span class="star">
+                <ion-icon name="star" style="color:#ffb400"></ion-icon>  
+                <ion-icon name="star" style="color:#ffb400"></ion-icon> 
+                <ion-icon name="star" style="color:#ffb400"></ion-icon>
+               <ion-icon name="star" style="color:#ffb400"></ion-icon>
+               </span>({{list.review}} Reviews)
+               </div>
+                <div *ngIf="list.averagerating>=3.0 && list.averagerating<3.5">
+              <span class="star">
+                <ion-icon name="star" style="color:#ffb400"></ion-icon>  
+                <ion-icon name="star" style="color:#ffb400"></ion-icon> 
+                <ion-icon name="star" style="color:#ffb400"></ion-icon>
+               </span>({{list.review}} Reviews)
+               </div>
+                 <div *ngIf="list.averagerating>=2 && list.averagerating<=2.5">
+              <span class="star">
+                <ion-icon name="star" style="color:#ffb400"></ion-icon>  
+                <ion-icon name="star" style="color:#ffb400"></ion-icon> 
+               </span>({{list.review}} Reviews)
+               </div>
+                  <div *ngIf="list.averagerating>=0 && list.averagerating<2.0">
+              <span class="star">
+                <ion-icon name="star" style="color:#ffb400"></ion-icon>  
+               
+               </span>({{list.review}} Reviews)
+               </div>
+                    <div *ngIf="list.averagerating<0.0">
+              <span class="star">
+                <ion-icon name="star-half" style="color:#ffb400"></ion-icon>  
+               </span>({{list.review}} Reviews)
+               </div>
+          
+          
+        
+	</div>	
+</div>
+
+
+</div>
+
+ <!--    <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content 
+      pullingIcon="arrow-dropdown"
+      pullingText="Pull to refresh"
+      refreshingSpinner="circles"
+      refreshingText="Refreshing..." >
+      
+    </ion-refresher-content>
+  </ion-refresher> -->
+</ion-content>
+<ion-footer *ngIf="directory=='false'" style="background-color: #FF0000">
+	
+<div  style="float: left;margin-left: 20px;margin-top:10px;color:#fff" (click)="near()">NEAR BY</div>
+
+<div  style="float: right;margin-right: 20px;margin-top:10px;color:#fff " 
+(click)="Favlist()">FAVOURITE</div>
+
+</ion-footer>

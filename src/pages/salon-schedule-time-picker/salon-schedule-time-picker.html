@@ -1,0 +1,106 @@
+<!--
+  Generated template for the SalonScheduleTimePicker page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<!-- <ion-header>
+
+  <ion-navbar>
+    <ion-title>salon_schedule_time_picker</ion-title>
+  </ion-navbar>
+
+</ion-header>
+ -->
+
+<!-- <ion-content padding>
+
+
+<p (click)="cancel(data) ">Camcel</p> 
+</ion-content> -->
+
+<div class="divclass">
+	<div class ="alertclass">
+	<br>
+	  <div *ngIf="monday!=null" class="topdiv">
+	 {{monday}}
+
+	  </div>
+	      <div *ngIf="tuesday!=null" class="topdiv">
+	 {{tuesday}}
+
+	  </div>
+	         <div *ngIf="wednesday!=null" class="topdiv">
+	 {{wednesday}}
+
+	  </div>
+
+	         <div *ngIf="thursday!=null" class="topdiv">
+	 {{thursday}}
+
+	  </div>
+           
+               <div *ngIf="friday!=null" class="topdiv">
+	 {{friday}}
+
+	  </div>
+
+	         <div *ngIf="saturday!=null" class="topdiv">
+	 {{saturday}}
+
+	  </div>
+
+                <div *ngIf="sunday!=null" class="topdiv">
+	 {{sunday}}
+
+	  </div>
+
+
+
+
+
+               <ion-row>
+               <ion-col>
+            <div class="fromdiv"> From:</div>
+               </ion-col>
+
+               <ion-col>
+        <ion-scroll style ="height: 396px" scrollY="true">
+          <div *ngFor="let m of time1;let i=index" class="scroll_time_div">
+      <div id ="var_{{i}}" (click)="time_pick_start(m.time,i)">  {{m.time}}  
+            </div>
+                 </div>
+                    </ion-scroll>
+                        </ion-col>
+
+
+                        <ion-col>
+                      <div class="fromdiv"> To:</div>
+                        </ion-col>
+
+
+                               <ion-col>
+                <ion-scroll style ="height:396px" scrollY="true">
+
+      <div *ngFor="let m of time2;let j=index" class="scroll_time_div1">
+          <div id="var_{{'To'+j}}" (click)="time_pick_end(m.time,'To'+j)">  {{m.time}}  </div>
+        	     </div>
+                        </ion-scroll>
+                                     </ion-col>
+                                         </ion-row>
+                                       
+                                       <div class="buton_div">
+                              <ion-row>
+                            <ion-col>         	
+                          <button ion-button block style="width: 70%;float: left;margin-left:9px" (click)='save()' >Save</button>
+                                     </ion-col>
+                                     <ion-col>
+                                     	 <button ion-button block style="width: 70%;float: right;margin-right:9px " (click)='cancel()' >Cancel</button>
+                                     </ion-col> 
+                                             </ion-row>
+
+                                       
+                                      </div>
+
+	                                 </div>
+	    

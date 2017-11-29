@@ -1,0 +1,113 @@
+<ion-header>
+
+  <ion-navbar color="purple">
+ <!--     <ion-buttons right >
+               <button ion-button (click)="cancel()">
+                         CANCEL </button>  </ion-buttons> -->
+  
+                       
+
+
+
+    <ion-title style="color:#fff ">ACCOUNT SETTINGS</ion-title>
+
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+<ion-list>
+
+	
+<!-- 
+  <ion-item (click)="presentModal1()" >
+    <ion-label>Online Payments</ion-label>
+       <ion-icon *ngIf="selected_value1==undefined" item-right name="md-arrow-dropdown" >     </ion-icon>
+                <p style="text-transform: uppercase;" item-right *ngIf="selected_value1!='undefined' ">{{selected_value1}}</p>
+  </ion-item> -->
+
+<!-- <ion-item>
+    <ion-label>Online Payment</ion-label>
+    <ion-toggle [(ngModel)]="payment_value"  (ionChange)="status(payment_value)" 
+
+ ></ion-toggle>
+  </ion-item> -->
+
+  <ion-item>
+    <ion-label>Salon Visibility</ion-label>
+    <ion-toggle [(ngModel)]="salon_visible_value" (ionChange)="status_visible(salon_visible_value)" 
+
+ ></ion-toggle>
+  </ion-item>
+   
+  <ion-item>
+    <ion-label>My Availability</ion-label>
+    <ion-toggle [(ngModel)]="my_availability" (ionChange)="status_available(my_availability)" 
+
+ ></ion-toggle>
+  </ion-item>
+
+<!--   <ion-item (click)="presentModal2()" >
+    <ion-label>Credit Card For Booking</ion-label>
+       <ion-icon *ngIf="selected_value1==undefined" item-right name="md-arrow-dropdown" >     </ion-icon>
+                <p style="text-transform: uppercase;" item-right *ngIf="selected_value1!='undefined' ">{{selected_value1}}</p>
+  </ion-item> -->
+
+
+
+
+
+
+<ion-item (click)="presentModal2()">
+  <ion-label>Schedule Appointments </ion-label>
+      <ion-icon *ngIf="selected_value2==' ' " item-right name="md-arrow-dropdown" >     </ion-icon>
+               <p style="text-transform: capitalize;" item-right *ngIf="selected_value2!='undefined' ">{{selected_value2}}</p>
+                </ion-item>
+
+<!-- <ion-item (click)="presentModal3()">
+  <ion-label>Allow Multi-Service Bookings? </ion-label>
+      <ion-icon *ngIf="selected_value3==undefined" item-right name="md-arrow-dropdown" >     </ion-icon>
+               <p style="text-transform: uppercase;" item-right *ngIf="selected_value3!='undefined' ">{{selected_value3}}</p>
+                </ion-item>
+      -->
+     
+     
+
+
+<ion-item (click)="presentModal4()">
+  <ion-label>Hours Notice For Online Booking</ion-label>
+     <ion-icon *ngIf="selected_value4==' ' " item-right name="md-arrow-dropdown" >     </ion-icon>
+                <p style="text-transform: capitalize;" item-right *ngIf="selected_value4!='undefined' ">{{selected_value4}}</p>
+              </ion-item>
+
+      
+
+     <ion-item (click)="presentModal5()">
+         <ion-label>Hours Notice For Cancellations </ion-label>
+           <ion-icon *ngIf="selected_value5== ' ' " item-right name="md-arrow-dropdown" ></ion-icon>
+            <p style="text-transform: capitalize;" item-right *ngIf="selected_value5!='undefined' ">{{selected_value5}}</p>
+               </ion-item>
+                
+  
+                
+                 
+             
+
+<!-- <ion-item (click)="presentModal5()">
+  <ion-label>Push Notificaton</ion-label>
+  <ion-icon *ngIf="selected_value5==undefined" item-right name="md-arrow-dropdown" ></ion-icon>
+      <p style="text-transform: uppercase " item-right *ngIf="selected_value=='enable' || 'disable' ">{{selected_value5}}</p>
+ 
+                  </ion-item> -->
+                         </ion-list>
+                
+                         <div style="text-align:center">
+            <button ion-button (click)="Save()">Save</button>
+      
+        </div>
+
+
+                       
+             
+</ion-content>

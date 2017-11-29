@@ -1,0 +1,331 @@
+
+
+<!--
+   Generated template for the Salondetailpage page.
+   
+   See http://ionicframework.com/docs/components/#navigation for more info on
+   Ionic pages and navigation.
+   -->
+<ion-header>
+   <ion-navbar color="appheader">
+      <ion-title >BUSINESS DETAILS</ion-title>
+      <ion-buttons end  >
+         <button icon-only ion-button (click)="Gallery()">
+            <ion-icon ios="ios-images" md="md-images" ></ion-icon>
+         </button>
+      </ion-buttons>
+   </ion-navbar>
+</ion-header>
+<ion-content >
+
+   <div>
+      <ion-segment style="background-color:#EAEAEA;font-family:'OpenSans-Regular';font-size: 15px" [(ngModel)]="segment"  (ionChange)="loadmap()"> 
+      <ion-segment-button value="service" >
+         SERVICES
+      </ion-segment-button>
+      <ion-segment-button value="map" >
+         MAP & DETAILS
+      </ion-segment-button>
+      <ion-segment-button value="review" >
+         REVIEWS
+      </ion-segment-button>
+      </ion-segment>
+   </div>
+<div #map3 id="map3" class="{{abc}}">
+      </div>
+
+   <div  [ngSwitch]="segment">
+   <div *ngSwitchCase="'service'">
+      <div class="div-img" *ngIf="salonimg!=null">
+         <img class="serviceimg" src="http://gagandeepsethi.com/salonDirectory/img/salonimage/{{salonimg}}">
+      </div>
+      <div *ngIf="salonimg==null">
+         <img class="serviceimg" src="assets/img/no-image.jpg">
+      </div>
+      <div class="fav" *ngIf="favo==0">
+         <button ion-button  (click)="fav()" *ngIf="directory=='false'" color="appcolor" block>
+            <ion-icon class="fav-icon" name="ios-heart-outline"></ion-icon>
+              ADD to FAVOURITES 
+         </button>
+      </div>
+      <div class="fav" *ngIf="favo==1">
+         <button ion-button  (click)="fav()" *ngIf="directory=='false'" color="appcolor" block>
+            <ion-icon class="fav-icon" name="md-heart"></ion-icon>
+             ADDED TO FAVOURITES
+         </button>
+      </div>
+      <div *ngFor="let service of services2">
+         <!-- <div *ngFor="let item of service.salon_services"> -->
+            <div class="main">
+               <div class="servicedata">
+                  <div class="title">{{service.title}}</div>
+                  <div class="charge"><b>${{service.cost}}</b> For {{service.time.hr}} hour {{service.time.min}} min</div>
+               </div>
+               <div class="book">
+                  <button class="btn-book" ion-button color="appcolor" (click)="list(service)">BOOK</button>
+               </div>
+            </div>
+       <!--   </div> -->
+      </div>
+      <div class="back-div" *ngIf="noservices=='true'" >
+         <div class="no-services"> Sorry!</div>
+         <div class="no-services"> No Services Added in this Salon</div>
+      </div>
+   </div>
+</div>
+
+ 
+
+   <div [ngSwitch]="segment">
+    <div *ngSwitchCase="'map'" >
+   
+      <!-- <img style="height:185px;width: 100%" src ="assets/img/map.jpg">  -->
+      <div style="background-color:#fff">
+      <!--    <div *ngFor="let info of services"> -->
+            <div style="border-bottom: 1px solid black" >
+               <ion-row>
+                  <ion-col  (click)="Direction()" >
+                     <div class="firstdiv ">
+                        <span class="mytext" >
+                           <ion-icon name="pin"></ion-icon>
+                           DIRECTIONS
+                        </span>
+                     </div>
+                  </ion-col>
+                  <ion-col (click)="share()">
+                     <div class="firstdiv" >
+                        <span class="mytext">
+                           <ion-icon name="share-alt"></ion-icon>
+                           SHARE
+                        </span>
+                     </div>
+                  </ion-col>
+                  <ion-col (click)="call()" >
+                     <div class="firstdiv">
+                        <span class="mytext" >
+                           <ion-icon name="call"></ion-icon>
+                           CALL
+                        </span>
+                     </div>
+                  </ion-col>
+               </ion-row>
+               <br>
+            </div>
+            <div class="maininerdiv">
+               <ion-row>
+                  <ion-col>
+                     <div class="innerdiv">  
+                        ADDRESS
+                     </div>
+                  </ion-col>
+                  <ion-col>
+                     <div class="innerdiv2">  
+                        {{salonaddress}}
+                     </div>
+                  </ion-col>
+               </ion-row>
+            </div>
+            <div class="maininerdiv">
+               <ion-row>
+                  <ion-col>
+                     <div class="innerdiv">  
+                        SCHEDULE
+                     </div>
+                  </ion-col>
+                  <ion-col>
+                     <div class="innerdiv2">  
+                        {{schedule}}
+                     </div>
+                  </ion-col>
+               </ion-row>
+            </div>
+            <div class="maininerdiv">
+               <ion-row>
+                  <ion-col>
+                     <div  class="innerdiv">  
+                        WEBSITE
+                     </div>
+                  </ion-col>
+                  <ion-col>
+                     <div (click)="openweb(website)" class="innerdiv2">  
+                        <a class="link">{{website}}</a>
+                     </div>
+                  </ion-col>
+               </ion-row>
+            </div>
+            <div class="maininerdiv">
+               <ion-row>
+                  <ion-col>
+                     <div class="innerdiv">  
+                        ABOUT
+                     </div>
+                  </ion-col>
+                  <ion-col>
+                     <div class="innerdiv2">  
+                        {{salondescription}}
+                     </div>
+                  </ion-col>
+               </ion-row>
+            </div>
+            <div class="maininerdiv">
+               <ion-row>
+                  <ion-col>
+                     <div class="innerdiv">  
+                        CONTACT NUMBER
+                     </div>
+                  </ion-col>
+                  <ion-col>
+                     <div class="innerdiv2">  
+                        {{saloncontactnumber}}
+                     </div>
+                  </ion-col>
+               </ion-row>
+            </div>
+            <div class="maininerdiv">
+               <ion-row>
+                  <ion-col>
+                     <div class="innerdiv">  
+                        FACEBOOK
+                     </div>
+                  </ion-col>
+                  <ion-col>
+                     <div (click)="fblink(facebooklink)" class="innerdiv2">  
+                        <a class="link">{{facebooklink}}</a>
+                     </div>
+                  </ion-col>
+               </ion-row>
+            </div>
+              <div class="maininerdiv">
+               <ion-row>
+                  <ion-col>
+                     <div class="innerdiv" >  
+                        INSTAGRAM
+                     </div>
+                  </ion-col>
+                  <ion-col>
+                     <div (click)="openinstalink(instagram)" class="innerdiv2">  
+                        <a class="link">{{instagram}}</a>
+                     </div>
+                  </ion-col>
+               </ion-row>
+            </div>
+              <div class="maininerdiv">
+               <ion-row>
+                  <ion-col>
+                     <div class="innerdiv">  
+                        WI-FI
+                     </div>
+                  </ion-col>
+                  <ion-col>
+                     <div class="innerdiv2">  
+                        {{wifi}}
+                     </div>
+                  </ion-col>
+               </ion-row>
+            </div>
+             <div class="maininerdiv">
+               <ion-row>
+                  <ion-col>
+                     <div class="innerdiv">  
+                        WHEELCHAIR ACCESS
+                     </div>
+                  </ion-col>
+                  <ion-col>
+                     <div class="innerdiv2">  
+                        {{wheel}}
+                     </div>
+                  </ion-col>
+               </ion-row>
+            </div>
+            <div style="height:40px">
+               <ion-row>
+                  <ion-col>
+                     <div class="innerdiv">  
+                        PARKING
+                     </div>
+                  </ion-col>
+                  <ion-col>
+                     <div class="innerdiv2">  
+                        {{parking}}
+                     </div>
+                  </ion-col>
+               </ion-row>
+            </div>
+         <!-- </div> -->
+      </div>
+   </div>
+</div>
+
+   <div [ngSwitch]="segment">
+   <div *ngSwitchCase="'review'">
+      <div>
+         <div class="outer-div">
+         <div *ngIf="salonimg!=null">
+            <img src ="http://gagandeepsethi.com/salonDirectory/img/salonimage/{{salonimg}}">
+            </div>
+             <div *ngIf="salonimg==null">
+            <img class="serviceimg" src="assets/img/no-image.jpg">
+           </div>
+            <div class="inner-div">
+               <span>{{salonname}}</span><br>
+               <span>{{salondescription}}</span>
+               <br>
+             <!--   <span>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+               </span> -->
+            </div>
+         </div>
+      </div>
+      <div class="review" >
+         <button ion-button class="add-review" color="appcolor" (click)="addreview()"  *ngIf="directory=='false'">ADD REVIEW</button>
+      </div>
+      <div *ngFor="let data of viewreviewinfo">
+      <ion-list style="background-color:#fff">
+         <ion-item style="border-bottom: 1px solid #000">
+            <ion-avatar item-start>
+               <img src="http://gagandeepsethi.com/salonDirectory/img/customerprofileimage/{{data.user.profile_image}}">
+            </ion-avatar>
+            <h5 style="color: #000">{{data.user.full_name}}</h5>
+            <span *ngIf="data.rating_count==5">
+               <ion-icon  style="color:#ffb400" name="star"></ion-icon>
+               <ion-icon  style="color:#ffb400" name="star"></ion-icon>
+               <ion-icon   style="color:#ffb400" name="star"></ion-icon>
+               <ion-icon   style="color:#ffb400" name="star"></ion-icon>
+               <ion-icon   style="color:#ffb400" name="star"></ion-icon>
+            </span>
+            <span *ngIf="data.rating_count==4">
+               <ion-icon  style="color:#ffb400" name="star"></ion-icon>
+               <ion-icon  style="color:#ffb400" name="star"></ion-icon>
+               <ion-icon   style="color:#ffb400" name="star"></ion-icon>
+               <ion-icon   style="color:#ffb400" name="star"></ion-icon>
+            </span>
+            <span *ngIf="data.rating_count==3">
+               <ion-icon  style="color:#ffb400" name="star"></ion-icon>
+               <ion-icon  style="color:#ffb400" name="star"></ion-icon>
+               <ion-icon   style="color:#ffb400" name="star"></ion-icon>
+            </span>
+             <span *ngIf="data.rating_count==2">
+               <ion-icon  style="color:#ffb400" name="star"></ion-icon>
+               <ion-icon  style="color:#ffb400" name="star"></ion-icon>
+            </span>
+             <span *ngIf="data.rating_count==1">
+               <ion-icon  style="color:#ffb400" name="star"></ion-icon>
+            </span>
+            <div style= "font-size: 10px;color: #000" text-wrap >
+             {{data.comment}}
+            </div>
+         </ion-item>
+      </ion-list>
+      </div>
+      <div class="back-div" *ngIf="noreview=='true'" >
+         <div class="no-services"> Sorry!</div>
+         <div class="no-services"> No Reviews Added</div>
+         <div class="no-services"> Please Add Reviews</div>
+      </div>
+   </div>
+</div>
+
+</ion-content>
+

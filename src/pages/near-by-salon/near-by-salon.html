@@ -1,0 +1,33 @@
+<ion-header>
+
+  <ion-navbar color="appheader">
+    <button ion-button menuToggle icon-only >
+      <ion-icon name='menu'></ion-icon>
+    </button>
+
+    <ion-title >SHOPS NEAR BY</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content style="position:relative">
+
+<div #map id="map3">
+ 
+</div> 
+ <ion-item class="item-select">
+  <ion-label>Select Range</ion-label>
+  <ion-select [(ngModel)]="nearbyrange" (ionChange)="Range()">
+  <ion-option value="5" >Near 5 miles</ion-option>
+  <ion-option value="10" >Near 10 miles</ion-option>
+  <ion-option value="15" >Near 15 miles</ion-option>
+  <ion-option value="20" >Near 20 miles</ion-option>
+  <ion-option value="25" >Near 25 miles</ion-option>
+  <ion-option value="30" >Near 30 miles</ion-option>
+        
+  </ion-select>
+ 
+</ion-item>
+  
+</ion-content>

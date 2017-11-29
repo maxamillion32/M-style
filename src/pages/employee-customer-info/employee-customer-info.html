@@ -1,0 +1,75 @@
+<!--
+  Generated template for the EmployeeCustomerInfo page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="appheader">
+    <ion-title>CLIENT DETAILS</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content style="background-color:#EBEBF9">
+
+<div class="main-div" >
+   <img class="profile-image" *ngIf="cutomerpic!=null"  src="http://gagandeepsethi.com/salonDirectory/img/customerprofileimage/{{cutomerpic}}"> 
+   <img class="profile-image"  *ngIf="cutomerpic==null" src="assets/img/user.jpg">
+</div>
+<div class="name">
+   <h4>{{customername}}</h4>
+</div>
+
+
+<div class="super">
+   <div class="user-info">
+   <div class="content">
+      <div class="user-profile">
+      <img  class="blue" src="assets/icon/name.png">
+         <div  class="field-details">
+            
+            {{customername}}
+         </div>
+      </div>
+      <div class="user-profile">
+       <img  class="blue" src="assets/icon/location.png">
+         <div  class="field-details">
+           
+            {{customeraddress}}
+         </div>
+      </div>
+     <!--  <div class="user-profile" *ngFor="let data of services">
+       <img  class="blue" src="assets/icon/service.png">
+         <div  class="field-details">
+           
+            {{data.title}}
+         </div>
+      </div> -->
+      <div class="user-profile">
+       <img  class="blue" src="assets/icon/mail.png">
+         <div  class="field-details">
+           {{customeremail}}
+         </div>
+      </div>
+      <div class="user-profile">
+       <img  class="blue" src="assets/icon/calender.png">
+         <div  class="field-details">
+           Last appointment-
+            {{bookingdate | date}}
+         </div>
+      </div>
+       <div class="user-profile">
+       <img  class="blue" src="assets/icon/calender.png">
+         <div  class="field-details">
+
+             NOTE- {{note}}
+            
+         </div>
+      </div>
+   </div>
+</div>
+</div>
+</ion-content>

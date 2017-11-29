@@ -1,0 +1,26 @@
+<!--
+  Generated template for the Faq page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="appheader">
+   <button ion-button menuToggle start>
+  <ion-icon name="menu" style="color:#fff"></ion-icon></button>
+    <ion-title>FAQ</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="content-about">
+<div class="full" *ngFor="let p of faqcontent; let i=index">
+	<div class="question" (click)="question(i)">{{p.question}}
+	<span class="pull-right"> 
+	<ion-icon name="add"  *ngIf="answer!=i"></ion-icon>
+	 <ion-icon name="remove"  *ngIf="answer==i"></ion-icon></span></div>
+	<div class="answer" *ngIf="answer==i">{{p.answer}}</div>
+</div>
+</ion-content>

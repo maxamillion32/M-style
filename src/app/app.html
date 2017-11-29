@@ -1,0 +1,252 @@
+
+
+<style>
+.circle-image{
+	display: inline-block;
+   height: 60px;
+   margin-right: 5%;
+   max-width: 60px;
+   text-align: left;
+   width: 100%;
+}
+.img-logo[_ngcontent-c0] {
+    border-radius: 100%;
+    display: inline-block;
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+    margin-top: 15px;
+    margin-left: 23px;
+}
+.img-back{
+	background-color:#fff;
+}
+.name{
+	text-align: center;
+	margin-top: 10px;
+	
+}
+.icon-img{
+	height: 25px;
+	float:left;
+}
+.side-menu-text{
+	font-family: 'OpenSans-Regular';
+	font-size: 11px;
+	float:left;
+	margin-left: 29px;
+	margin-top: 5px;
+}
+.profile {
+	float:right;
+	color:#fff;
+	font-family: 'OpenSans-Regular';
+	font-size: 11px;
+	margin-top:25px;
+	padding-left: 10px;
+  padding-right: 10px;
+  background:#000; 
+}
+.item-md {
+    height: 0px;
+}
+.div-inside{
+	background-color:#000;
+	float: left;
+	width: 100%;
+	color:#fff;
+	height: 40px;
+}
+.sidemenu{
+	background:#fff;
+}
+.btn-side{
+  background-color:#fff;
+}
+
+</style>
+
+
+
+
+
+
+
+
+
+
+<ion-menu   id="myMenu" [content]="content">
+
+  
+<ion-content class="sidemenu">
+
+<div *ngIf="usertype==0" >
+   <div class="div-inside">
+      <div class="name text-center">
+         Hi  {{username}}
+      </div>
+   </div>
+   <div class="img-back">
+      <div class="circle-image" *ngIf="userprofilepic!='false'">
+         <img class="img-logo" src="{{userprofilepic}}">
+      </div>
+      <div class="circle-image" *ngIf="userprofilepic=='false'">
+         <img class="img-logo" src="assets/img/user.jpg">
+      </div>
+      <div class="profile" *ngIf="auth=='true'">
+         <p (click)="userprofile()" menuClose>
+            VIEW YOUR PROFILE 
+            <ion-icon name="arrow-forward"></ion-icon>
+         </p>
+      </div>
+   </div>
+   <button  menuClose no-lines ion-item *ngFor="let p of pages" (click)="openPage(p)" class="btn-side">
+   <!-- <ion-icon  name="{{p.logo}}"> </ion-icon> -->
+   <img class="icon-img" src="{{p.logo}}" >
+   <span class="side-menu-text"> {{p.title}}</span>
+   </button>
+   <button  (click)="logout()" menuClose no-lines ion-item  class="btn-side">
+   <img class="icon-img" src="assets/icon/icon20.png" >
+   <span class="side-menu-text">LOGOUT</span>
+   </button> 
+</div>
+
+
+<div *ngIf="usertype==1" >
+   <div class="div-inside">
+      <div class="name text-center">
+         Hi  {{username}}
+      </div>
+   </div>
+   <div class="img-back">
+    <div class="circle-image" *ngIf="userprofilepic!='false'">
+         <img class="img-logo" src="{{userprofilepic}}">
+      </div>
+      <div class="circle-image" *ngIf="userprofilepic=='false'">
+         <img class="img-logo" src="assets/img/user.jpg">
+      </div>
+      <div (click)="salonownerprofile()" class="profile"  *ngIf="auth=='true'">
+         <p  menuClose>
+            VIEW YOUR PROFILE 
+            <ion-icon name="arrow-forward"></ion-icon>
+         </p>
+      </div>
+   </div>
+   <button  menuClose no-lines ion-item *ngFor="let p of salonside" (click)="salonPage(p)" color="btn-side">
+   <!-- <ion-icon  name="{{p.logo}}"> </ion-icon> -->
+   <img class="icon-img" src="{{p.logo}}" >
+   <span class="side-menu-text"> {{p.title}}</span>
+   </button>
+   <button  (click)="logout()" menuClose no-lines ion-item  color="btn-side">
+   <img class="icon-img" src="assets/icon/icon20.png" >
+   <span class="side-menu-text">LOGOUT</span>
+   </button> 
+</div>
+
+
+
+<div *ngIf="usertype==2" >
+   <div class="div-inside">
+      <div class="name text-center">
+         Hi   {{username}}
+      </div>
+   </div>
+   <div class="img-back">
+      <div class="circle-image" *ngIf="userprofilepic!='false'">
+         <img class="img-logo" src="{{userprofilepic}}">
+      </div>
+      <div class="circle-image" *ngIf="userprofilepic=='false'">
+         <img class="img-logo" src="assets/img/user.jpg">
+      </div>
+      <div (click)="Employeeprofile()" class="profile"  *ngIf="auth=='true'">
+         <p  menuClose>
+            VIEW YOUR PROFILE 
+            <ion-icon name="arrow-forward"></ion-icon>
+         </p>
+      </div>
+   </div>
+   <button  menuClose no-lines ion-item *ngFor="let p of employeeside" 
+   (click)="EmployeePage(p)" color="btn-side">
+   <!-- <ion-icon  name="{{p.logo}}"> </ion-icon> -->
+   <img class="icon-img" src="{{p.logo}}" >
+   <span class="side-menu-text"> {{p.title}}</span>
+   </button>
+   <button  (click)="logout()" menuClose no-lines ion-item  color="btn-side">
+   <img class="icon-img" src="assets/icon/icon20.png" >
+   <span class="side-menu-text">LOGOUT</span>
+   </button> 
+</div>
+
+
+
+
+
+<div *ngIf="usertype==3" >
+   <div class="div-inside">
+      <div class="name text-center">
+         Hi  {{username}}
+      </div>
+   </div>
+   <div class="img-back">
+      <div class="circle-image" *ngIf="userprofilepic!='false'">
+         <img class="img-logo" src="{{userprofilepic}}">
+      </div>
+      <div class="circle-image" *ngIf="userprofilepic=='false'">
+         <img class="img-logo" src="assets/img/user.jpg">
+      </div>
+      <div (click)="Employeeprofile()" class="profile"  *ngIf="auth=='true'">
+         <p  menuClose>
+            VIEW YOUR PROFILE 
+            <ion-icon name="arrow-forward"></ion-icon>
+         </p>
+      </div>
+   </div>
+   <button  menuClose no-lines ion-item *ngFor="let p of guestside" 
+   (click)="guest(p)" color="btn-side">
+   <!-- <ion-icon  name="{{p.logo}}"> </ion-icon> -->
+   <img class="icon-img" src="{{p.logo}}" >
+   <span class="side-menu-text"> {{p.title}}</span>
+   </button>
+   <!-- <button  (click)="logout()" menuClose no-lines ion-item  color="btn-side">
+   <img class="icon-img" src="assets/icon/icon20.png" >
+   <span class="side-menu-text">LOGOUT</span>
+   </button>  -->
+</div>
+
+ </ion-content>
+
+
+
+ 
+  
+ 
+
+
+
+
+</ion-menu>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<ion-nav id="nav" #content [root]="rootPage" swipeBackEnabled="true"></ion-nav>

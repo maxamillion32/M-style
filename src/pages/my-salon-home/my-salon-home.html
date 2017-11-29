@@ -1,0 +1,222 @@
+<!--
+  Generated template for the MySalonHome page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="purple">
+          <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+<ion-buttons right (click)= "notification()">
+<button ion-button>
+<!-- <img src ="img/ring.png" > -->
+<ion-icon name= "notifications" ></ion-icon>
+   </button>
+   <div *ngIf="notification_count>0" class="notification_count">{{notification_count}}
+   </div>
+   </ion-buttons>
+    <ion-title>HOME</ion-title>
+     
+          
+  </ion-navbar>
+
+</ion-header>
+<ion-content padding [ngStyle]="{'background-image': 'url(' + userprofilepic + ')'}" no-repeat center style="background-size:cover;object-fit: cover;background-position:center"  >
+
+
+
+
+
+
+
+
+     <div style="background-color: #4E4336;opacity:0.64;margin-top:4%">
+  <ion-row>
+    <ion-col >
+    <div style="height:75px;margin-top: 0px" (tap)="myservicelist()">
+         <div  class ="left_div2">
+              <img class="imageclass" src ="img/service-list.png">
+                       <div class="namediv">
+                             Service List
+                       </div>  
+                        </div>
+                              </div>
+                            </ion-col>
+
+
+<!--   <ion-col >
+        <div style ="height:75px" (tap)="notification()">
+       <div  class ="right_div">
+            <img class="imageclass" src ="img/notification.png">
+             <div class="namediv8">
+                    Notifications
+                       </div>
+                  </div>
+                      </div>
+                     </ion-col> -->
+
+
+                  
+
+        <ion-col >
+        <div style ="height:75px" (click)="addemploye()">
+       <div  class ="right_div">
+            <img class="imageclass" src ="img/users.png">
+             <div class="namediv2">
+                   Staff
+                       </div>
+                  </div>
+                      </div>
+                     </ion-col>
+                         </ion-row>
+
+    <!--   <div style="margin-left: 46%;height: 100px">
+               <div (click)="addemploye()" class ="last_div">
+                  <img class="imageclass" src ="img/users.png">
+                     <div class="namediv1">
+                         Staff
+                       </div>
+                     </div>
+                        </div> -->
+
+
+
+         <ion-row>      
+            <ion-col >  
+
+             <div class="maindiv"  >
+               <div (click)="myapointments()"  class ="left_div3">
+                  <img class="imageclass" src ="img/appointments.png">
+                   <div class="namediv">
+                    Appointments
+                       </div>
+                     </div>
+                     </div>
+                        </ion-col>
+               
+                              <ion-col >
+                              <div class="maindiv">
+       <div (tap)="businessinfo()" class ="right_div2">
+            <img class="imageclass" src ="img/customer-information.png">
+               <div class="namediv3">
+                  Business Info
+                       </div>
+                  </div>
+                  </div>
+                     </ion-col>
+        
+                                </ion-row> 
+
+       <ion-row>  
+          <ion-col>
+           <div (tap)="onlinebooking()" class="maindiv">
+               <div  class ="left_div4">
+                  <img class="imageclass" src ="img/setting.png">
+                    <div class="namediv">
+                   Settings
+                       </div>
+                     </div>
+                     </div>
+                        </ion-col>
+                          
+                              <ion-col >
+                              <div class="maindiv">
+       <div (click)="myclients()" class ="right_div3">
+            <img class="imageclass" src ="img/clients.png">
+              <div class="namediv2">
+              Clients  
+                       </div>
+                  </div>
+                  </div>
+                     </ion-col>
+        
+                                </ion-row> 
+    
+
+
+
+
+      
+        <ion-row>      
+           <ion-col> 
+            <div class="maindiv">
+           <div (tap)="paymentstatus()" class="maindiv"> 
+               <div  class ="left_div5">
+                  <img class="imageclass" src ="img/payments.png">
+                     <div class="namediv">
+                         Payments 
+                       </div>
+                     </div>
+                     </div>
+                     </div>
+                        </ion-col>
+                          
+       <ion-col>
+       <div (click)="mylocation()" class="maindiv">
+       <div class ="right_div4">
+            <img class="imageclass" src ="img/directory.png">
+             
+                  <div class="namediv2">
+                             Directory 
+                       </div>
+                       </div>
+                       </div>
+                     </ion-col>
+        
+                              </ion-row> 
+
+                               <ion-row>      
+           <ion-col>  
+           <div (tap)="subscription_plans()" class="maindiv">
+               <div  class ="left_div6">
+                  <img class="imageclass" src ="img/Untitled-1.png">
+                     <div class="namediv">
+                         Subscription Plans
+                       </div>
+                     </div>
+                     </div>
+                        </ion-col>
+                          
+       <ion-col>
+         <div class="maindiv">
+       <div (tap)="upload_myimages()"   class ="right_div5">
+            <img class="imageclass" src ="img/camera.png">
+             
+                  <div class="namediv3">
+                           Upload Images
+                       </div>
+                       </div>
+                       </div>
+                     </ion-col>
+        
+                              </ion-row> 
+ <br>
+                               
+                     
+                      
+
+                        </div>
+
+</ion-content>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

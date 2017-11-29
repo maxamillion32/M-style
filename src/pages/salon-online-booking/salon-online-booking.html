@@ -1,0 +1,91 @@
+<ion-header>
+
+  <ion-navbar color="purple">
+  <span class="profile-edit-bttnn">SAVE</span>
+  
+    <ion-title style="color:#fff ">ACCOUNT SETTING</ion-title>
+
+  <ion-buttons right >
+<button ion-button>
+  CANCEL
+   </button>
+       </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+<ion-list>
+
+	<!-- <span style="float: left;margin-left: 5px; padding-top: 18px;> 	</span> -->
+
+  <ion-item style="color: #909090">
+    <ion-label>Online Confirmation</ion-label>
+    <ion-toggle [(ngModel)]="sausage" ></ion-toggle>
+  </ion-item>
+
+<ion-item>
+  <ion-label>Time Slots </ion-label>
+  <ion-select [(ngModel)]="toppings" multiple="false">
+    <ion-option>15 min</ion-option>
+    <ion-option>30 min</ion-option>
+    <ion-option>45 min</ion-option>
+    <ion-option>60 min</ion-option>
+      <ion-option>1.5 hr</ion-option>
+      <ion-option>2 hr</ion-option>
+        <ion-option>2.5 hr</ion-option>
+            <ion-option>3 hr</ion-option>
+                
+                 
+                </ion-select>
+                </ion-item>
+
+
+<ion-item>
+  <ion-label>Time Notice For Online Booking</ion-label>
+  <ion-select [(ngModel)]="toppings" multiple="false">
+    <ion-option>30 min</ion-option>
+     <ion-option>1 hr</ion-option>
+    <ion-option>2  hr</ion-option>
+    <ion-option>3  hr</ion-option>
+    <ion-option>4 hr </ion-option>
+      <ion-option>5 hr </ion-option>
+      <ion-option>7 hr </ion-option>
+        <ion-option>8 hr </ion-option>
+            <ion-option>9 hr </ion-option>
+                <ion-option>10 hr </ion-option>
+                 
+                </ion-select>
+                </ion-item>
+
+                  </ion-list>
+
+<ion-item>
+  <ion-label>Time Zone </ion-label>
+  <ion-select [(ngModel)]="toppings" multiple="false">
+  <!--   <ion-option>15 min</ion-option>
+    <ion-option>30 min</ion-option>
+    <ion-option>45 min</ion-option>
+    <ion-option>60 min</ion-option>
+      <ion-option>1.5 hr</ion-option>
+      <ion-option>2 hr</ion-option>
+        <ion-option>2.5 hr</ion-option>
+            <ion-option>3 hr</ion-option> -->
+                
+                 
+                </ion-select>
+                </ion-item>
+
+<ion-item>
+  <ion-label>Push Notificaton </ion-label>
+  <ion-select [(ngModel)]="toppings" multiple="false">
+    <ion-option>Enable</ion-option>
+    <ion-option>Disable</ion-option>
+   
+                
+                 
+                </ion-select>
+                </ion-item>
+
+</ion-content>

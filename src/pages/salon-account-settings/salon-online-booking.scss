@@ -1,0 +1,143 @@
+page-salon-online-booking {
+
+.toolbar-title-md {
+   font-size: 2rem !important;
+    font-family: Open Sans !important;
+    
+}
+.toolbar-title-ios {
+      font-size: 13px;
+    font-family: Open Sans !important;
+    
+}
+.toolbar-ios ion-title {
+    padding: 10px 90px 1px;
+    font-family: 'OpenSans-Regular';
+    font-size:13px;
+}
+
+
+.item-md.item-toggle ion-label {
+    font-family: open-sense;
+    font-size: 14px;
+    margin-left: 13px !important;
+}
+
+.item-ios.item-toggle ion-label {
+    font-family: open-sense;
+    font-size: 14px;
+    margin-left: 13px;
+}
+.toggle-md.toggle-checked .toggle-inner {
+    background-color: #4bd865;
+    transform: translate3d(16px, 0px, 0px);
+}
+.toggle-ios.toggle-checked .toggle-inner {
+    background-color: #4bd865;
+    transform: translate3d(16px, 0px, 0px);
+}
+.item-md {
+    background-color: #fff;
+    border-bottom: 1px solid #a2afc0;
+    box-shadow: none;
+    color: #000;
+    font-size: 14px;
+    font-weight: normal;
+    margin-left: 0;
+    padding-left: 0;
+    position: relative;
+    
+}
+.item-ios {
+    background-color: #fff;
+    border-bottom: 1px solid #a2afc0;
+    box-shadow: none;
+    color: #000;
+    font-size: 14px;
+    font-weight: normal;
+    margin-left: 0;
+    padding-left: 0;
+    position: relative;
+    
+}
+.profile-edit-bttnn {
+  background: transparent;
+  
+  color: #fff;
+  height: 40px;
+
+  position: absolute;
+  right:1px;
+  text-align: center;
+  top: 36px;
+ width: 60px;
+  z-index: 1;
+  font-size: 11px
+}
+.profile-edit-bttnn2 {
+  background: transparent;
+  
+  color: #fff;
+  height: 40px;
+font-size: 11px;
+  position: absolute;
+  left:1px;
+  text-align: center;
+  top: 36px;
+ width: 60px;
+  z-index: 1;
+}
+.item-md.item-toggle ion-label {
+    // font-size: 11px;
+    margin-left: 0;
+    font-family:open-sense;
+    font-size: 14px
+}
+.label-md {
+    color: #000;
+    font-family: open-sans;
+    margin: 13px 8px 13px 15px;
+    font-size: 14px
+}
+
+.label-ios {
+    color: #000;
+    font-family: open-sans;
+    margin: 13px 8px 13px 15px;
+      font-size: 14px
+}
+
+
+.list-md .item-block .item-inner {
+    border-bottom: 0px solid #dedede;
+}
+
+
+
+
+
+ .button-md {
+    background-color: #ff0000;
+    border-radius: 23px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    height: 3.6rem;
+    width: 20%;
+    
+}
+ .button-ios {
+   background-color: #ff0000;
+    border-radius: 23px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    height: 3.6rem;
+    width: 20%;
+
+   
+}
+
+
+
+}

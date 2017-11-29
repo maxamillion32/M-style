@@ -1,0 +1,31 @@
+page-employee-upload-images {
+.div-img{
+	height: 231px;
+	width: 100%;
+	object-fit: cover;
+    
+}
+.head{
+	text-align: center;
+	font-family:'OpenSans-Regular';
+	margin-top: 15px;
+}
+.past {
+    margin-top: 50%;
+    text-align: center;
+    font-family:'OpenSans-Regular';
+}
+.delete{
+   color:black;
+    float: right;
+    font-size: 39px;
+    position: absolute;
+    right: 14px;
+    }
+
+.toolbar-title-ios {
+   font-size: 13px;
+  font-family: Open Sans !important;
+    
+ }
+}

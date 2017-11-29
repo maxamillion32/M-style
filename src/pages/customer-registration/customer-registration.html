@@ -1,0 +1,76 @@
+<!--
+  Generated template for the CustomerRegistration page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar  color="appheader">
+    <ion-title>REGISTRATION</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding class="cust-reg">
+<div class="regheading">
+<h3>Let's Create your Account</h3>
+</div>
+<div class="list">
+<form [formGroup]="custregister">
+       <ion-list >
+			<ion-item class="input-field">
+			<ion-input type="text" placeholder="Full Name" formControlName="username"
+			 [(ngModel)]="name"></ion-input>
+			</ion-item>
+<p style="color:red"  *ngIf="!custregister.controls.username.valid && (custregister.controls.username.dirty )">*Invalid Name </p>
+
+			<ion-item class="input-field email">
+			<ion-input type="email"  placeholder="E-mail: This will be your Login" formControlName="useremail" [(ngModel)]="email"></ion-input>
+			</ion-item>
+ <p style="color:red"  *ngIf="!custregister.controls.useremail.valid && (custregister.controls.useremail.dirty )">*Invalid E-mail </p>  
+
+             <ion-item class="input-field">
+			<ion-input type="password" placeholder="Password" formControlName="pass" 
+			[(ngModel)]="password"></ion-input>
+			</ion-item>
+<p style="color:red" *ngIf="!custregister.controls.pass.valid && (custregister.controls.pass.dirty )" >*Password should be in range of 3-12 character</p>
+
+
+			<ion-item class="input-field">
+			<ion-input type="password" placeholder="Confirm Password" formControlName="cpass" [(ngModel)]="cpass"></ion-input>
+			</ion-item>
+<p style="color:red" *ngIf="!custregister.controls.cpass.valid && (custregister.controls.cpass.dirty )" >*Input field required</p>
+
+			<ion-item class="input-field email">
+			<ion-input type="tel" placeholder="Mobile Phone: For Text Notification" 
+			formControlName="usernumber" [(ngModel)]="number"></ion-input>
+			</ion-item>
+<p style="color:red"  *ngIf="!custregister.controls.usernumber.valid && (custregister.controls.usernumber.dirty )">*Invalid number </p>
+
+			</ion-list>
+	</form>
+ </div>
+
+              	
+ 
+       <div class="check">
+      <ion-checkbox color="dark" ng-true-value="'1'" ng-false-value="'0'" 
+       [(ngModel)]="check" ></ion-checkbox>
+        </div>
+      <div class="agree">I Agree to Accept<a 
+      (tap)="terms()" 
+      class="terms">Terms & Conditions</a></div>
+	 
+
+
+
+          <div class="btn1">
+			<button ion-button color="appheader" block [disabled]="!custregister.valid"
+			 (click)="reg()" class="reg">Create Account</button>
+			 </div>
+			 <div class="btn2">
+			<button ion-button color="appheader" block (click)="skip()" class="skip">SKIP</button>
+			</div>
+
+</ion-content>

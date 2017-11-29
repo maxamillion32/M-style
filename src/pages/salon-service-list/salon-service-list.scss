@@ -1,0 +1,106 @@
+page-salon-service-list {
+.past {
+   color: red;
+    font-family: "OpenSans-Regular";
+    font-size: 19px;
+    margin-top: 50%;
+    text-align: center;
+}
+
+.label-ios + ion-input .text-input, .label-ios + ion-textarea .text-input, .label-ios + .input + .cloned-input {
+    margin-left: 0;
+    width: calc(100% - 16px / 2 - 16px);
+}
+
+
+
+ion-icon {
+    display: inline-block;
+    font-size: 2.2em;
+}
+ 
+.noti-bttnn {
+
+   color: #fff;
+    font-size: 25px;
+    height: 40px;
+    line-height: 40px;
+    position: absolute;
+    right: 7px;
+    text-align: center;
+    top: 12px;
+    width: 63px;
+    z-index: 1;
+}
+.toolbar-title-md {
+
+    font-family: Open Sans !important;
+
+}
+
+.toolbar-title-ios {
+ 
+    font-family: Open Sans !important;
+    font-size:13px
+
+}
+.noti-bttnn1 {
+ 
+   font-size: 23px;
+    height: 40px;
+    float: right;
+    position: absolute;
+    right: 15px;
+    text-align: center;
+    top: -5px;
+    width: 40px;
+    z-index: 1;
+}
+.noti-bttnn2 {
+ 
+   font-size: 23px;
+    height: 40px;
+    float: left;
+    position: absolute;
+    left: 15px;
+    text-align: center;
+    top: -5px;
+    width: 40px;
+    z-index: 1;
+}
+.add-new-bttnn {
+ 
+    background: transparent none repeat scroll 0 0;
+    color: #fff;
+    font-family: open-sense;
+    font-size: 10px;
+    height: 40px;
+    position: absolute;
+    right: 9px;
+    text-align: center;
+    top: 36px;
+    width: 56px;
+    z-index: 1;
+
+}
+.remove-bttnn {
+ 
+    background: transparent none repeat scroll 0 0;
+    color: #000;
+    font-family: open-sense;
+    font-size: 10px;
+    height: 40px;
+    position: absolute;
+    right: 9px;
+    text-align: center;
+    top: 25px;
+    width: 56px;
+    z-index: 1;
+
+
+}
+
+.list-ios {
+    margin: -1px 0 16px;
+}
+}

@@ -1,0 +1,108 @@
+<!--
+  Generated template for the SalonOwnerProfile2 page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="purple">
+    <ion-title>PERSONAL INFO</ion-title>
+
+    <ion-buttons end (click)= "editprofile()">
+<button ion-button>EDIT</button>
+   
+ </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+      <ion-content>
+
+           
+       <div>
+        <div class="main-div" >
+     <div class="user-image">
+    <!--  <img *ngIf="myimage!=null" class="profile-image"  src="http://europa.promaticstechnologies.com/salonDirectory/img/salonownerprofileimage/{{myimage}}"> -->
+        <!--   <img *ngIf="myimage==null" class="profile-image"  src="assets/img/user.jpg"> -->
+<img class="profile-image"   src="{{myimage}}"> 
+<!--  <img class="profile-image"  *ngIf=!userpic src="assets/img/user.jpg"> -->                                           
+
+     </div>
+     <div class="name">
+   <h4>{{name}}</h4>
+</div>
+<button (click)="uploadpic(1)"   [disabled]="v==false" style="position:absolute;left: 15%;top: 35%;width: 35px;height: 35px;color:#0B1047 ; border: 1px solid #0b1047;" outline round ion-button icon-only>
+        <ion-icon name="camera" ></ion-icon>
+      </button>
+        
+  <button (click)="uploadpic(2)"  [disabled]="v==false" style="position:absolute;right: 15%;top: 35%;width: 35px;height: 35px;color:#0B1047; border: 1px solid #0B1047;" outline round ion-button icon-only>
+        <ion-icon name="images" ></ion-icon> 
+
+      </button>
+               </div>
+
+
+
+<div class="super">
+
+   <div class="user-info">
+     <form [formGroup]="form3">
+      <div class="user-profile">
+      <img  class="blue" src="assets/icon/name.png">
+         <div  class="field-details">
+            
+        <input  formControlName ="name" [(ngModel)]="name" [disabled]="v==false" >
+    <p style="color:red"  *ngIf="!form3.controls.name.valid && 
+                      (form3.controls.name.dirty )">*Invalid field. </p>
+         </div>
+      </div>
+      <div class="user-profile">
+       <img  class="blue" src="assets/icon/number.png">
+         <div  class="field-details">
+           <input type="tel"  formControlName ="mobile_number" [(ngModel)]="mobile_number" [disabled]="v==false" >
+    <p style="color:red"  *ngIf="!form3.controls.mobile_number.valid && 
+                      (form3.controls.mobile_number.dirty )">*Invalid field. </p>
+         </div>
+      </div>
+      <div class="user-profile">
+       <img  class="blue" src="assets/icon/mail.png">
+         <div  class="field-details">
+           
+        <ion-input  formControlName ="email" [(ngModel)]="email" disabled ></ion-input>
+          <p style="color:red"  *ngIf="!form3.controls.email.valid && 
+                      (form3.controls.email.dirty )">*Invalid field. </p>  
+         </div>
+      </div>
+      </form>
+     <!--  <div class="user-profile">
+       <img  class="blue" src="assets/icon/notepad.png">
+         <div   class="field-details">
+     <ion-input text-wrap type="text"  [(ngModel)] ="about_me" [disabled]="v==false" ></ion-input>
+            
+         </div>
+      </div> -->
+  </div>
+
+   
+
+   <div >
+        <button ion-button block *ngIf="v==true" style="background-color:red;margin :14px 28%" (click)="editmyprofile()" [disabled]="!form3.valid" >SAVE</button>
+       </div>
+</div>
+
+
+<!-- <div class="main-div" *ngIf="myimage==null" >
+     <div class="user-image">
+     <img class="profile-image"  src="assets/img/user.jpg">
+     </div>
+</div>
+<div class="name">
+   <h4>{{name}}</h4>
+</div> -->
+     </div>
+
+
+     </ion-content>
+

@@ -1,0 +1,60 @@
+page-near-by-salon {
+    #map3 {
+    width: 100%;
+    height: 100%;
+    opacity: 1; 
+    }
+           .toolbar-background {
+        background: #2B2B2B;
+    }
+.toolbar-title-ios {
+   font-size: 13px;
+  font-family: Open Sans !important;
+  text-align: center;
+    
+ }
+ .toolbar-ios ion-title {
+    padding: 10px 90px 1px;
+}
+.toolbar-title-md {
+    /*background: #222 none repeat scroll 0 0;*/
+    color: #fff;
+    font-family: "OpenSans-Regular";
+    font-size: 2rem;
+    font-weight: 500;
+    /*text-align: center;*/
+    width: 80%;
+}
+
+
+    .item-select{
+        position:absolute;
+        background-color: #fff;
+        border: 1px solid rgba(0, 0, 0, 0.15)!important;
+        box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+        top: 10px;
+        width: 180px;
+        right:10px;
+        opacity: 2;
+        font-size: 1.4rem;
+        height: 30px;
+        min-height: 32px;
+        
+    }
+    .item-select .select-md, .item-select .select-ios{
+        font-size: 1.4rem;
+        padding: 3px 8px 3px 0;
+        width: calc(100% - 70px);
+        max-width: none;
+    }
+    .item-select ion-label{
+        font-size: 1rem;
+        font-weight: 400;
+        margin: 0;
+        max-width: 70px;
+        color: #000;
+    }
+    .item-md.item-block .item-inner {
+      border:none;
+    }
+}

@@ -1,0 +1,113 @@
+<!--
+  Generated template for the EmployeeAppointments page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="appheader">
+   <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+        </button>
+    <ion-title>APPOINTMENTS</ion-title>
+
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+<ion-segment  [(ngModel)]="bookings" color="primary" >
+    <ion-segment-button value="upcoming">
+      Upcoming 
+    </ion-segment-button>
+  <!--   <ion-segment-button value="past">
+      Past
+    </ion-segment-button> -->
+    <ion-segment-button value="current">
+      Current
+    </ion-segment-button>
+  </ion-segment>
+
+
+<div [ngSwitch]="bookings">
+
+<div *ngSwitchCase="'upcoming'">
+
+<ion-list no-lines>
+
+  <ion-item *ngFor="let data of upcomingdata">
+    <ion-thumbnail item-start >
+      <img class="circle-image" *ngIf="data.customer_image!=null" src="http://gagandeepsethi.com/salonDirectory/img/customerprofileimage/{{data.customer_image}}">
+    <img class="circle-image" *ngIf="data.customer_image==null" src="assets/img/user.jpg">
+    </ion-thumbnail>
+
+    <div class="detail" >
+    <div>Client Name-<b>{{data.customername}}</b></div>
+       <div><b>{{data.customer_address}}</b></div>
+       <div>Slot-<b>{{data.starttime}}</b> to <b>{{data.endtime}}</b></div>
+        <div>Date-<b>{{data.date | date}}</b></div>
+   
+
+     </div>
+      <!--  <div class="cancel-div">
+        <button class="cancel" ion-button color="appcolor" small round>CANCEL</button>
+       </div> -->
+  </ion-item>
+  
+</ion-list>
+<div *ngIf="up=='true'" class="past">
+<img src="assets/icon/smile.png">
+<div>Sorry!No Upcoming Bookings</div>
+</div>
+</div>
+
+
+<!-- 
+<div *ngSwitchCase="'past'">
+<ion-list no-lines>
+  <ion-item *ngFor="let data of pastdata">
+    <ion-thumbnail item-start *ngIf="data.image!=null">
+      <img class="circle-image" src="{{data.image}}">
+    </ion-thumbnail>
+     <ion-thumbnail item-start  *ngIf="data.image==null">
+      <img class="circle-image" src="assets/img/user.jpg">
+    </ion-thumbnail>
+    <div class="detail2">
+    <div>{{data.customername}}</div>
+    <div>{{data.customer_address}}</div>
+    <div>{{data.date}}</div>
+   </div>
+  </ion-item>
+</ion-list>
+<div *ngIf="past=='true'" class="past">
+<img src="assets/icon/smile.png">
+<div>Sorry!No Past Bookings</div>
+</div>
+</div> -->
+
+<div *ngSwitchCase="'current'">
+<ion-list no-lines>
+  <ion-item *ngFor="let data of currentdata">
+    <ion-thumbnail item-start>
+    <img class="circle-image" *ngIf="data.customer_image!=null" src="http://gagandeepsethi.com/salonDirectory/img/customerprofileimage/{{data.customer_image}}">
+      <img class="circle-image" *ngIf="data.customer_image==null" src="{{data.image}}">
+    </ion-thumbnail>
+    <div class="detail2">
+    <div>{{data.customername}}</div>
+    <div>{{data.customer_address}}</div>
+    <div>Slot-<b>{{data.starttime}}</b> to <b>{{data.endtime}}</b></div>
+    <div>{{data.date | date}}</div>
+    </div>
+   
+  </ion-item>
+</ion-list>
+
+</div>
+
+
+
+
+</div>
+</ion-content>

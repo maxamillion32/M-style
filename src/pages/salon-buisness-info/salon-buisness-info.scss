@@ -1,0 +1,138 @@
+page-salon-buisness-info {
+
+
+.toolbar-ios ion-title {
+    
+    padding: -1px 90px 1px;
+  
+}
+.street-map{
+  margin-top: 2%;
+}
+
+.toolbar-title-md {
+
+    font-family: Open Sans !important;
+   
+
+}
+.toolbar-title-ios {
+   font-family: Open Sans !important;
+    font-size: 13px;
+    
+   
+}
+.item-md {
+    background-color: #fff;
+     border:1px solid #000;
+    box-shadow: none;
+    color: #000;
+    font-size: 11px;
+    padding-left: 2px;
+  
+    font-family:  Open Sans-bold ;
+   
+}
+.item-ios {
+    background-color: #fff;
+    border:1px solid #000;
+    box-shadow: none;
+    color: #000;
+    font-size: 11px;
+    font-weight: normal;
+    font-family:  Open Sans-bold ;
+    padding-left: 2px;
+  
+    position: relative;
+    text-transform: none;
+    transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
+}
+
+
+.list-md .item-block .item-inner {
+    border-bottom: 0 solid #dedede!important;
+}
+
+
+.item-md.item-block .item-inner {
+    border-bottom: 1px solid ;
+    padding-right: 8px;
+}
+
+
+.item-ios.item-block .item-inner {
+    border-bottom: 1px solid ;
+    padding-right: 8px;
+}
+
+.item-input ion-input, .item-input ion-textarea {
+    color: #000;
+    position: static;
+    font-family: open-sense;
+    font-size: 15px
+}
+ion-label {
+    -moz-box-flex: 1;
+    display: block;
+    flex: 1 1 0;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-family: open-sans
+}
+
+ .list-md .item-input.input-has-focus:last-child {
+  border-bottom-color: transparent!important;
+      box-shadow: none!important;
+}
+.list-md :last-child {
+  border-bottom-color: transparent!important;
+      box-shadow: none!important;
+}
+.item-md.item-input.input-has-focus .item-inner {
+  border-bottom-color: transparent!important;
+  box-shadow: none !important;
+}
+.pin{
+  margin-left: 24px;
+  margin-bottom: 2px;
+}
+.btn{
+   font-family:'OpenSans-Regular';
+}
+.save{
+   width:65%;
+   border-radius: 20px;
+}
+
+
+.item-md.item-block .item-inner {
+    border-bottom: 0px solid;
+    padding-right: 8px;
+}
+.label-md {
+    margin: 13px 8px 1px 0;
+}
+.label-ios{
+    margin: 13px 8px 1px 0;
+}
+
+// .select-md {
+//     padding: 13px 8px 0px 16px;
+// }
+.select-ios {
+    padding: 13px 8px 0px 16px;
+}
+.item-md.item-block .item-inner {
+    border-bottom: 0px solid #dedede;
+    padding-right: 8px;
+}
+.item-ios.item-block .item-inner {
+    border-bottom: 0px solid #dedede;
+    padding-right: 8px;
+}
+}
+

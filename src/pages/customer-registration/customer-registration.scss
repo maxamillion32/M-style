@@ -1,0 +1,72 @@
+page-customer-registration {
+
+	
+
+.input-field {
+    
+    border:1px solid #acacac;
+    color: #222;
+    font-size: 1.6rem;
+    font-weight: normal;
+    margin-bottom: 5%;
+    padding-left: 0px;
+    padding-right: 0;
+    position: relative;
+    text-transform: none;
+    transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
+    /*background-color:#E1E1E1;*/
+}
+.cust-reg{
+
+}
+.text-input-ios {
+    margin: 11px 8px;
+    padding: 0;
+    width: calc(100% - 8px);
+}
+.check{
+    width: 16px;
+    float: left;
+}
+.reg{
+
+	background-color:#6D0710;
+	margin-top: 20px;
+    font-family: 'OpenSans-Regular';
+     border-radius: 20px;
+}
+.btn1{
+    text-align: center;
+
+}
+.btn2{
+   text-align: center; 
+}
+.skip{
+   
+    border: 1px solid rgb(0, 0, 0);
+    background-color:#fff;
+    margin-top: 5%;
+    color:#222;
+     border-radius: 20px;
+}
+.list{
+	margin-top:8%;
+}
+.agree{
+	margin-left:9%;
+}
+.terms{
+	margin-left:2px;
+}
+.regheading{
+     font-family: 'OpenSans-Regular';
+    
+     text-align: center;
+}
+.toolbar-title-ios {
+   font-size: 13px;
+  font-family: Open Sans !important;
+    
+ }
+}

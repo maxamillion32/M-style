@@ -1,0 +1,101 @@
+ <ion-header>
+
+  <ion-navbar color="purple">
+    <ion-title>NOTIFICATIONS</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content >
+<div >
+  <ion-segment [(ngModel)]="segment"  >
+    <ion-segment-button value="booking_request">
+      Booking Requests 
+    </ion-segment-button>
+    <ion-segment-button value="cancel_bookings">
+     Cancelled Bookings
+    </ion-segment-button>
+  </ion-segment>
+</div>
+
+
+<div  [ngSwitch]="segment">
+   <div *ngSwitchCase="'booking_request'">
+   <div >
+ 
+
+<ion-grid  *ngFor ="let m of mynotication_data;let i=index ">
+       <ion-row id="var_{{i}}" (click)="opennotification(m,i)">
+  
+<ion-col col-2 >
+ <div id="var_{{i}}"   *ngIf="m.array_index==1" style="height: 100%;width: 121%;background-color:#fff">
+<div style ="padding-top: 20px">
+        <img style="border-radius: 100%;height: 55px width:55px;object-fit: cover;" src="http://gagandeepsethi.com/salonDirectory/img/customerprofileimage/{{m.customer_image}}" >
+        </div>
+        </div>
+
+<div id="var_{{i}}"   *ngIf="m.array_index==0" style="height: 100%;width: 105%;background-color:#edf3ff">
+        <div   style ="padding-top: 20px">
+        <img style="border-radius: 100%;height: 55px width:55px;object-fit: cover;" src="http://gagandeepsethi.com/salonDirectory/img/customerprofileimage/{{m.customer_image}}" >
+        </div>
+</div>
+</ion-col>
+
+<ion-col col-10 >
+ <div id="var_{{i}}"   *ngIf="m.array_index==1" style="height: 100%;width: 100%;background-color: #fff" >
+
+        <p *ngIf="m.position=='salonowner' " style="padding-top: 20px;margin-left:4px;padding-left: 0px;width: 98%;font-family: open-sans;margin-top: 1px"><strong>{{m.customer_fullname}}  </strong> wants to book you </p>
+
+        <p *ngIf="m.position=='employee' " style="padding-top: 20px;margin-left:4px;padding-left: 0px;width: 98%;font-family: open-sans;margin-top: 1px"><strong>{{m.customer_fullname}}  </strong> wants to book your employee {{m.name}}  </p>
+
+   <p *ngIf="m.array_index==1"  style="margin-left: 3px;padding-top: 0px;width: 98%;text-transform: capitalize;font-family: open-sans"> 
+
+   Date of Appointment:{{m.date}} at {{m.start_time}}
+
+    </p>
+      </div>
+ <div id="var_{{i}}"   *ngIf="m.array_index==0" style="height: 100%;width: 121%;background-color: #edf3ff">
+   
+        <p  *ngIf="m.position=='employee' " style="padding-top: 20px;margin-left:4px;padding-left: 0px;width: 98%;font-family: open-sans;margin-top: 1px"><strong>{{m.customer_fullname}}  </strong> wants to book your employee {{m.name}} </p>
+
+              <p  *ngIf="m.position=='salonowner' " style="padding-top: 20px;margin-left:4px;padding-left: 0px;width: 98%;font-family: open-sans;margin-top: 1px"><strong>{{m.customer_fullname}}  </strong> wants to book you </p>
+
+   <p *ngIf="m.array_index==0"  style="margin-left: 3px;padding-top: 0px;width: 98%;text-transform: capitalize;font-family: open-sans"> 
+
+   Date of Appointment:<span>{{m.date}} at {{m.start_time}}</span>
+
+    </p>
+
+</div>
+    </ion-col>
+   
+    </ion-row>
+
+   
+      </ion-grid>  
+
+
+ </div>
+
+                   </div>
+                        
+   
+   <div *ngSwitchCase="'cancel_bookings'">
+     <div  *ngFor ="let m of cancel_notication_data;let j=index " >
+         <ion-item text-wrap id="var_{{j}}"  (click)="opennotification2(m,j)" >
+
+
+  <ion-avatar item-start>
+      <img  style="height: 55px width:55px;object-fit: cover;" src="http://gagandeepsethi.com/salonDirectory/img/customerprofileimage/{{m.customer_image}}" >
+         </ion-avatar>
+    <span class="textclass" ><strong>{{m.customer_fullname}}</strong> has Cancelled his Booking     </span>
+    <br>Date of Appointment:
+       <span class="textclass">{{m.date}} at {{m.start_time}} </span>
+            </ion-item>
+                   </div>
+</div>
+
+
+</div>
+
+</ion-content>

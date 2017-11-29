@@ -1,0 +1,44 @@
+<!--
+  Generated template for the SalonMyClient2 page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="purple">
+    <ion-title>MY CLIENTS</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+
+<ion-item *ngFor ="let m of customer_name " (click)="client_page2(m)" >
+
+ <ion-avatar item-start *ngIf="m.customer_profile_image!=null">
+      <img style="height: 55px width:55px;object-fit:cover" src="http://gagandeepsethi.com/salonDirectory/img/customerprofileimage/{{m.customer_profile_image}}">
+    </ion-avatar>
+
+     <ion-avatar item-start *ngIf="m.customer_profile_image==null">
+      <img style="height: 55px width:55px;object-fit:cover" src="img/info(128).png">
+    </ion-avatar>
+
+    <span class="textclass" ><strong>{{m.customername}}</strong> </span>
+    <br>
+ <span class="textclass"> Last Appointment Date:{{m.date}}</span>
+</ion-item>
+
+
+    <div *ngIf="past==true " class="past">
+       <img src="assets/icon/smile.png">
+         <div>Sorry!Nothing to Display</div>
+              </div>
+
+
+
+
+
+
+</ion-content>

@@ -1,0 +1,75 @@
+page-customer-home {
+.icon-menu{
+	 color: #f36a21;	
+	}
+.search-icon .md{
+	color:#fff;
+}
+.search-icon .ios{
+	color:#222;
+}
+	/*.searchbar-input-container {
+	    display: block;
+	    flex-shrink: 1;
+	    position: relative;
+	   
+	}*/
+	.img-div{
+	height:207px;
+	}
+
+	.toolbar .searchbar-md {
+	    float: right;
+	    padding: 4px;
+	    position: relative;
+	}
+	.toolbar .searchbar-ios .searchbar-input {
+    background: #fff none repeat scroll 0 0;
+    color:#000;
+}
+
+.searchbar-ios.searchbar-left-aligned .searchbar-search-icon {
+    margin-left: 0;
+    margin-top: 5px;
+}
+.searchbar-ios .searchbar-input {
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    color: rgb(0, 0, 0);
+    font-size: 1.4rem;
+    font-weight: 400;
+    height: 3rem;
+    margin-top: 12px;
+    padding: 0 28px;
+}
+	.outer-div{
+		position: relative;
+	}
+	.outer-div img{
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	.inner-div{
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		padding: 15px 10px;
+		background-color: rgba(0, 0, 0, 0.5);
+		line-height: 18px;
+		color: #fff;
+		
+		font-family:'OpenSans-Regular';
+	}
+	ion-footer {
+   
+    height: 35px;
+  
+}
+.no-cat {
+    margin-top: 50%;
+    text-align: center;
+    font-family:'OpenSans-Regular';
+}
+}

@@ -1,0 +1,50 @@
+<!--
+  Generated template for the SalonCategory page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="purple">
+    <ion-title>CATEGORIES</ion-title>
+
+<ion-buttons end (click)="cancel()">
+	<button ion-button>
+		CANCEL
+	</button>
+
+</ion-buttons>
+  </ion-navbar>
+
+
+</ion-header>
+
+
+<ion-content >
+
+<div class="first_div">
+CATEGORIES OF YOUR BUSINESS	
+
+</div>
+
+      <label for="options"></label>
+           <br>
+        <div *ngFor="let cbItem of cbArr">
+          <label>
+            <input type="checkbox"
+                   name="options"
+                   value="{{cbItem}}"
+                   [checked]="cbChecked.indexOf(cbItem) >= 0"
+                   (change)="updateCheckedOptions(cbItem, $event)"/>
+
+           <span style="margin-left: 10px;font-family:open-sans"> {{cbItem}}</span>
+           <br>
+           <br>
+          </label></div>
+          <div style="text-align:center;">
+          	 <button ion-button block (click)="updateOptions()">SAVE</button>
+          </div>
+
+
+</ion-content>

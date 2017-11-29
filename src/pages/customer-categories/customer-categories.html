@@ -1,0 +1,33 @@
+<!--
+  Generated template for the CustomerCategories page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="appheader">
+   <button tappable ion-button menuToggle start>
+  <ion-icon name="menu" style="color:#fff"></ion-icon></button>
+    <ion-title>CHOOSE CATEGORY</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+<div class="main-div">
+<div *ngFor="let items of tilesdata">
+<div class="tiles" (click)="list2(items.categoryname,items.id)" >
+    <!-- <img   class="tiles-img" src="http://europa.promaticstechnologies.com/salonDirectory/img/categoryimage/{{items.category_image}}"> -->
+    <img   class="tiles-img" src="{{items.categoryimage}}">
+    <div class="img-text">
+       <div class="text-data" ><b>{{items.categoryname}}</b>
+       </div>
+   </div>
+</div>
+
+</div>
+</div>
+
+</ion-content>

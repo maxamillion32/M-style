@@ -1,0 +1,61 @@
+
+<ion-header>
+
+  <ion-navbar color="appheader">
+
+    <ion-title >LOGIN</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding style="background:url('assets/img/loginback.png');background-size:cover">
+  <!--    <div style="text-align: center; ">
+	<img style="height: 200px" src ="assets/img/icon.png">
+     </div> -->
+     <div class="full">
+<form [formGroup]="loginform">
+<div class="item-div">
+
+
+<ion-item class="class3">
+<ion-input type="text" placeholder="E-mail"  formControlName="emailaddress"
+ [(ngModel)]="email"></ion-input>
+</ion-item>
+<p style="color:red"  *ngIf="!loginform.controls.emailaddress.valid && (loginform.controls.emailaddress.dirty )"> *Invalid E-mail </p>
+<br>
+<br>
+
+<ion-item class="class3">
+<ion-input type="password" placeholder="Password" formControlName="pass" 
+[(ngModel)]="password"></ion-input>
+</ion-item>
+ <p style="color:red" *ngIf="!loginform.controls.pass.valid && (loginform.controls.pass.dirty )" >*Invalid Password</p>
+
+
+</div>
+</form>
+<br>
+
+       <div class="check">
+      <ion-checkbox color="appcolor" ng-true-value="'1'" ng-false-value="'0'" 
+      [(ngModel)]="savepass"></ion-checkbox>  </div>
+      <div class="agree">Remember me</div>
+	
+
+
+
+<div (click)="forget()" class="forget">
+ <u> Forgot Password</u>
+</div>
+
+<br>
+<button  ion-button class="logdiv" color="appcolor" [disabled]="!loginform.valid" (click)="login()">LOGIN</button>
+
+<div class="line"></div>
+
+<div class="sign-up"  (click)="create()">
+<div><u>Sign Up Here</u></div>
+</div>
+</div>
+</ion-content>

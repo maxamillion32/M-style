@@ -1,0 +1,37 @@
+
+
+<div class="divclass">
+  <div class ="alertclass">
+
+
+
+    <div style="text-align: center;margin-top: 14px;font-family:open-sans">
+       Schedule Appointments is used to set time slots.e.g.-If Selected 15 min ,time slots will be like 8:15,8:30,8:45,9:00,9:15.. 
+      </div>
+      <br>
+
+
+  
+   <!--  <form [formGroup]="addservice"> -->
+  
+     <ion-list *ngFor="let m of time" radio-group [(ngModel)]="selected_value" >
+
+       <ion-item>
+                <ion-label>{{m.mytime}}</ion-label>
+                  <ion-radio [value]="m.mytime" ></ion-radio>
+                    </ion-item>
+                       
+                      </ion-list>
+         <!--  </form> -->
+
+
+
+
+  <div style="text-align:center">
+<button ion-button (click)="accept()">Save</button>
+        <button ion-button (click)="cancel()">Cancel</button>
+        </div>
+
+
+     </div>
+       </div>

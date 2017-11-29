@@ -1,0 +1,228 @@
+<ion-header>
+
+  <ion-navbar color="purple">
+    <ion-title>BOOKING DETAILS</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+  <div class="main-div" >
+
+ <img class="profile-image" *ngIf="myclientdata.customer_profile_image!=null" src="http://gagandeepsethi.com/salonDirectory/img/customerprofileimage/{{myclientdata.customer_profile_image}}">
+
+    <img class="profile-image" *ngIf="myclientdata.customer_profile_image==null"  src="img/info(128).png">
+</div>
+<div class="name">
+   <h4>{{ myclientdata.customername}}</h4>
+
+ <!--  <div style="float: left;margin-left: 15px;margin-top: -46px">
+<button ion-button block (click)="accept(notfication_data)">
+  Accept </button>
+     </div>
+       
+          <div style="float:right;margin-right: 15px;margin-top: -46px ">
+  <button ion-button block (click)="decline(notfication_data)">
+      Decline </button>
+               </div> -->
+
+
+</div>
+
+
+<div class="super">
+   <div class="user-info">
+      <div class="user-profile">
+      <img  class="blue" src="assets/icon/name.png">
+         <div  class="field-details">
+            
+       Name:     {{ myclientdata.customername}}
+         </div>
+      </div>
+      <div class="user-profile">
+       <img  class="blue" src="assets/icon/number.png">
+         <div  class="field-details">
+           
+        Contact No. : {{myclientdata.customercontactnumber}}
+         </div>
+      </div>
+      <div class="user-profile">
+       <img  class="blue" src="assets/icon/mail.png">
+         <div  class="field-details">
+           
+       Email: {{myclientdata.customeremail}}
+         </div>
+      </div>
+      <!-- <div class="user-profile">
+       <img  class="blue" src="assets/icon/notepad.png">
+         <div   class="field-details">
+           
+      Appointment Date:   {{ notification_data.date}}
+         </div>
+      </div> -->
+ 
+     <!-- <div class="user-profile">
+       <img  class="blue" src="assets/icon/notepad.png">
+
+         <div   class="field-details">
+       Service Selected: <span *ngFor="let m of services">{{m.title}}</span>  
+            </div>
+                 </div> -->
+
+<!-- 
+          <div style="font-family:open-sans">SERVICES SELECTED:
+   <div *ngFor ="let m of services">
+  <div  class="namediv">{{m.title}}</div>
+  <br>
+   </div>
+   </div> -->
+
+
+     <!--    <div class="user-profile">
+       <img  class="blue" src="assets/icon/name.png">
+         <div   class="field-details">
+           
+EMPLOYEE ALLOCATED:{{myclientdata.employeename}}
+
+         </div>
+      </div>
+  -->
+     <div class="user-profile">
+       <img  class="blue" src="assets/icon/date.png">
+         <div   class="field-details">
+           
+ Last Appointment Date: {{myclientdata.date}}
+
+         </div>
+      </div>
+<!-- 
+               <div class="user-profile">
+       <img  class="blue" src="assets/icon/money.png">
+         <div   class="field-details">
+           
+         TOTAL PAYMENT:{{myclientdata.total_amount}}
+
+         </div>
+      </div>
+ -->
+ 
+
+
+   </div>
+</div>
+<div >
+
+  <button ion-button block style="margin: 0 28%" (click)="details()">View Details</button>
+
+</div>
+</ion-content>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+<ion-header>
+
+  <ion-navbar color="purple">
+    <ion-title>Client Profile</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+
+   <div class="main-div" >
+     <div class="user-image">
+     <img class="profile-image" *ngIf="myclientdata.customer_profile_image!=null"  src="http://europa.promaticstechnologies.com/salonDirectory/img/customerprofileimage/{{myclientdata.customer_profile_image}}">
+
+    <img class="profile-image" *ngIf="myclientdata.customer_profile_image==null"  src="img/info(128).png">
+
+     </div>
+         </div>
+
+   <div class="main">
+   <div class="payment">
+   <div> CUSTOMER NAME:
+   <div class="namediv"> {{ myclientdata.customername}}</div>
+   </div>
+   <br> 
+
+   <div style="font-family:open-sans">SERVICES SELECTED:
+   <div *ngFor ="let m of services">
+  <div  class="namediv">{{m.title}}</div>
+  <br>
+   </div>
+   </div>
+     
+
+              <div>TOTAL APPOINTMENTS MADE:
+    <div class="namediv">{{myclientdata.employeename}}</div>
+    </div>
+           <br>
+
+
+      <div>LAST APPOINTMENT DATE:
+    <div class="namediv">{{myclientdata.date}}</div>
+    </div>
+<br>
+
+   <div>EMPLOYEE ALLOCATED:
+    <div class="namediv">{{myclientdata.employeename}}</div>
+    </div>
+           <br>
+               <div>EMAIL:
+    <div class="namediv">{{myclientdata.customeremail}}</div>
+    </div>
+           <br>
+
+           <div>PHONE NUMBER:
+    <div class="namediv">{{myclientdata.customercontactnumber}}</div>
+    </div>
+           <br>
+
+        <div>TOTAL PAYMENT:
+    <div class="namediv">{{myclientdata.total_amount}}</div>
+    </div>
+   <br>
+
+        
+   </div>
+</div>
+
+
+</ion-content>
+
+
+
+
+
+
+
+
+ -->

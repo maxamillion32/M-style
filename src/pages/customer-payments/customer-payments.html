@@ -1,0 +1,39 @@
+
+<ion-header>
+
+  <ion-navbar color="appheader">
+   <button ion-button menuToggle start>
+  <ion-icon name="menu" style="color:#fff"></ion-icon></button>
+   
+    <ion-title>MY ONLINE PAYMENTS</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+   <div>
+   <img src="assets/img/payment.jpg">
+   </div>
+
+   <div class="nopayments" *ngIf="noinfo=='true'">
+    <img src="assets/icon/smile.png">
+     <div >No Payments Done</div>
+   </div>
+    <div class="main" *ngFor="let data of paymentinfo2">
+   <div class="payment">
+   <div><b>{{data.salonname}}</b></div> 
+   <div><b>Total Cost-</b>${{data.totalcost}}</div>
+   <div><b>Order Id-</b>{{data.order_id}}</div>
+   <div *ngIf="data.transaction_id!=null">
+   <b>Transaction Id-</b>{{data.transaction_id}}
+   </div>
+   <div >
+   <button class="btn" ion-button style="float:right" small round color="appcolor">{{data.paystatus}}</button>
+   </div>
+   <div><b>Booking Date-</b>{{data.payment_date | date}}</div>
+   <div><b>Booking Time-</b>{{data.payment_time}}</div>
+   
+   </div>
+   </div>
+</ion-content>

@@ -1,0 +1,46 @@
+<!--
+  Generated template for the PushNotyPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+
+<div class="divclass">
+  <div class ="alertclass">
+
+
+
+
+    <div style="text-align: center;margin-top: 14px;font-family:open-sans">
+    Push Notification Descrprtion is explained here
+      </div>
+      <br>
+
+      <ion-label style="color: #909090">SALON NAME </ion-label>
+
+        <ion-item style="border :1px solid">
+        <ion-input  type="text"  placeholder="ENTER SALOON NAME" [(ngModel)]= "mysalon_name" ></ion-input>
+               </ion-item>
+  
+
+
+  <ion-label style="color: #909090">SALON SERVICE</ion-label>
+
+<ion-item style="border :1px solid ">
+ <ion-input  type="text"  placeholder="ENTER YOUR NEW SERVICE" [(ngModel)]="service" ></ion-input>
+         </ion-item>
+
+
+ 
+  
+
+
+  <div style="text-align:center">
+<button ion-button (click)="send()">Send</button>
+        <button ion-button (click)="cancel()">Cancel</button>
+        </div>
+
+
+     </div>
+       </div>

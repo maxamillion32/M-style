@@ -1,0 +1,109 @@
+<!--
+  Generated template for the SalonPaymentPage2 page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+
+
+
+<ion-header>
+
+  <ion-navbar color="appheader">
+   <button ion-button menuToggle start>
+  <ion-icon name="menu" style="color:#fff"></ion-icon></button>
+   
+    <ion-title>MY PAYMENT STATUS</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+   <div>
+   <img src="assets/img/payment.jpg">
+   </div>
+
+ <!--   <div class="main">
+   <div class="payment"> -->
+   <!-- div> CUSTOMER NAME:
+   <div class="namediv"> {{payment_data2.customername}}</div>
+   </div> -->
+<!--    <br>  -->
+
+   <!-- <div style="font-family:open-sans">SERVICES SELECTED:
+   <div *ngFor ="let m of services">
+  <div  class="namediv">{{m.title}}</div>
+  <br>
+   </div>
+   </div> -->
+ 
+
+ <!--   <div>EMPLOYEE ALLOCATED:
+    <div class="namediv">{{payment_data2.employeename}}</div>
+    </div>
+           <br>
+        <div>TOTAL PAYMENT:
+    <div class="namediv">{{payment_data2.total_amount}}</div>
+    </div>
+   <br>
+
+   </div>
+</div> -->
+
+
+<div class="super">
+   <div class="user-info">
+      <div class="user-profile">
+      <img  class="blue" src="assets/icon/name.png">
+         <div  class="field-details">
+            
+     Customer Name:        {{payment_data2.customername}}
+         </div>
+      </div>
+      <div class="user-profile">
+       <img  class="blue" src="assets/icon/number.png">
+         <div  class="field-details">
+           
+       Employee Allocated: {{payment_data2.employeename}}
+         </div>
+      </div>
+      <div class="user-profile">
+       <img  class="blue" src="assets/icon/mail.png">
+         <div  class="field-details">
+           
+        Total Payment:   {{payment_data2.total_amount}}
+         </div>
+      </div>
+      <div class="user-profile">
+       <img  class="blue" src="assets/icon/notepad.png">
+         <div   class="field-details">
+           
+         Service Selected: <span *ngFor ="let m of services" > 
+         <span> {{m.title}}</span> </span>
+         </div>
+        
+      </div>
+                <div class="user-profile">
+       <img  class="blue" src="assets/icon/payment-status.png">
+         <div  class="field-details">
+           
+       Payment Status: {{payment_data2.paystatus}}
+         </div>
+      </div>
+    
+
+   </div>
+</div>
+
+
+
+</ion-content>
+
+
+
+
+
+
+

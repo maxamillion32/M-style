@@ -1,0 +1,46 @@
+<!--
+  Generated template for the CustomerAfterPayment page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="appheader">
+    <ion-title>CONFIRMATION</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<div class="icon">
+<ion-icon  class="check-icon" name="checkmark-circle"></ion-icon>
+<div class="amount-text"><i>Payment Successfull</i></div>
+<div class="amount">${{totalamount}}</div>
+
+</div>
+
+
+<div  class="main">
+<div class="payment-data" >Payment Details</div>
+		<div class="heading">
+			<span class="field">Number Of Staff Members</span>
+			<span class="field-value">{{staff_member}}</span>
+		</div>
+		<div class="heading">
+			<span class="field">Transaction id--</span>
+			<span class="field-value">{{transactionid}}</span>
+		</div>
+		
+        <!-- <div class="heading">
+			<span class="field">Transaction Date--</span>
+			<span class="field-value">{{paymentdate}}</span>
+		</div> -->
+
+		<!-- <div class="heading">
+			<span class="field">Transaction Time--</span>
+			<span class="field-value">{{paymenttime}}</span>
+		</div> -->
+</div>
+</ion-content>

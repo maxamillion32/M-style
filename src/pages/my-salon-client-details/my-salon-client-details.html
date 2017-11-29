@@ -1,0 +1,106 @@
+<!--
+  Generated template for the MySalonClientDetailsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+ <ion-header>
+
+  <ion-navbar color="purple">
+    <ion-title>Booking Details</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content >
+<div >
+  <ion-segment [(ngModel)]="segment"  >
+    <ion-segment-button value="booking_request">
+      Accepted
+    </ion-segment-button>
+    <ion-segment-button value="cancel_bookings">
+     Cancelled 
+    </ion-segment-button>
+  </ion-segment>
+</div>
+
+
+<div  [ngSwitch]="segment">
+   <div *ngSwitchCase="'booking_request'">
+<!--    <div >
+   <ion-grid>
+       <ion-row *ngFor ="let m of my_request_data;let i=index ">
+<ion-col col-2 >
+ <div  style="height: 100%;width: 100%;background-color:#fff">
+<div style ="padding-top: 20px">
+        <img style="border-radius: 100%;height: 55px width:55px;object-fit: cover;" src="http://europa.promaticstechnologies.com/salonDirectory/img/customerprofileimage/{{m.customer_profile_image}}" >
+        </div>
+        </div>
+</ion-col>
+
+
+
+
+<ion-col col-10 >
+ <div  style="height: 100%;width: 100%;background-color: #fff">
+        <p style="padding-top: 20px;margin-left:4px;padding-left: 0px;width: 98%;font-family: open-sans;margin-top: 1px"><strong>{{m.customername}}  </strong> </p>
+
+   <p  style="margin-left: 3px;padding-top: 0px;width: 98%;text-transform: capitalize;font-family: open-sans"> 
+
+   Date of Appointment:{{m.date}}  
+
+    </p>
+     <p  style="margin-left: 3px;padding-top: 0px;width: 98%;text-transform: capitalize;font-family: open-sans"> 
+
+   {{m.starttime}}-{{m.endtime}}
+
+    </p>
+      </div>
+ 
+    </ion-col>
+
+    </ion-row>
+
+   
+      </ion-grid>  
+  </div> -->
+  <div  *ngFor ="let m of my_request_data" >
+         <ion-item *ngIf="customer_id==m.customer_id"  >
+
+
+  <ion-avatar item-start>
+      <img *ngIf="m.customer_profile_image!=null"  style="height: 55px width:55px;object-fit: cover;" src="http://gagandeepsethi.com/salonDirectory/img/customerprofileimage/{{m.customer_profile_image}}" >
+
+<img *ngIf="m.customer_profile_image==null" src="img/info(128).png" style="height: 55px width:55px;object-fit:cover">
+     
+         </ion-avatar>
+    <span class="textclass" ><strong>{{m.customername}}</strong>     </span>
+    <br>Date of Appointment:
+       <span class="textclass">{{m.date}}  </span>
+       <br>
+            <span class="textclass"> {{m.starttime}}-{{m.endtime}} </span>
+            </ion-item>
+                   </div>
+
+
+
+  </div>
+
+
+
+    <div *ngSwitchCase="'cancel_bookings'">
+     <div  *ngFor ="let m of cancel_data;let j=index " >
+         <ion-item *ngIf="customer_id==m.customer_id" >
+
+  <ion-avatar item-start>
+      <img  style="height: 55px width:55px;object-fit: cover;" src="http://gagandeepsethi.com/salonDirectory/img/customerprofileimage/{{m.customer_image}}" >
+         </ion-avatar>
+    <span class="textclass" ><strong>{{m.customer_fullname}}</strong>     </span>
+    <br>Date of Appointment:
+       <span class="textclass">{{m.date}} </span>
+ <br>
+         <span class="textclass"> {{m.start_time}}-{{m.end_time}} </span>
+            </ion-item>
+                   </div>
+</div>
+</div>

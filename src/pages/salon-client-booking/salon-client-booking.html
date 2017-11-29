@@ -1,0 +1,135 @@
+<!--
+  Generated template for the SalonClientBooking page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="appheader">
+   <ion-title class="title">{{viewTitle }}</ion-title>
+    <ion-buttons right>
+   <button ion-button (click)="loadEvents()">
+            MY APPOINTMENTS
+   </button>
+          </ion-buttons>
+         
+      
+      
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+
+<calendar class="cal" [eventSource]="eventSource"
+              [calendarMode]="calendar.mode"
+              [currentDate]="calendar.currentDate"
+              (onCurrentDateChanged)="onCurrentDateChanged($event)"
+              (onEventSelected)="onEventSelected($event)"
+              (onTitleChanged)="onViewTitleChanged($event)"
+              (onTimeSelected)="onTimeSelected($event)"
+              step="30">
+    </calendar>
+
+
+    <div class="head">BOOKING BY CLIENTS </div>
+
+<!-- <ion-list *ngFor="let m of mydata">
+
+<div >
+       <div  *ngIf="m.date==current_date" class="main_div" >
+        <div class="container">
+        <div class="date-format">
+      	<p>{{ current_date | date:'MMM' }}    </p>
+      	<p>{{ current_date | date:'dd' }}</p>
+      	<p>{{ current_date | date:'Z' }}</p>
+      </div>
+      
+      <div class="image">
+ 
+
+        <img  src ='http://europa.promaticstechnologies.com/salonDirectory/img/customerprofileimage/{{m.customer_profile_image}}' >
+
+      	<p style="padding-top: 5px;margin-left: 29px;padding-left: 8px;width: 100%">Customer Name:{{m.customername}}</p>
+
+   <p style="margin-left: 20px;padding-top: 0;width: 100%;text-transform: capitalize;"> 
+
+    Service: <span *ngFor="let n of m.service "> <span> {{n.title}} </span>
+    </span>
+    </p>
+
+
+     <p style="margin-left: 13px;
+    padding-top: 0"> Employee:{{m.employeename}}</p>
+      <p style="margin-left: 14px;
+    padding-top: 0"> Time:{{m.starttime}}- {{m.endtime}}</p>
+      <p style="margin-left: 23px;
+    padding-top: 0"> Pay Status: {{m.paystatus}}</p>
+      </div>
+
+   
+        
+      </div>
+   </div>
+
+
+
+</div>
+
+
+   </ion-list>
+ -->
+<ion-list *ngFor="let m of mydata">
+
+      
+       <div  *ngIf="m.date==current_date" class="main_div" >
+       <ion-grid>
+       <ion-row>
+      <ion-col col-2 >
+        <div class="container">
+        <div class="date-format">
+        <p>{{ current_date | date:'MMM' }}    </p>
+        <p>{{ current_date | date:'dd' }}</p>
+        <p>{{ current_date | date:'Z' }}</p>
+      </div>
+      </div>
+</ion-col>
+     <!--  <div class="image"> -->
+
+
+<ion-col col-2 >
+<div style ="padding-top: 18px">
+        <img style="border-radius: 100%;height:50px" src = 'http://gagandeepsethi.com/salonDirectory/img/customerprofileimage/{{m.customer_profile_image}}' >
+        </div>
+</ion-col>
+<ion-col col-8 >
+        <p style="padding-top: 5px;margin-left: -4px;padding-left: 0px;width: 100%">Customer Name:{{m.customername}}</p>
+
+   <p style="margin-left: -4px;padding-top: 0;width: 100%;text-transform: capitalize;"> 
+
+    Service:<span *ngFor="let n of m.service "><span>{{n.title}} </span>
+    </span>
+    </p>
+
+
+     <p style="margin-left: -4px;
+    padding-top: 0"> Employee:{{m.employeename}}</p>
+      <p style="margin-left: -4px;
+    padding-top: 0"> Time:{{m.starttime}}-{{m.endtime}}</p>
+    </ion-col>
+    </ion-row>
+    
+
+   
+      </ion-grid>     
+      
+   </div>
+    
+   </ion-list>
+
+</ion-content>
+
+
+

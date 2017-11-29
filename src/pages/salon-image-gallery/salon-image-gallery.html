@@ -1,0 +1,79 @@
+<!--
+  Generated template for the SalonImageGallery page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+
+  <ion-navbar color="purple">
+    <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-buttons end (click)="show_hide_icon()">
+<button ion-button >
+  Edit
+</button>
+</ion-buttons>
+            <ion-title>MY GALLERY</ion-title>
+  </ion-navbar>
+
+</ion-header>
+<!-- style="background: url(assets/img/services.jpeg) no-repeat center;background-size:cover;background-color: rgb(41,40,82,0)" -->
+
+<ion-content style="background-color: #fff" >
+<br>
+
+    <div *ngIf="image!=null" >
+	<img src ="http://gagandeepsethi.com/salonDirectory/img/salonimage/{{image}}" style="height: 180px;
+    object-fit: cover;
+    width: 100%;position:relative; " >
+     <!--  <ion-icon  *ngIf="show==true" (click)= "delete_image()" name="trash" class="noti-bttnn1"></ion-icon> -->
+	<div class="textdiv">SALON PROFILE IMAGE
+    <img src ="img/icon.png" class="iconclass">
+    <img src ="img/icon.png" class="iconclass2">
+   </div>
+
+    </div>
+  <div *ngIf="image==null" class="past">
+       <img src="assets/icon/smile.png">
+         <div>OOPS!Please Add Salon Profile Image </div>
+              </div>
+    
+      <br>
+
+    <div *ngIf="myimage!=Something Wrong " style="border :2px solid #fff;width: 100%">
+   
+	 <div class="textdiv2">OTHER SALON IMAGES
+     <img src ="img/icon.png" class="iconclass">
+      <img src ="img/icon.png" class="iconclass2">
+
+
+     </div>
+         <div>
+            <div *ngIf="myimage!=null" class="maindiv" >
+  	   <div *ngFor="let myimage1 of myimage" class="imagediv" >
+   
+    
+
+		 <img src="http://gagandeepsethi.com/salonDirectory/img/gallerysalonimage/{{myimage1}}" style="height: 100%;
+    object-fit: cover;
+    width: 100%">
+  <ion-icon *ngIf="show==true" (click)= "showConfirm(myimage1)" name="trash" class="noti-bttnn2"></ion-icon>
+	   </div>
+    </div>
+    </div>
+
+ </div>  
+
+  <div *ngIf="myimage==null" class="past">
+       <img src="assets/icon/smile.png">
+         <div>OOPS!Please Add Images To Gallery </div>
+              </div>
+
+</ion-content>
+
+
+
+

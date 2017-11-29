@@ -1,0 +1,146 @@
+<!--
+  Generated template for the CustomerBookings page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-header>
+
+  <ion-navbar color="appheader">
+   <button ion-button menuToggle start>
+  <ion-icon name="menu" style="color:#fff"></ion-icon></button>
+   
+    <ion-title>MY BOOKINGS</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+<ion-segment  [(ngModel)]="bookings" color="primary" >
+    <ion-segment-button value="upcoming">
+      Upcoming 
+    </ion-segment-button>
+    <!-- <ion-segment-button value="past">
+      Past
+    </ion-segment-button> -->
+    <ion-segment-button value="current">
+      Current
+    </ion-segment-button>
+  </ion-segment>
+
+
+<div [ngSwitch]="bookings">
+
+<div *ngSwitchCase="'upcoming'">
+
+<ion-list no-lines>
+
+  <ion-item *ngFor="let data of upcomingdata">
+
+
+    <ion-thumbnail item-start *ngIf="data.bookedstatus=='employeebooked'">
+      <img class="circle-image" *ngIf="data.image!=null" src="http://gagandeepsethi.com/salonDirectory/img/employeeprofileimage/{{data.image}}">
+       <img class="circle-image" *ngIf="data.image==null" src="assets/img/user.jpg">
+    </ion-thumbnail>
+
+    <ion-thumbnail item-start *ngIf="data.bookedstatus=='salonbooked'">
+      <img class="circle-image" *ngIf="data.image!=null" 
+      src="http://gagandeepsethi.com/salonDirectory/img/salonownerprofileimage/{{data.image}}">
+       <img class="circle-image" *ngIf="data.image==null" src="assets/img/user.jpg">
+    </ion-thumbnail>
+     
+         <div class="detail" >
+         <div>{{data.salonname}}</div>
+          <div>{{data.name}}</div>
+        <div>{{data.salonaddress}}</div>
+        <div>Date-<b>{{data.date | date}}</b></div>
+        <div>Start Time-<b>{{data.starttime}}</b></div>
+        <div>End Time-<b>{{data.endtime}}</b></div>
+
+         <button ion-button small class="btn" (click)="pay(data.payment_id,data.cost,data.salonname,data.salon_id)" color="appcolor">Pay $ {{data.cost}}</button>
+      <button ion-button small class="btn" color="appcolor" (click)="cancelbooking(data.payment_id,data.bookingdate)">Cancel Booking</button>
+        </div>
+     
+  </ion-item>
+  
+</ion-list>
+<div *ngIf="up=='true'" class="past">
+<img src="assets/icon/smile.png">
+<div>Sorry!No Upcoming Bookings</div>
+</div>
+</div>
+
+
+<!-- 
+<div *ngSwitchCase="'past'">
+<ion-list no-lines>
+  <ion-item *ngFor="let data of pastdata">
+   
+    <ion-thumbnail item-start *ngIf="data.bookedstatus=='employeebooked'">
+      <img class="circle-image" *ngIf="data.image!=null" src="http://gagandeepsethi.com/salonDirectory/img/employeeprofileimage/{{data.image}}">
+       <img class="circle-image" *ngIf="data.image==null" src="assets/img/user.jpg">
+    </ion-thumbnail>
+
+    <ion-thumbnail item-start *ngIf="data.bookedstatus=='salonbooked'">
+      <img class="circle-image" *ngIf="data.image!=null" 
+      src="http://gagandeepsethi.com/salonDirectory/img/salonownerprofileimage/{{data.image}}">
+       <img class="circle-image" *ngIf="data.image==null" src="assets/img/user.jpg">
+    </ion-thumbnail>
+
+    <div class="detail">
+   <div>{{data.salonname}}</div>
+    <div>Employee Alloted-<b>{{data.name}}</b></div>
+    <div>{{data.salonaddress}}</div>
+     <div>Date-<b>{{data.date | date}}</b></div>
+       <div>Start Time-<b>{{data.starttime}}</b></div>
+        <div>End Time-<b>{{data.endtime}}</b></div>
+   </div>
+  </ion-item>
+</ion-list>
+<div *ngIf="past=='true'" class="past">
+<img src="assets/icon/smile.png">
+<div>Sorry!No Past Bookings</div>
+</div>
+</div> -->
+
+<div *ngSwitchCase="'current'">
+<ion-list no-lines>
+  <ion-item *ngFor="let data of currentdata">
+   
+    <ion-thumbnail item-start *ngIf="data.bookedstatus=='employeebooked'">
+      <img class="circle-image" *ngIf="data.image!=null" src="http://gagandeepsethi.com/salonDirectory/img/employeeprofileimage/{{data.image}}">
+       <img class="circle-image" *ngIf="data.image==null" src="assets/img/user.jpg">
+    </ion-thumbnail>
+
+    <ion-thumbnail item-start *ngIf="data.bookedstatus=='salonbooked'">
+      <img class="circle-image" *ngIf="data.image!=null" 
+      src="http://gagandeepsethi.com/salonDirectory/img/salonownerprofileimage/{{data.image}}">
+       <img class="circle-image" *ngIf="data.image==null" src="assets/img/user.jpg">
+    </ion-thumbnail>
+    <div class="detail">
+   <div>{{data.salonname}}</div>
+    <!-- <div>Employee Alloted-<b>{{data.employeename}}</b></div> -->
+    <div>{{data.name}}</div>
+    <div>{{data.salonaddress}}</div>
+     <div>Date-<b>{{data.date | date}}</b></div>
+       <div>Start Time-<b>{{data.starttime}}</b></div>
+        <div>End Time-<b>{{data.endtime}}</b></div>
+        
+         <button ion-button small class="btn" (click)="pay(data.payment_id,data.cost)" color="appcolor">Pay $ {{data.cost}}</button>
+      <button ion-button small class="btn" color="appcolor" (click)="cancelbooking(data.payment_id,data.bookingdate)">Cancel Booking</button>
+    </div>
+   
+  </ion-item>
+</ion-list>
+
+</div>
+
+
+
+
+</div>
+
+
+</ion-content>

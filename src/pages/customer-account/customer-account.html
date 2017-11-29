@@ -1,0 +1,194 @@
+<!--
+  Generated template for the CustomerAccount page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="appheader">
+    <ion-title>PROFILE</ion-title>
+      <ion-buttons end  >
+
+            <button icon-only ion-button *ngIf="edit=='true' && !disableStatus" (click)="save()">
+               <ion-icon name="checkmark-circle"></ion-icon>
+            </button>
+        </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+<div *ngIf="edit!='true'">
+
+
+<!-- <div class="main-div" >
+     <div class="user-image">
+     <img class="profile-image" *ngIf="userpic"  src="{{userpic}}">
+    <img class="profile-image" *ngIf=!userpic  src="assets/img/user.jpg">
+     </div>
+</div>
+
+ 
+<div class="user-info">
+
+<div class="user-profile">
+<div  class="field-details">NAME- {{username}}</div>
+</div>
+<div class="user-profile">
+<div  class="field-details">CONTACT NUMBER- {{number}}</div>
+</div>
+<div class="user-profile">
+<div  class="field-details">E-MAIL- {{email}}</div>
+</div>
+<div class="user-profile">
+<div  class="field-details">ADDRESS- {{address}}</div>
+</div>
+</div>
+
+<div class="edit-div">
+<button ion-button class="edit" color="appcolor" (click)="update()">EDIT </button>
+</div>
+ -->
+
+
+<div class="main-div" >
+   <img class="profile-image" *ngIf="userpic"  src="{{userpic}}"> 
+   <img class="profile-image"  *ngIf=!userpic src="assets/img/user.jpg">
+</div>
+<div class="name">
+   <h4>{{username}}</h4>
+</div>
+
+
+<div class="super">
+   <div class="user-info">
+      <div class="user-profile">
+      <img  class="blue" src="assets/icon/name.png">
+         <div  class="field-details">
+            
+            {{username}}
+         </div>
+      </div>
+      <div class="user-profile">
+       <img  class="blue" src="assets/icon/number.png">
+         <div  class="field-details">
+           
+            {{number}}
+         </div>
+      </div>
+      <div class="user-profile">
+       <img  class="blue" src="assets/icon/mail.png">
+         <div  class="field-details">
+           
+            {{email}}
+         </div>
+      </div>
+      <div class="user-profile">
+       <img  class="blue" src="assets/icon/location.png">
+         <div  class="field-details">
+           
+            {{address}}
+         </div>
+      </div>
+   </div>
+</div>
+
+
+
+
+<div style="text-align:center">
+   <button ion-button class="edit" color="appcolor" (click)="update()">EDIT</button>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div *ngIf="edit=='true'">
+<!-- <div class="main-div">
+     <div class="user-image" >
+      <ion-icon class="icon-edit" (click)="userimage()" name="create"></ion-icon>
+<img class="profile-image"  *ngIf="userpic" (click)="userimage()" src="{{userpic}}">
+<img class="profile-image"   *ngIf=!userpic (click)="userimage()" src="assets/img/user.jpg">
+      
+     </div>
+</div> -->
+
+<div class="main-div" >
+   <img class="profile-image" (click)="userimage()" *ngIf="userpic"  src="{{userpic}}"> 
+   <img class="profile-image"  (click)="userimage()"  *ngIf=!userpic src="assets/img/user.jpg">
+</div>
+<div (click)="userimage()"  class="name">
+   <h4>EDIT PIC</h4>
+</div>
+
+
+<form [formGroup]="custregister" >
+<div class="user-info2">
+<div class="user-profile2">
+<div class="field">FULL NAME</div>
+<ion-item class="item-upper">
+<ion-input type="text" [(ngModel)]="username" formControlName="username" (input)="validationcheck(custregister.controls.username.valid)"></ion-input>
+</ion-item>
+<p style="color:red"  *ngIf="!custregister.controls.username.valid && (custregister.controls.username.dirty )">*Invalid Name </p>
+
+
+
+
+<div class="field">CONTACT NUMBER</div>
+<ion-item class="item-upper">
+<ion-input type="text" [(ngModel)]="number"   formControlName="usernumber" (input)="validationcheck(custregister.controls.usernumber.valid)"></ion-input>
+</ion-item>
+
+<p style="color:red"  *ngIf="!custregister.controls.usernumber.valid && (custregister.controls.usernumber.dirty )">*Invalid number </p>
+
+
+
+<div class="field">E-MAIL</div>
+<ion-item class="item-upper">
+<ion-input type="text" [(ngModel)]="email" formControlName="useremail" readonly></ion-input>
+</ion-item>
+ <p style="color:red"  *ngIf="!custregister.controls.useremail.valid && (custregister.controls.useremail.dirty )">*Invalid E-mail </p>  
+
+
+
+<div class="field">ADDRESS</div>
+<ion-item class="item-upper">
+<ion-input type="text" formControlName="useraddress" [(ngModel)]="address" 
+(input)="validationcheck(custregister.controls.useraddress.valid)"></ion-input>
+</ion-item>
+<p style="color:red"  *ngIf="!custregister.controls.useraddress.valid && (custregister.controls.useraddress.dirty )">*Invalid Address</p>  
+
+</div>
+</div>
+</form>
+</div>
+
+</ion-content>

@@ -1,0 +1,98 @@
+<!--
+  Generated template for the CustomerFavSalon page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="appheader">
+    <!-- <ion-title>FAVOURITE SALON</ion-title> -->
+     <button ion-button menuToggle start>
+         <ion-icon name="menu" ></ion-icon>
+  </button>
+   
+
+<ion-searchbar (ionInput)="getItems($event)" placeholder="Search Business">
+	
+</ion-searchbar>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+<div *ngFor="let list of favlistdata">
+
+<div class="outer-div">
+    <div class="img-div" *ngIf="list.salon_image!=null">
+	<img (click)="detail(list.id,list.salon_image)" src ="http://gagandeepsethi.com//salonDirectory/img/salonimage/{{list.salon_image}}">
+	</div>
+	<div class="img-div" *ngIf="list.salon_image==null">
+	<img  (click)="detail(list.id,list.salon_image)" 
+	src ="assets/img/no-image.jpg">
+	</div>
+	<div class="inner-div">
+		<span><b>{{list.salon_name}}</b></span><br>
+		<span>{{list.salon_address}}</span>
+		<br>
+		 <div *ngIf="list.averagerating>=4.5 && list.averagerating<=5.0">
+              <span class="star">
+                <ion-icon name="star" style="color:#ffb400"></ion-icon>  
+                <ion-icon name="star" style="color:#ffb400"></ion-icon> 
+                <ion-icon name="star" style="color:#ffb400"></ion-icon>
+                <ion-icon name="star" style="color:#ffb400"></ion-icon>
+               <ion-icon name="star" style="color:#ffb400"></ion-icon>
+               </span>({{list.review}} Reviews)
+               </div>
+               <div *ngIf="list.averagerating>=4.0 && list.averagerating< 4.5">
+              <span class="star">
+                <ion-icon name="star" style="color:#ffb400"></ion-icon>  
+                <ion-icon name="star" style="color:#ffb400"></ion-icon> 
+                <ion-icon name="star" style="color:#ffb400"></ion-icon>
+                <ion-icon name="star" style="color:#ffb400"></ion-icon>
+               </span>({{list.review}} Reviews)
+               </div>
+                <div *ngIf="list.averagerating>=3.5 && list.averagerating<4.0">
+              <span class="star">
+                <ion-icon name="star" style="color:#ffb400"></ion-icon>  
+                <ion-icon name="star" style="color:#ffb400"></ion-icon> 
+                <ion-icon name="star" style="color:#ffb400"></ion-icon>
+               <ion-icon name="star" style="color:#ffb400"></ion-icon>
+               </span>({{list.review}} Reviews)
+               </div>
+                <div *ngIf="list.averagerating>=3.0 && list.averagerating<3.5">
+              <span class="star">
+                <ion-icon name="star" style="color:#ffb400"></ion-icon>  
+                <ion-icon name="star" style="color:#ffb400"></ion-icon> 
+                <ion-icon name="star" style="color:#ffb400"></ion-icon>
+               </span>({{list.review}} Reviews)
+               </div>
+                 <div *ngIf="list.averagerating>=2 && list.averagerating<=2.5">
+              <span class="star">
+                <ion-icon name="star" style="color:#ffb400"></ion-icon>  
+                <ion-icon name="star" style="color:#ffb400"></ion-icon> 
+               </span>({{list.review}} Reviews)
+               </div>
+                  <div *ngIf="list.averagerating>=0 && list.averagerating<2.0">
+              <span class="star">
+                <ion-icon name="star" style="color:#ffb400"></ion-icon>  
+               
+               </span>({{list.review}} Reviews)
+               </div>
+                    <div *ngIf="list.averagerating<0.0">
+              <span class="star">
+                <ion-icon name="star-half" style="color:#ffb400"></ion-icon>  
+               </span>({{list.review}} Reviews)
+               </div>
+          
+          
+		<!--   <span>
+        	  <ion-icon name="star"></ion-icon>  <ion-icon name="star"></ion-icon>  <ion-icon name="star"></ion-icon>
+        </span> -->
+	</div>	
+</div>
+</div>
+
+</ion-content>

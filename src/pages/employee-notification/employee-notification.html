@@ -1,0 +1,105 @@
+
+<ion-header>
+
+  <ion-navbar color="appheader">
+    <ion-title>NOTIFICATIONS</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+<!-- <div *ngFor="let data of notificationdata">
+<ion-list>
+  <ion-item class="item-client">
+    <ion-avatar item-start>
+      <img src="http://europa.promaticstechnologies.com/salonDirectory/img/customerprofileimage/{{data.customerprofileimage}}">
+    </ion-avatar>
+ <div class="content">
+    <div>Your Booking has Confirmed </div>
+     <div> with {{data.customername}}</div>
+     <div>Date-{{data.bookingdate}}</div>
+    <div>Time Slot{{data.starttime}} to {{data.endtime}}</div>
+     <div>Address-{{data.address}}</div>
+      <div>Contact Number-{{data.customercontactnumber}}</div>
+     </div>
+  </ion-item>
+</ion-list>
+</div>
+ -->
+
+
+
+<ion-segment  [(ngModel)]="Notiseg" color="primary" >
+    <ion-segment-button value="accepted">
+     REQUESTED
+    </ion-segment-button>
+    <ion-segment-button value="declined">
+     CANCELLED
+    </ion-segment-button>
+  </ion-segment>
+<div [ngSwitch]="Notiseg">
+
+<div *ngSwitchCase="'accepted'">
+<div *ngFor="let data of notificationdata;let i=index">
+<ion-list>
+  <ion-item class="item-client" id="var_{{i}}" (click)="selectedtime(i)">
+    <ion-avatar item-start *ngIf="data.customerprofileimage!=null">
+       <img src="http://gagandeepsethi.com/salonDirectory/img/customerprofileimage/{{data.customerprofileimage}}">
+    </ion-avatar>
+    <ion-avatar item-start *ngIf="data.customerprofileimage==null">
+      <img src="assets/img/user.jpg">
+    </ion-avatar>
+ <div class="content">
+    <div>{{data.customername}} wants to book you</div>
+     <div>Date-{{data.bookingdate | date}}</div>
+    <div>Time Slot-{{data.starttime}} to {{data.endtime}}</div>
+     <div>Address-{{data.address}}</div>
+      <div>Contact Number-{{data.customercontactnumber}}</div>
+       <button ion-button small class="btn" (click)="confirm(data.payment_id,data.paystatus)" color="appcolor">Confirm Booking</button>
+      <button ion-button small class="btn" color="appcolor" (click)="cancelbooking(data.payment_id,data.paystatus)">Cancel Booking</button>
+     </div>
+  </ion-item>
+</ion-list>
+</div>
+
+ <div *ngIf="hide1=='true'" class="past">
+<img src="assets/icon/bell.png">
+<div>Sorry!No New Notification Available</div>
+</div>
+</div>
+</div>
+
+
+
+<div [ngSwitch]="Notiseg">
+
+<div *ngSwitchCase="'declined'">
+<div *ngFor="let data of declined;let i=index">
+<ion-list>
+  <ion-item  id="var_{{i}}" >
+    <ion-avatar item-start *ngIf="data.customerprofileimage!=null">
+      <img src="http://gagandeepsethi.com/salonDirectory/img/customerprofileimage/{{data.customerprofileimage}}">
+    </ion-avatar>
+    <ion-avatar item-start *ngIf="data.customerprofileimage==null">
+      <img src="assets/img/user.jpg">
+    </ion-avatar>
+ <div class="content">
+    <div>Your Booking has Cancelled </div>
+     <div> with {{data.customername}}</div>
+     <div>Date-{{data.bookingdate}}</div>
+    <div>Time Slot-{{data.starttime}} to {{data.endtime}}</div>
+     <div>Address-{{data.address}}</div>
+      <div>Contact Number-{{data.customercontactnumber}}</div>
+     </div>
+  </ion-item>
+</ion-list>
+</div>
+
+ <div *ngIf="nodata=='true'" class="past">
+<img src="assets/icon/bell.png">
+<div>Sorry!No  New Notification Available</div>
+</div>
+</div>
+</div>
+</ion-content>

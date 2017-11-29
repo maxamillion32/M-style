@@ -1,0 +1,59 @@
+<!--
+  Generated template for the CustomerEmployeeListing page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="appheader">
+    <ion-title>STAFF</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content style="background-color:#EBEBF9" >
+
+     <div class="main-div" >
+      <div class="div-one">
+
+
+      <div class="profile-img">
+        <img  class="list-img" *ngIf="ownerpic!=null" src="http://gagandeepsethi.com/salonDirectory/img/salonownerprofileimage/{{ownerpic}}">
+        <img  class="list-img"  *ngIf="ownerpic==null" src="assets/img/user.jpg">
+        </div>
+
+
+
+        <div class="text">{{salonowner}}</div>
+        <button ion-button small class="btn" color="appcolor"
+    (click)="owner()">View Details</button>
+      </div>
+        
+    </div>
+
+    <div class="main-div" >
+    	<div class="div-one" *ngFor="let data of itemss">
+
+
+      <div class="profile-img">
+      	<img  class="list-img"  *ngIf="data.profile_image!=null" src="http://gagandeepsethi.com/salonDirectory/img/employeeprofileimage/{{data.profile_image}}">
+        <img  class="list-img" *ngIf="data.profile_image==null" src="assets/img/user.jpg">
+        </div>
+
+
+
+      	<div class="text">{{data.full_name}}</div>
+      	<!-- <div class="text">{{data.profile}}</div> -->
+       <!--  <div class="status">{{data.employee_status}}</div> -->
+      	<button ion-button small class="btn" color="appcolor"
+        (click)="view(data.employee_id,data.full_name,data.contact_number,
+    data.category,data.profile_image,data.email,data.employee_online_status)">View Details</button>
+    	</div>
+    		
+    </div>
+
+
+
+</ion-content>

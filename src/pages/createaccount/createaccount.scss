@@ -1,0 +1,49 @@
+page-createaccount {
+.card {
+/*    background:#6D0710 none repeat scroll 0 0;
+    */
+    display: table;
+    height: 145px;
+    margin: 45px auto;
+    position: relative;
+    text-align: center;
+    width: 248px;
+}
+.toolbar-title-md {
+   font-family: "OpenSans-Regular";
+}
+.toolbar-title-ios {
+   font-family: "OpenSans-Regular";
+   font-size: 12.2px;
+   
+}
+
+.cust1{
+	 text-align: center;
+	 background:#fff none repeat scroll 0 0;
+	border:1px solid #6D0710;
+	border-style: dashed;
+	   position: absolute;
+	   font-family: "OpenSans-Regular";
+	  width:50%;
+	  right:0%;
+	  left:0;
+	  top:150px;
+	  margin: 0 auto;
+
+}
+.cust2{
+	 text-align: center;
+	 background:#fff none repeat scroll 0 0;
+	border:1px solid #6D0710;
+	border-style: dashed;
+	   position: absolute;
+	   font-family: "OpenSans-Regular";
+	   width:63%;
+	   right:0;
+	   top:150px;
+	   left:0;
+	   margin:0 auto;
+
+}
+}

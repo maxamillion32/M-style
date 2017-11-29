@@ -1,0 +1,83 @@
+<!--
+  Generated template for the EmployeeHome page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="appheader">
+         <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+        </button>
+    <ion-title>EMPLOYEE HOME</ion-title>
+    <ion-buttons end *ngIf="count==0">
+    	<button (click)="notification()" ion-button><ion-icon class="notification"  ios="ios-notifications" md="md-notifications" ></ion-icon></button>
+    	<!--  <span class="span-item">0</span> -->
+    </ion-buttons>
+     <ion-buttons end *ngIf="count!=0">
+    	<button (click)="notification()" ion-button><ion-icon class="notification"  ios="ios-notifications" md="md-notifications" ></ion-icon></button>
+    	  <span class="span-item">{{count}}</span>
+    </ion-buttons>
+  
+  </ion-navbar>
+
+</ion-header>
+
+
+<!-- <ion-content style="background: url(assets/img/model-image.jpg) no-repeat center ;background-size:cover;" padding > -->
+
+<ion-content  [ngStyle]="{'background-image': 'url(' + imagePath + ')'}" no-repeat center style="background-size:cover;object-fit: cover;background-position:center" 
+   >
+
+<div class="main">
+		<div class="listing" (click)="directory()">
+			<div class="div-one">
+				<img  class="list-img" src="img/directory.png">	
+			    <div class="text">MY DIRECTORY</div>
+			</div>
+		</div>
+
+		<div class="listing" (click)="Gallery()" >
+			<div class="div-one">
+				<img  class="list-img" src="img/gallery.png">
+			    <div class="text">MY GALLERY</div>
+			</div>
+		</div>
+
+
+		<div class="listing" (click)="APPOINTMENTS()">
+			<div class="div-one">
+			<img  class="list-img" src="img/appointments.png">
+		    <div class="text">MY APPOINTMENTS</div>
+			</div>
+		</div>
+
+
+		<div class="listing" (click)="client()">
+			<div class="div-one">
+			<img  class="list-img" src="img/clients.png">
+		  <div class="text">MY CLIENTS</div>
+			</div>
+		</div>
+
+
+<!-- 
+		<div class="listing" (click)="About()">
+			<div class="div-one">
+			<img  class="list-img" src="assets/icon/user300.png">
+		     <div class="text">ABOUT US</div>
+			</div>
+		</div>
+ -->
+
+
+<!-- 
+		<div class="listing" (click)="Contact()">
+		    <div class="div-one">
+			<img  class="list-img" src="assets/icon/contact-us300.png">	
+		    <div class="text">CONTACT US</div>
+			</div>
+		</div> -->
+</div>
+</ion-content>

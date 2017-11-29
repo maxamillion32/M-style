@@ -1,0 +1,49 @@
+<ion-grid *ngIf="status!=0">
+       <ion-row *ngFor ="let m of mynotication_data;let i=index ">
+     
+<ion-col col-2 >
+ <div id="var_{{i}}"  (click)="opennotification(m,i)" *ngIf="m.array_index==1" style="height: 100%;width: 121%;background-color:#fff">
+<div style ="padding-top: 20px">
+        <img style="border-radius: 100%;height: 55px width:55px;object-fit: cover;" src="http://gagandeepsethi.com/salonDirectory/img/customerprofileimage/{{m.customer_image}}" >
+        </div>
+        </div>
+
+<div id="var_{{i}}"  (click)="opennotification(m,i)" *ngIf="m.array_index==0" style="height: 100%;width: 105%;background-color:#edf3ff">
+        <div   style ="padding-top: 20px">
+        <img style="border-radius: 100%;height: 55px width:55px;object-fit: cover;" src="http://gagandeepsethi.com/salonDirectory/img/customerprofileimage/{{m.customer_image}}" >
+        </div>
+</div>
+</ion-col>
+
+<ion-col col-10 >
+ <div id="var_{{i}}"  (click)="opennotification(m,i)" *ngIf="m.array_index==1" style="height: 100%;width: 100%;background-color: #fff" >
+
+        <p *ngIf="m.position=='salonowner' " style="padding-top: 20px;margin-left:4px;padding-left: 0px;width: 98%;font-family: open-sans;margin-top: 1px"><strong>{{m.customer_fullname}}  </strong> wants to book you </p>
+
+        <p *ngIf="m.position=='employee' " style="padding-top: 20px;margin-left:4px;padding-left: 0px;width: 98%;font-family: open-sans;margin-top: 1px"><strong>{{m.customer_fullname}}  </strong> wants to book your employee {{m.name}}  </p>
+
+   <p *ngIf="m.array_index==1"  style="margin-left: 3px;padding-top: 0px;width: 98%;text-transform: capitalize;font-family: open-sans"> 
+
+   Date of Appointment:{{m.date}} at {{m.start_time}}
+
+    </p>
+      </div>
+ <div id="var_{{i}}"  (click)="opennotification(m,i)" *ngIf="m.array_index==0" style="height: 100%;width: 121%;background-color: #edf3ff">
+   
+        <p  *ngIf="m.position=='employee' " style="padding-top: 20px;margin-left:4px;padding-left: 0px;width: 98%;font-family: open-sans;margin-top: 1px"><strong>{{m.customer_fullname}}  </strong> wants to book your employee {{m.name}} </p>
+
+              <p  *ngIf="m.position=='salonowner' " style="padding-top: 20px;margin-left:4px;padding-left: 0px;width: 98%;font-family: open-sans;margin-top: 1px"><strong>{{m.customer_fullname}}  </strong> wants to book you </p>
+
+   <p *ngIf="m.array_index==0"  style="margin-left: 3px;padding-top: 0px;width: 98%;text-transform: capitalize;font-family: open-sans"> 
+
+   Date of Appointment:<span>{{m.date}} at {{m.start_time}}</span>
+
+    </p>
+
+</div>
+    </ion-col>
+          
+    </ion-row>
+
+   
+      </ion-grid>  

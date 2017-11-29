@@ -1,0 +1,85 @@
+
+<ion-header>
+
+  <ion-navbar color="purple">
+ 
+    <ion-title  style="color:#fff ">MANAGE STAFF</ion-title>
+     <ion-buttons right>
+        <button ion-button (click)="cancel()" >CANCEL</button>
+    </ion-buttons>
+
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding >
+
+
+<form [formGroup]="form3">
+
+  <ion-label  style="color: #909090">EMPLOYEE NAME</ion-label>
+
+<ion-item style="color: #000">
+ <ion-input type="text"   placeholder="ENTER EMPLOYEE NAME" formControlName ="name"></ion-input>
+ </ion-item>
+  <p style="color:red"  *ngIf="!form3.controls.name.valid && 
+ (form3.controls.name.dirty )">*Invalid field.  </p>
+	<br>
+
+
+  <ion-label style="color: #909090">EMAIL</ion-label>
+
+<ion-item style="color: #000">
+ <ion-input    placeholder="ENTER EMAIL" formControlName ="email"></ion-input>
+ </ion-item>
+  <p style="color:red"  *ngIf="!form3.controls.email.valid && 
+ (form3.controls.email.dirty )">*Invalid Field or Use Lowercase Letter  </p>
+<br>
+
+  <ion-label style="color: #909090">PHONE NUMBER</ion-label>
+     <ion-item style="color: #000">
+      <ion-input   placeholder="ENTER PHONE" formControlName ="phone_number" ></ion-input>
+    </ion-item>
+ <p style="color:red"  *ngIf="!form3.controls.phone_number.valid && 
+ (form3.controls.phone_number.dirty )">*Invalid field </p>
+
+
+<br>
+<br>
+<ion-item *ngIf="printdata!=undefined" style="color: #909090">
+  <ion-label  >SERVICES OFFERED </ion-label>
+
+  <ion-select *ngIf="printdata!=undefined" formControlName="selected_service" multiple="true">
+    <div *ngFor = "let m of printdata">
+         <ion-option [value]="m.title">{{m.title}}</ion-option>
+         
+      </div>
+           </ion-select>
+
+          </ion-item>
+
+
+
+   
+
+      <ion-label *ngIf="printdata==undefined"  style="color: #909090">SERVICES OFFERED</ion-label>
+
+     <ion-item *ngIf="printdata==undefined"  style="color: #999">
+            PLEASE ADD  SERVICES TO YOUR SERVICE LIST 
+
+
+          </ion-item>
+
+
+       </form>
+<br>
+
+<div >
+
+  <button ion-button block style="margin: 0 28%" (click)="save()" [disabled]=!form3.valid >SAVE</button>
+
+</div>
+
+
+</ion-content>

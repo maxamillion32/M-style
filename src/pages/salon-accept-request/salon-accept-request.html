@@ -1,0 +1,193 @@
+<ion-header>
+
+  <ion-navbar color="purple">
+  
+    <ion-title>BOOKING DETAILS</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+  <div class="main-div" >
+   <img class="profile-image"   src="http://gagandeepsethi.com/salonDirectory/img/customerprofileimage/{{image}}"> 
+  <!--  <img class="profile-image"  *ngIf="myimage==null" src="assets/img/user.jpg"> -->
+</div>
+<div class="name">
+   <h4>{{ notification_data.customer_fullname}}</h4>
+
+  <div *ngIf="notification_data.position=='salonowner' " style="float: left;margin-left: 15px;margin-top: -46px">
+<button  ion-button block   (click)="accept(notfication_data)">
+  Accept </button>
+     </div>
+       
+          <div  *ngIf="notification_data.position=='salonowner' "  style="float:right;margin-right: 15px;margin-top: -46px ">
+   
+  <button ion-button block  (click)="decline(notfication_data)">
+      Decline </button>
+               </div>
+
+
+</div>
+
+
+<div class="super">
+   <div class="user-info">
+      <div class="user-profile">
+      <img  class="blue" src="assets/icon/name.png">
+         <div  class="field-details">
+            
+       Name:    {{ notification_data.customer_fullname}}
+         </div>
+      </div>
+      <div class="user-profile">
+       <img  class="blue" src="assets/icon/number.png">
+         <div  class="field-details">
+           
+        Contact No. :   {{ notification_data.customer_contact_number}}
+         </div>
+      </div>
+      <div class="user-profile">
+       <img  class="blue" src="assets/icon/mail.png">
+         <div  class="field-details">
+           
+       Email: {{ notification_data.customer_email}}
+         </div>
+      </div>
+      <div class="user-profile">
+       <img  class="blue" src="assets/icon/calendar(1).png">
+         <div   class="field-details">
+           
+      Appointment Date:   {{ notification_data.date}}
+         </div>
+      </div>
+ 
+     <div class="user-profile">
+       <img  class="blue" src="assets/icon/notepad.png">
+
+         <div   class="field-details">
+       Service Selected: <span *ngFor="let m of service_selected">{{m}}</span>  
+            </div>
+
+          
+         </div>
+      
+
+        <div class="user-profile">
+       <img  class="blue" src="assets/icon/clock.png">
+         <div   class="field-details">
+           
+        Start Time: {{ notification_data.start_time}}
+         </div>
+      </div>
+ 
+     <div class="user-profile">
+       <img  class="blue" src="assets/icon/clock.png">
+         <div   class="field-details">
+           
+          End Time: {{notification_data.end_time}}
+         </div>
+      </div>
+
+               <div class="user-profile">
+       <img  class="blue" src="assets/icon/money.png">
+         <div   class="field-details">
+           
+          Total Charges: {{notification_data.totalcost}}
+         </div>
+      </div>
+
+ 
+
+
+   </div>
+</div>
+
+</ion-content>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <ion-item  style="border-bottom: 1px solid #9C9C9B ">
+  Name:{{ notification_data.customer_fullname}}
+</ion-item>
+<!-- <ion-item  style="background-color: #FFF;font-size:16px;font-weight: lighter" >{{ notification_data.customer_fullname}}
+ <ion-input  type="text"  placeholder="" ></ion-input>
+ </ion-item> -->
+
+
+<!-- <ion-item style="border-bottom: 1px solid #9C9C9B ">
+  <ion-label>Contact No:{{ notification_data.customer_contact_number}}</ion-label>
+</ion-item> -->
+<!-- <ion-item style="background-color: #FFF;font-size:16px;font-weight: lighter">{{ notification_data.customer_contact_number}}
+
+ </ion-item> -->
+
+<!-- <ion-item  style="border-bottom: 1px solid #9C9C9B ">
+  <ion-label>Email-Id:{{ notification_data.customer_email}}</ion-label>
+</ion-item> -->
+<!-- <ion-item  style="background-color: #FFF;font-size:16px;font-weight: lighter">{{ notification_data.customer_email}}
+ </ion-item> -->
+
+
+<!-- <ion-item  style="border-bottom: 1px solid #9C9C9B ">
+  <ion-label>DATE OF APPOINTMENT:{{ notification_data.date}}</ion-label>
+</ion-item > -->
+
+<!-- <ion-item style="background-color: #FFF;font-size:16px;font-weight: lighter">{{ notification_data.date}}
+
+ </ion-item>
+
+<ion-item  style="border-bottom: 1px solid #9C9C9B ">
+  <ion-label> APPOINTMENT START TIME: {{ notification_data.start_time}}</ion-label>
+</ion-item > -->
+<!-- <ion-item style="background-color: #FFF;font-size:16px;font-weight: lighter">{{ notification_data.start_time}}
+
+ </ion-item> -->
+
+<!--  <ion-item  style="border-bottom: 1px solid #9C9C9B ">
+  <ion-label> APPOINTMENT END TIME: {{ notification_data.end_time}}</ion-label>
+</ion-item > -->
+<!-- <ion-item style="background-color: #FFF;font-size:16px;font-weight: lighter">{{ notification_data.end_time}}
+
+ </ion-item> -->
+
+
+
+
+<!-- <br>
+<div *ngFor="let n of mynotifydata " >
+<div class="smalldiv">
+	{{n.title}}
+</div>
+<div  class="mediumdiv">
+
+
+	<span style="margin-left: 5px"> TIME: {{ n.time}}</span><br>
+     <span style="margin-left: 5px">END TIME: {{ notification_data.end_time}}</span><br>
+      <span style="margin-left: 5px">PRICE: {{ n.cost}}</span>
+      <br>
+      	
+</div><br><br>
+</div>
+<br><br> --> -->
+<!-- <div style="text-align:center">
+<button ion-button (click)="accept()">ACCEPT</button>
+        <button ion-button (click)="decline()">DECLINE</button>
+        </div> -->
+

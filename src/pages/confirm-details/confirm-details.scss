@@ -1,0 +1,102 @@
+page-confirm-details {
+   .salon-img{
+      border-radius: 50%;
+    float: left;
+    height: 42px;
+    width: 40px;
+    object-fit: cover;
+   }
+   .emp-img{
+   	 border-radius: 50%;
+    float: left;
+    height: 42px;
+    width: 40px;
+    object-fit: cover;
+    
+   }
+   .name-emp{
+     padding-left: 60px;
+     padding-top: 4px;
+   }
+   .service{
+   	/*float: left;*/
+    width: 50%;
+    padding-left: 60px;
+   }
+   .cost{
+   	margin-left: 120px;
+   }
+
+   .costt{
+    float: right;
+    margin-top: -18px;
+   }
+   .button-ios {
+  
+    height: 3.2rem;
+    
+}
+   .time{
+   	margin-top: 12px;
+   	/*border-bottom: 1px solid rgb(0, 0, 0);*/
+   	 font-family: 'OpenSans-Regular';
+   	 font-size: 12px;
+   	 height: 22px;
+   }
+   .main-div{
+     float:left;
+     width:20%;
+   	/*border-bottom: 1px solid rgb(0, 0, 0);*/
+   }
+   .salon-detail{
+     font-family: 'OpenSans-Regular';
+   }
+   .second-div{
+   
+    /*border-bottom: 1px solid rgb(0, 0, 0);*/
+    margin-top: 35px;
+   }
+   .employee-detail{
+    
+    font-family: "OpenSans-Regular";
+     
+   }
+   .total{
+   	float: right;
+   	   font-family: 'OpenSans-Regular';
+   	  margin-top: 13px;
+   }
+   .textarea-text {
+  	margin-top: 40px;
+    height: 60px;
+    overflow: auto;
+    width: 100%;
+    font-size: 1.6rem;
+     padding: 6px;
+    font-weight: normal;
+    font-family: 'OpenSans-Regular';
+}
+.client{
+	margin-top: 100px;
+	font-family: 'OpenSans-Regular';
+	
+   /*border-bottom: 1px solid rgb(0, 0, 0);*/
+}
+.terms{
+	text-align: center;
+	margin-top:27px;
+	font-family: 'OpenSans-Regular';
+}
+.cnf-btn{
+	margin-top:12px;
+	font-family: 'OpenSans-Regular';
+}
+.btn{
+	border-radius: 20px;
+}
+.toolbar-title-ios {
+   font-size: 13px;
+  font-family: Open Sans !important;
+    
+ }
+}

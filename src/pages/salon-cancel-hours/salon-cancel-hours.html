@@ -1,0 +1,36 @@
+
+
+<div class="divclass">
+  <div class ="alertclass">
+
+
+
+    <div style="text-align: center;margin-top: 14px;font-family:open-sans">
+   Time Period by which a customer can cancel a booking after he had made a booking
+      </div>
+      <br>
+
+
+  
+  
+     <ion-list *ngFor="let m of time" radio-group [(ngModel)]="selected_value">
+
+       <ion-item>
+                <ion-label>{{m.mytime}}</ion-label>
+                  <ion-radio [value]="m.mytime" ></ion-radio>
+                    </ion-item>
+                       
+                      </ion-list>
+
+
+
+
+
+  <div style="text-align:center">
+<button ion-button (click)="accept()">Save</button>
+        <button ion-button (click)="cancel()">Cancel</button>
+        </div>
+
+
+     </div>
+       </div>

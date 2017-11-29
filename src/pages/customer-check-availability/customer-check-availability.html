@@ -1,0 +1,102 @@
+<ion-header>
+    <ion-navbar color="appheader">
+        <ion-title>PICK DATE & TIME</ion-title>
+        <!-- <ion-buttons end>
+            <button ion-button [disabled]="isToday" (click)="today()">Today</button>
+        </ion-buttons> -->
+    </ion-navbar>
+</ion-header>
+
+
+
+<ion-content  >
+<div class="calender">
+    <div class="calender-header">
+      <ion-icon (click)="previousMonth()" class="left-arrow" name="ios-arrow-back"></ion-icon>
+        <ion-label class="calender-header-text">
+          {{month[selectedMonth]}} {{selectedYear}}
+        </ion-label> 
+      <ion-icon (click)="nextMonth()" class="right-arrow" name="ios-arrow-forward"></ion-icon>
+    </div>
+    <div class="calender-sebheader">
+      <ion-label *ngFor="let day of days" class="calender-subheader-text">{{day}}</ion-label> 
+    </div>
+    <div class="calender-content">
+      <ion-label class="calender-content-text" id="{{b}}datediv" (click)="pickDate(b)" *ngFor="let b of box;let i = index ">
+        <span >{{b}}</span>
+      </ion-label>
+    </div>
+  </div>
+
+
+<div class="timer">
+<div class="timetext"><ion-icon name="arrow-down"></ion-icon>Select time Slot</div>
+<div class="add" (click)="openservicesmodel()">Add Services
+<ion-icon class="icon-add" name="add-circle">
+</ion-icon>
+</div>
+
+ <div class="img-slide-tag">
+     <ion-item  no-padding  class="item-img-slide">            
+       <div style="width:100%;overflow-x:scroll;overflow-y: hidden;" >
+          <div class="div-images" *ngFor="let data of timedata;let i=index" >
+         <ion-col   [ngClass]="{'active': selectedItem == data}" 
+         (click)="selectedtime(data,data.hr,data.min)">{{data.hr}}:{{getMin(data.min)}}</ion-col>
+         </div>
+     </div>
+</ion-item>
+</div>
+</div>
+
+
+  <div class="main">
+    <div class="img-div" *ngIf="employeebook==1">
+      <img  *ngIf="employeepic==null" src="assets/img/user.jpg">
+     <img *ngIf="employeepic!=null" src="http://gagandeepsethi.com/salonDirectory/img/employeeprofileimage/{{employeepic}}">
+    </div>
+    <div class="img-div" *ngIf="salonownerbook==1">
+      <img  *ngIf="salonownerpic==null" src="assets/img/user.jpg">
+     <img *ngIf="salonownerpic!=null" src="http://gagandeepsethi.com/salonDirectory/img/salonownerprofileimage/{{salonownerpic}}">
+    </div>
+    <div  class="service">{{selectedservicetitle}}</div>
+     <div class="choosen-cost">${{selectedservicecost}}</div>
+    <div class="employeename" *ngIf="employeebook==1">{{employeename}}</div>
+     <div class="employeename" *ngIf="salonownerbook==1">{{salonownername}}
+     </div>
+     <div class="time">{{defaulttime1}}:{{addzero(defaulttime2)}}-{{totalhour}}:{{addzero2(totalmin)}}</div>
+  
+</div>
+
+
+
+
+<div class="no-services" *ngIf="noservices=='true'">
+  <div>No Services Added.</div>
+  <div>Please Add Services</div>
+</div>
+
+<div class="main" *ngFor="let data of bigdata;let i=index">
+    <div class="img-div" *ngIf="employeebook==1">
+      <img  *ngIf="employeepic==null" src="assets/img/user.jpg">
+     <img *ngIf="employeepic!=null" src="http://gagandeepsethi.com/salonDirectory/img/employeeprofileimage/{{employeepic}}">
+    </div>
+
+    <div class="img-div" *ngIf="salonownerbook==1">
+      <img  *ngIf="salonownerpic==null" src="assets/img/user.jpg">
+     <img *ngIf="salonownerpic!=null" src="http://gagandeepsethi.com/salonDirectory/img/salonownerprofileimage/{{salonownerpic}}">
+    </div>
+
+    <div  class="service">{{data.title}}</div>
+     <ion-icon class="icon-delete" (click)="deleteservice(i)" ios="ios-trash" md="md-trash"></ion-icon>
+     <div class="choosen-cost">$  {{data.cost}}</div>
+    <div class="employeename" *ngIf="employeebook==1">{{employeename}}</div>
+     <div class="employeename" *ngIf="salonownerbook==1">{{salonownername}}
+     </div>
+     <div class="time">{{getHours1(data.time,i)}}:{{getMin1(data.time,i)}}--{{getHours2(data.time,i)}}:{{getMin2(data.time,i)}}</div>
+  
+</div>
+<div style="text-align:center;margin-top:26px;">
+<button ion-button color="appcolor" class="confirm" (click)="appoint()"> PROCEED- {{selecteddate |date}}</button>
+</div>
+
+</ion-content>

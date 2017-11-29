@@ -1,0 +1,330 @@
+page-salon-owner-profile2 {
+
+
+
+.item-md.item-block .item-inner {
+    border-bottom: 0px solid #dedede;
+    padding-right: 8px;
+}
+.item-ios.item-block .item-inner {
+    border-bottom: 0px solid #dedede;
+    padding-right: 8px;
+}
+img {
+    border: 0 none;
+    max-width: 100%;
+    width: 28px;
+}
+.toolbar-ios {
+    min-height: 56px;
+    padding: 4px;
+}
+form, input, optgroup, select {
+    border: 0 none;
+    color: inherit;
+    font: inherit;
+    margin: 0;
+    background-color: #f5f5f5;
+}
+.item-md {
+    background-color: #fff;
+    border-bottom: 2px solid #b1b1b1;
+    box-shadow: none;
+    color:#808080;
+    font-size: 1.5rem;
+    font-family: "open sans";
+    font-weight: normal;
+    padding-left: 16px;
+    padding-right: 0;
+    position: relative;
+    text-transform: none;
+    transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
+}
+.item-ios {
+    background-color: #fff;
+    border-bottom: 2px solid #b1b1b1;
+    box-shadow: none;
+    color:#808080;
+    font-size: 1.5rem;
+    font-family: "open sans";
+    font-weight: normal;
+    padding-left: 16px;
+    padding-right: 0;
+    position: relative;
+    text-transform: none;
+    transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
+}
+.text-input-md {
+    color: #000;
+    font-family: "Open-Sans";
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin: 13px 5px;
+    padding: 0;
+    width: calc(100% - 8px - 8px);
+}
+.text-input-ios{
+    color: #000;
+    font-family: "Open-Sans";
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin: 13px 5px;
+    padding: 0;
+    width: calc(100% - 8px - 8px);
+}
+.button-md {
+    background-color: #fff;
+    border-radius: 41px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    color: #fff;
+    font-size: 1.4rem;
+    width: 60%;
+    font-weight: 500;
+    height: 3.6rem;
+    margin: 0.4rem 0.2rem;
+    overflow: hidden;
+    padding: 0 1.1em;
+    text-transform: uppercase;
+    transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0s, background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0s, color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0s, -webkit-box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
+}
+.button-ios {
+    background-color: #fff;
+    border-radius: 41px;
+     width: 60%;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 500;
+    height: 3.6rem;
+    margin: 0.4rem 0.2rem;
+    overflow: hidden;
+    padding: 0 1.1em;
+    text-transform: uppercase;
+    transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0s, background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0s, color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0s, -webkit-box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
+}
+.profile-edit-bttnn {
+  background: transparent;
+  font-family: "open-sans";
+  color: #fff;
+  height: 40px;
+   line-height: 11px;
+  position: absolute;
+  right:1px;
+  text-align: center;
+  top: 32px;
+ width: 60px;
+  z-index: 1;
+  font-size: 11px;
+  font-weight: 600px
+}
+.button-block {
+    clear: both;
+    display: initial;
+    width: 60%;
+}
+.toolbar-ios ion-title {
+    height: 100%;
+    left: 0;
+    padding: 0 65px 1px;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    transform: translateZ(0px);
+    width: 100%;
+}
+
+.toolbar-title-ios {
+    font-size:13px;
+     font-family: Open Sans !important;
+   
+}
+
+.back-button-ios {
+    -moz-box-ordinal-group: 1;
+    line-height: 1;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 17px;
+    min-height: 3.2rem;
+    order: 0;
+    overflow: visible;
+    padding-top: 4px;
+    transform: translateZ(0px);
+    z-index: 99;
+}
+.toolbar-md {
+  
+    font-family: 'OpenSans-Regular';
+}
+.main-div {
+  background: #0000FF none repeat scroll 0 0;
+  height: 197px;
+  width: 100%;
+  position: relative;
+}
+.profile-image{
+  height:95px;
+  width:95px;
+  border-radius: 100%;
+   display: inline-block;
+    object-fit: cover;
+      position:absolute;
+      top:24%;
+      left: 0;
+      margin: 0 auto;
+      right:0;
+      border:5px solid #fff;
+}
+.work {
+    margin-left: -9px;
+}
+.item-upper{
+    background:#E1E1E1;
+    font-family: 'OpenSans-Regular';
+    margin-top: 20px;
+    
+  }
+
+  .super{
+    padding: 12px;
+  }
+  .arrow{
+   color: rgb(255, 0, 0);
+    float: right;
+    font-size: 17px;
+    padding-right: 10px;
+}
+ /* .user-image {
+
+    width:100%;
+    float:left;
+    position: relative;
+   
+}*/
+
+.name{
+  position: absolute;
+    color: #fff;
+    top: 142px;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    text-align: center;
+
+}
+  .text-input-md {
+    color: #000;
+     font-family: 'OpenSans-Regular';
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin: -4px 5px;
+    padding: 0;
+    width: calc(100% - 8px - 8px);
+}
+
+
+.user-name{
+  font-size: 20px;
+  font-family: 'OpenSans-Regular';
+  float: right;
+  margin-top:60px;
+  margin-right:15px;
+}
+.user-profile{
+  float:left;
+   /*background: #fff none repeat scroll 0 0;*/
+   width:100%;
+   /*border:1px solid black;*/
+   margin-top: 23px;
+   padding-left: 17px;
+
+}
+.abc{
+  margin-top: 2px;
+}
+.blue{
+  width:15px;
+  height:15px;
+  float:left;
+  margin-top:3px;
+}
+.edit{
+  
+  width:60%;
+  border-radius:20px;
+}
+.field{
+  border-bottom:2px solid #b7b7b7;
+  color:#000;
+ font-family:'OpenSans-Bold';
+ text-transform: uppercase;
+  padding:10px;
+
+}
+
+.field-details{
+  color: #000;
+  font-family: "OpenSans-Regular";
+  padding: 2px 0 0px 25px;
+  margin-top:-1px;
+}
+.user-info{
+  margin-top: 29px;
+  padding: 13px;
+    background-color: #F5F5F5;
+    height: 165px;
+}
+
+
+.gallery{
+  
+  left: 80%;
+    position: absolute;
+    top: 37%;
+    font-family: 'OpenSans-Regular';
+}
+.icon-media{
+  color: rgb(0, 128, 128);
+    font-size: 1.2em;
+}
+.button-md {
+    background-color: #fff;
+    border-radius: 41px;
+   
+    color: #fff;
+    font-size: 1.4rem;
+    width: 60%;
+    font-weight: 500;
+    
+    
+}
+.button-ios {
+    background-color: #fff;
+    border-radius: 41px;
+   
+    color: #fff;
+    font-size: 1.4rem;
+    width: 60%;
+    font-weight: 500;
+    }
+    .button-block {
+    clear: both;
+    display: initial;
+    width: 44%;
+}
+
+.item-md.item-block .item-inner {
+    border-bottom: 0px solid #dedede;
+    padding-right: 8px;
+}
+.item-ios.item-block .item-inner {
+    border-bottom: 0px solid #dedede;
+    padding-right: 8px;
+}
+.text-input-ios {
+   
+    margin: 0 5px !important;
+
+}
+}

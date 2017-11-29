@@ -1,0 +1,79 @@
+page-salon-reg2 {
+
+
+.input-field {
+    
+    border:1px solid #acacac;
+    color: #222;
+    font-size: 1.6rem;
+    font-weight: normal;
+    margin-bottom: 5%;
+    padding-left: 0px;
+    padding-right: 0;
+    position: relative;
+    text-transform: none;
+    transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
+}
+ion-icon {
+
+    margin-left: 18px;
+}
+.cust-reg{
+
+}
+.list-ios {
+    margin: -1px 0 14px;
+}
+.text-input-ios {
+    margin: 11px 8px;
+    padding: 0;
+    width: calc(100% - 8px);
+}
+.reg{
+	width:90%;
+	margin-left: 4%;
+	background-color:#6D0710;
+	margin-top: 8%;
+    font-family: 'OpenSans-Regular';
+    border-radius:20px;
+}
+.list{
+	margin-top:8%;
+}
+.agree{
+	margin-left:30px;
+}
+.terms{
+	margin-left:2px;
+}
+.check{
+    width: 16px;
+    float: left;
+}
+.text-input[disabled] {
+    opacity: 1
+}
+.btn{
+   font-family:'OpenSans-Regular';
+
+}
+.regheading{
+     font-family: 'OpenSans-Regular';
+     text-align: center;
+}
+.item-md ion-icon[item-left], .item-md ion-icon[item-right], .item-md ion-icon[item-start], .item-md ion-icon[item-end] {
+    margin-bottom: 10px;
+    margin-left: -14px;
+    margin-top: -26px;
+}
+.item-ios ion-icon[item-left], .item-ios ion-icon[item-right], .item-ios ion-icon[item-start], .item-ios ion-icon[item-end] {
+    margin-bottom: 10px;
+    margin-left: -14px;
+    margin-top: -26px;
+}
+.toolbar-title-ios {
+   font-size: 13px;
+  font-family: Open Sans !important;
+    
+ }
+}

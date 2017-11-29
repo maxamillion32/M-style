@@ -1,0 +1,146 @@
+<!-- 
+
+
+<div class="divclass">
+	<div class ="alertclass">
+		<div class="titledivclass">
+			<ion-label no-margin style="width: 100%;font-size: 20px">ADD YOUR SERVICE</ion-label>
+			
+
+		</div>
+		
+    <form [formGroup]="addservice">
+     	
+   <ion-item>
+      <ion-label>Service Name:</ion-label>
+          <ion-input  formControlName="name" ></ion-input>
+                </ion-item>
+
+         <p style="color:red;margin-left:19px "  *ngIf="!addservice.controls.name.valid && 
+                      (addservice.controls.name.dirty )">*Invalid field. </p>
+
+
+
+ <ion-item>
+      <ion-label>Cost(In $):</ion-label>
+          <ion-input max="3" min="1"  formControlName="cost" ></ion-input>
+             </ion-item>
+
+      <p style="color:red;margin-left:19px"  *ngIf="!addservice.controls.cost.valid && 
+                      (addservice.controls.cost.dirty )">*Invalid field.</p>
+
+
+<ion-item>
+       <ion-label>Duration:</ion-label>
+          <ion-datetime displayFormat="HH:mm" min="00:15" max="03:00" formControlName="time"  > </ion-datetime>
+            </ion-item>
+
+
+
+
+    <ion-item>
+       <ion-label>Descrption:</ion-label>
+           <ion-input  formControlName = "description" ></ion-input>
+              </ion-item>
+            
+            <p style="color:red;margin-left:19px"  *ngIf="!addservice.controls.description.valid && 
+                      (addservice.controls.description.dirty )">*Invalid field. </p>
+   
+           </form>
+
+
+		<div style="width:100%;text-align: center">
+	
+	<button ion-button (click) ="submit()" [disabled]="!addservice.valid"  >SUBMIT</button>
+      <button ion-button (click) ="cancel()" >CANCEL</button>
+	        	</div>
+	
+</div>
+</div> -->
+
+
+<ion-header>
+
+  <ion-navbar color="purple">
+ 
+    <ion-title  style="color:#fff ">ADD SERVICE</ion-title>
+     <ion-buttons right>
+        <button ion-button (click)="cancel()" >CANCEL</button>
+    </ion-buttons>
+
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding >
+
+
+<form [formGroup]="addservice">
+
+  <ion-label  style="color: #909090">Service Name:</ion-label>
+
+<ion-item style="color: #000">
+ <ion-input type="text"   placeholder="ENTER SERVICE NAME" formControlName ="name"></ion-input>
+ </ion-item>
+  <p style="color:red"  *ngIf="!addservice.controls.name.valid && 
+ (addservice.controls.name.dirty )">*Invalid field.  </p>
+  <br>
+
+
+
+
+
+  <ion-label style="color: #909090">Cost(In $):</ion-label>
+
+<ion-item style="color: #000">
+ <ion-input    placeholder="ENTER COST" formControlName ="cost"></ion-input>
+ </ion-item>
+  <p style="color:red"  *ngIf="!addservice.controls.cost.valid && 
+ (addservice.controls.cost.dirty )">*Invalid Field  </p>
+<br>
+
+  <ion-label style="color: #909090">Description:</ion-label>
+     <ion-item style="color: #000">
+      <ion-input   placeholder="ENTER DESCRIPTION" formControlName ="description" ></ion-input>
+    </ion-item>
+
+  <p style="color:red"  *ngIf="!addservice.controls.description.valid && 
+             (addservice.controls.description.dirty )">*Invalid field </p>
+
+<br>
+<ion-label style="color: #909090">Duration:</ion-label>
+     <ion-item>
+      
+<ion-datetime placeholder="ENTER DURATION" displayFormat="HH:mm" min="00:15" max="03:00" formControlName="time"  > </ion-datetime>
+            </ion-item>
+
+
+       </form>
+<br>
+<br>
+  <ion-label style="color: #909090">Select Employee:</ion-label>
+   <ion-item >
+   <ion-label  style="color: #909090;padding-top: 0px;font-size: 18px">Select Employee </ion-label>
+  <ion-select  [(ngModel)]="selected_service" multiple="false">
+    <div *ngFor = "let m of my_employee_data">
+         <ion-option [value]="m.full_name">{{m.full_name}}</ion-option>
+         
+      </div>
+       <ion-option [value]="owner_name">{{owner_name}}</ion-option>
+           </ion-select>
+
+          </ion-item>
+
+
+
+ 
+
+<div >
+
+  <button ion-button block style="margin: 26px 28%" (click)="save()" [disabled]=!addservice.valid >SAVE</button>
+
+</div>
+
+
+</ion-content>

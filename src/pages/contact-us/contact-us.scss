@@ -1,0 +1,68 @@
+page-contact-us {
+  .text{
+  	text-align: center;
+  	font-family: 'OpenSans-Regular';
+  	margin-top:20px; 
+
+  }
+  .input-text{
+  	color:black;
+  }
+  .itemdata{
+  	background:#E1E1E1;
+  	font-family: 'OpenSans-Regular';
+  	
+  }
+  .item1{
+  	margin-top: 10px;
+  }
+  .item2{
+  	margin-top: 40px;
+  }
+  .item3{
+  	margin-top: 40px;
+  	width: 36%;
+  	float:left;
+  }
+  .item4{
+  	margin-top: 40px;
+  	width: 100%;
+  	float:right;
+  }
+  .item5{
+  	margin-top: 40px;
+ 
+  }
+  .textarea-text {
+  	margin-top: 40px;
+    height: 120px;
+    overflow: auto;
+    background-color:#E1E1E1;
+  
+    width: 100%;
+    font-size: 1.6rem;
+     padding: 14px;
+    font-weight: normal;
+    font-family: 'OpenSans-Regular';
+}
+.contact-btn{
+		
+		width:80%;
+		margin-left: 10%;
+		font-family: 'OpenSans-Regular';
+    border-radius:20px;
+}
+.toolbar-title-md {
+   font-family: 'OpenSans-Regular';
+}
+.toolbar-title-ios {
+   font-size: 13px;
+    font-family: Open Sans !important;
+    
+ }
+   .toolbar-ios ion-title {
+    padding: 10px 90px 1px;
+    font-family: 'OpenSans-Regular';
+    font-size:13px;
+}
+}

@@ -1,0 +1,157 @@
+         <ion-header>
+
+  <ion-navbar color="purple">
+ <!--  <span (click)="editprofile()" class="profile-edit-bttnn"></span> -->
+
+
+  <ion-buttons right (click)="editprofile()">
+<button ion-button>
+  EDIT
+   </button>
+       </ion-buttons>
+    <ion-title  style="color:#fff "> BUSINESS INFO</ion-title>
+
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding >
+
+  <form [formGroup]="form3">
+
+
+  <ion-label >BUSINESS NAME </ion-label>
+
+<ion-item style="border :1px solid">
+ <ion-input  type="text"  placeholder="ENTER BUSINESS NAME" [(ngModel)]= "mysalon_name" formControlName="mysalon_name" [disabled]="v==false"></ion-input>
+ 
+ </ion-item>
+  <p style="color:red"  *ngIf="!form3.controls.mysalon_name.valid && 
+                      (form3.controls.mysalon_name.dirty )">*Invalid field. </p>
+
+
+  <button ion-button [disabled]="v==false"  (click)="pickAddress()" block class="btn" color="appcolor" >
+  ADDRESS DETAILS<ion-icon class="pin" name="pin"></ion-icon></button>
+   <div id="map"></div>
+
+   <ion-label >Full Address</ion-label>
+<ion-item style="border :1px solid ">
+ <!-- <ion-input *ngIf="placedetails.address!=undefined" type="text"  placeholder="ENTER ADDRESS" (click)="showModal()" [(ngModel)]= "placedetails.address" [disabled]="v==false" ></ion-input> -->
+  <ion-input  type="text" [(ngModel)]="fulladdress" formControlName="fulladdress" placeholder="ENTER ADDRESS" 
+   [disabled]="v==false" ></ion-input>
+
+ </ion-item>
+    <p style="color:red"  *ngIf="!form3.controls.fulladdress.valid && 
+                      (form3.controls.fulladdress.dirty )">*Invalid field. </p>
+<!-- <ion-label >City</ion-label>
+
+<ion-item style="border :1px solid ">
+  <ion-input  type="text" [(ngModel)]="district" placeholder="ENTER CITY" 
+   [disabled]="v==false" ></ion-input>
+ </ion-item>
+ -->
+
+
+<!-- <ion-label >Postcode</ion-label>
+
+<ion-item style="border :1px solid ">
+  <ion-input  type="text" [(ngModel)]="postalcode" placeholder="ENTER POSTCODE" 
+   [disabled]="v==false" ></ion-input>
+ </ion-item>
+ -->
+
+
+
+
+  <ion-label>MOBILE NO.</ion-label>
+
+<ion-item style="border :1px solid ">
+ <ion-input    placeholder="ENTER  MOBILE NUMBER" [(ngModel)]="mycontact_number" formControlName="mycontact_number" [disabled]="v==false" ></ion-input>
+  </ion-item>
+   <p style="color:red"  *ngIf="!form3.controls.mycontact_number.valid && 
+            
+          (form3.controls.mycontact_number.dirty )">*Invalid field. </p>
+ 
+
+  <ion-label >BUSINESS DESCRIPTION</ion-label>
+
+<ion-item style="border :1px solid ">
+ <ion-input  type="text"  placeholder="ENTER  BUSINESS DESCRIPTION" [(ngModel)]="mydescription" formControlName="mydescription" [disabled]="v==false" ></ion-input>
+ </ion-item>
+   <p style="color:red"  *ngIf="!form3.controls.mydescription.valid && 
+            
+          (form3.controls.mydescription.dirty )">*Invalid field. </p>
+</form>
+
+ <ion-label  >WEBSITE</ion-label>
+
+
+ <ion-item style="border :1px solid ">
+ <ion-input  type="text"  placeholder="ENTER  WEBSITE" [(ngModel)]="website" [disabled]="v==false" ></ion-input>
+ </ion-item>
+
+
+   <ion-label>FACEBOOK</ion-label>
+
+
+ <ion-item style="border :1px solid ">
+ <ion-input  type="text"  placeholder="ENTER FACEBOOK URL" [(ngModel)]="fb" [disabled]="v==false" ></ion-input>
+ </ion-item>
+
+<ion-label >INSTAGRAM</ion-label>
+
+
+ <ion-item style="border :1px solid ">
+ <ion-input  type="text"  placeholder="ENTER  INSTAGRAM URL" [(ngModel)]="insta" [disabled]="v==false" ></ion-input>
+ </ion-item>
+
+
+
+
+  <ion-label >SCHEDULE</ion-label>
+<!--  wheelchair_value  wifi" -->
+
+<ion-item style="border :1px solid ">
+ <ion-input     placeholder="ENTER SCHEDULE"   [(ngModel)]="schedule_value" [disabled]="v==false" readonly ></ion-input>
+ </ion-item>
+
+ <button ion-button [disabled]="v==false"  (click)="schedule_page()" block class="btn" color="appcolor" >
+  SET  SCHEDULE<img style="height:22px; width:22px; margin-left: 24px"  src="img/annual-calendar-symbol.png"></button>
+<br>
+<ion-item >
+  <ion-label>PARKING</ion-label>
+  <ion-select [(ngModel)]="parking_value" [disabled]="v==false" multiple="false">
+    <ion-option>AVAILABLE</ion-option>
+    <ion-option>NOT AVAILABLE</ion-option>
+ 
+  </ion-select>
+</ion-item>
+
+
+<br>
+<ion-item >
+  <ion-label>WHEELCHAIR</ion-label>
+  <ion-select [(ngModel)]="wheelchair" [disabled]="v==false" multiple="false">
+    <ion-option>AVAILABLE</ion-option>
+    <ion-option>NOT AVAILABLE</ion-option>
+ 
+  </ion-select>
+</ion-item>
+<br>
+<ion-item >
+  <ion-label>WIFI</ion-label>
+  <ion-select [(ngModel)]="wifi" [disabled]="v==false" multiple="false">
+    <ion-option>AVAILABLE</ion-option>
+    <ion-option>NOT AVAILABLE</ion-option>
+ 
+  </ion-select>
+</ion-item>
+<br>
+<!-- *ngIf="savebtn=='true'" -->
+<div style="text-align: center;" >
+ <button *ngIf="v==true"  class="save" ion-button small color="appcolor" (click)="save()" [disabled]="!form3.valid" >SAVE</button>
+</div>
+
+
+</ion-content>

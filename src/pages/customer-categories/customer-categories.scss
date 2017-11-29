@@ -1,0 +1,59 @@
+page-customer-categories {
+   .tiles{
+     float:left;
+     width: 50%;
+     position: relative;
+     height: 126px;
+  }
+  .tiles2{
+     float:right;
+     width: 50%;
+  }
+  .img-text{
+  	
+  }
+  .tiles-img{
+  	height: 125px;
+    width:100%;
+    object-fit: cover;
+  }
+  .text-data{
+    color: rgb(255, 255, 255);
+    font-family: "OpenSans-Regular";
+    left: 0;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 40%;
+  }
+.tiles::before {
+    background-color: rgba(0, 0, 0, 0.5);
+    content: "";
+    display: inline;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    border: 2px solid #fff;
+}
+.toolbar-title {
+	font-family:'OpenSans-Regular';
+    display: block;
+    overflow: hidden;
+   
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.toolbar-title-ios {
+   font-size: 13px;
+  font-family: Open Sans !important;
+    
+ }
+.toolbar-ios ion-title {
+  
+    padding: 7px 90px 0;
+    
+}
+}

@@ -1,0 +1,78 @@
+<!--
+  Generated template for the AppointmentDetailPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<!-- piakbu{"title":"MD ASIF-testing-Tata Sharma","startTime":"2017-09-06T05:00:00.000Z","endTime":"2017-09-06T06:15:00.000Z","allDay":false} -->
+<ion-header>
+
+  <ion-navbar color="purple">
+    <ion-title >BOOKING DETAILS </ion-title>
+  
+         </ion-navbar>
+      </ion-header>
+
+
+    <ion-content >
+        <div style="width: 100%">
+	       <img style="width: 100%;height: 200px" src="assets/img/contact.jpg">
+
+              </div>
+
+<ion-item >
+  <ion-label>CUSTOMER NAME</ion-label>
+         </ion-item>
+
+     <ion-item style="font-size:16px;font-weight: lighter;color:#000;text-transform: uppercase">
+          {{customer_name}}
+ </ion-item>
+
+
+<ion-item style="border-bottom: 1px solid #9C9C9B ">
+      <ion-label>SERVICE PROVIDED</ion-label>
+          </ion-item>
+
+
+     <ion-item style="background-color: #FFF;font-size:16px;font-weight: lighter;color:#000">  {{service}}
+             </ion-item>
+
+
+
+
+        <ion-item>
+         <ion-label> APPOINTMENT DATE:</ion-label>
+          </ion-item>
+        <ion-item  style="background-color: #FFF;font-size:16px;font-weight: lighter;color:#000">
+               {{str2| date}}
+                   </ion-item>
+
+   
+         <ion-item>
+      <ion-label>START TIME:</ion-label>
+       </ion-item>
+       <ion-item  style="background-color: #FFF;font-size:16px;font-weight: lighter;color:#000">
+         {{ str2 | date:'shortTime' }}
+                </ion-item>
+
+
+<ion-item >
+  <ion-label>END TIME:</ion-label>
+</ion-item>
+<ion-item style="font-size:16px;font-weight: lighter;color:#000">
+{{ str3 | date:'shortTime' }}
+ </ion-item>
+
+      <ion-item >
+          <ion-label>EMPLOYEE ALLOCATED:</ion-label>
+        </ion-item>
+        <ion-item style="font-size:16px;font-weight: lighter;color:#000">
+           {{employe_name}}
+          </ion-item>      
+
+
+   
+
+
+
+              </ion-content>

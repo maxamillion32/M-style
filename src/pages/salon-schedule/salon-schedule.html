@@ -1,0 +1,442 @@
+<!--
+  Generated template for the SalonSchedule page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="purple">
+
+ 
+   <ion-buttons right>
+        <button ion-button (click)="cancel()" >CANCEL</button>
+    </ion-buttons>
+    <ion-title>SALON SCHEDULE</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+<!-- 
+<ion-item>      
+    <ion-label stacked color="primary">Start</ion-label>
+    <ion-input [(ngModel)]="start_date" type="text" placeholder="Enter start date" readonly="readonly" (focus)="$event.stopPropagation(); showDateTimePicker($event)"></ion-input>
+             </ion-item>
+
+      <ion-item>
+    <ion-label stacked color="primary">End</ion-label>
+    <ion-input [(ngModel)]="end_date" type="text" placeholder="Enter end date" readonly="readonly" (focus)="$event.stopPropagation(); showDateTimePicker($event)"></ion-input>
+              </ion-item> -->
+ 
+
+  <div style="background-color: #d3d3d3;
+    font-family: open-sans;
+    font-size: 16px;
+    height: 34px;text-align:center;padding-top: 5px">Select Opening Hours For Business
+   
+
+  </div>
+  
+  
+      <ion-item>
+    <ion-label>Monday
+  
+     <p *ngIf="value1==undefined &&mon_start_time==undefined" (click)="timepicker1()" class="time_select_div">  
+            StartTime-EndTime
+            </p>
+
+               <p *ngIf="value1==true &&mon_start_time!=null" (click)="timepicker1()" class="time_select_div">{{mon_start_time}}{{mon_end_time}}  
+            
+            </p>
+
+      <p *ngIf="value1==false " (click)="timepicker1()" class="time_select_div">  
+          Not Working
+            </p>
+  
+
+    </ion-label>
+
+    <ion-checkbox checked=true *ngIf="value1==true" [(ngModel)]="value1"  (click)="update1()" ></ion-checkbox>
+   
+    <ion-checkbox *ngIf="value1==undefined " [(ngModel)]="value1"  (click)="timepicker1()"  ></ion-checkbox>
+
+   <ion-checkbox *ngIf="value1==false " [(ngModel)]="value1"  (click)="timepicker1()" ></ion-checkbox>
+
+     </ion-item>
+
+  
+
+
+
+
+   <ion-item >
+    <ion-label>Tuesday
+     
+     <p *ngIf="value2==undefined &&tue_start_time==undefined" (click)="timepicker2()" class="time_select_div">  
+            StartTime-EndTime
+            </p>
+
+   <p *ngIf="value2==true &&tue_start_time!=null" (click)="timepicker2()" class="time_select_div">{{tue_start_time}}{{tue_end_time}}
+           
+            </p>
+
+      <p *ngIf="value2==false" (click)="timepicker2()" class="time_select_div">  
+          Not Working
+            </p>
+          </ion-label>
+
+    <ion-checkbox *ngIf="value2==true" [(ngModel)]="value2"  (click)="update2()" ></ion-checkbox>
+   
+   <ion-checkbox *ngIf="value2==undefined " [(ngModel)]="value2"  (click)="timepicker2()" checked="true" ></ion-checkbox>
+
+   <ion-checkbox *ngIf="value2==false " [(ngModel)]="value2"  (click)="timepicker2()" ></ion-checkbox>
+
+     </ion-item>
+
+  
+
+   <ion-item >
+    <ion-label>Wednesday
+     
+
+     
+     <p *ngIf="value3==undefined &&wed_start_time==undefined" (click)="timepicker3()" class="time_select_div">  
+            StartTime-EndTime
+            </p>
+
+               <p *ngIf="value3==true &&wed_start_time!=null" (click)="timepicker3()" class="time_select_div">  
+            {{wed_start_time}}{{wed_end_time}}
+            </p>
+
+      <p *ngIf="value3==false " (click)="timepicker3()" class="time_select_div">  
+          Not Working
+            </p>
+  
+
+    </ion-label>
+
+    <ion-checkbox *ngIf="value3==true" [(ngModel)]="value3"  (click)="update3()" ></ion-checkbox>
+   
+    <ion-checkbox *ngIf="value3==undefined " [(ngModel)]="value3"  (click)="timepicker3()" checked="true" ></ion-checkbox>
+
+   <ion-checkbox *ngIf="value3==false " [(ngModel)]="value3"  (click)="timepicker3()" ></ion-checkbox>
+     </ion-item>
+
+
+
+         <ion-item >
+    <ion-label>Thursday
+     
+     <p *ngIf="value4==undefined &&thu_start_time==undefined" (click)="timepicker4()" class="time_select_div">  
+            StartTime-EndTime
+            </p>
+
+               <p *ngIf="value4==true &&thu_start_time!=null" (click)="timepicker4()" class="time_select_div">  
+            {{thu_start_time}}{{thu_end_time}}
+            </p>
+
+      <p *ngIf="value4==false " (click)="timepicker4()" class="time_select_div">  
+          Not Working
+            </p>
+  
+
+    </ion-label>
+
+    <ion-checkbox *ngIf="value4==true" [(ngModel)]="value4"  (click)="update4()" ></ion-checkbox>
+   
+    <ion-checkbox *ngIf="value4==undefined " [(ngModel)]="value4"  (click)="timepicker4()" checked="true" ></ion-checkbox>
+
+   <ion-checkbox *ngIf="value4==false " [(ngModel)]="value4"  (click)="timepicker4()" ></ion-checkbox>
+     </ion-item>
+
+   
+            <ion-item>
+    <ion-label>Friday
+
+     
+    <p *ngIf="value5==undefined &&fri_start_time==undefined" (click)="timepicker5()" class="time_select_div">  
+            StartTime-EndTime
+            </p>
+
+               <p *ngIf="value5==true &&fri_start_time!=null" (click)="timepicker5()" class="time_select_div">  
+            {{fri_start_time}}{{fri_end_time}}
+            </p>
+
+      <p *ngIf="value5==false " (click)="timepicker5()" class="time_select_div" > 
+          Not Working
+            </p>
+  
+
+    </ion-label>
+
+    <ion-checkbox *ngIf="value5==true" [(ngModel)]="value5"  (click)="update5()" ></ion-checkbox>
+   
+    <ion-checkbox *ngIf="value5==undefined " [(ngModel)]="value5"  (click)="timepicker5()" checked="true" ></ion-checkbox>
+
+   <ion-checkbox *ngIf="value5==false " [(ngModel)]="value5"  (click)="timepicker5()" ></ion-checkbox>
+     </ion-item>
+
+
+       <ion-item>
+           <ion-label>Saturday
+
+     
+<p *ngIf="value6==undefined &&sat_start_time==undefined" (click)="timepicker6()" class="time_select_div" >  
+            StartTime-EndTime
+            </p>
+
+               <p *ngIf="value6==true &&sat_start_time!=null" (click)="timepicker6()" class="time_select_div" >  
+            {{sat_start_time}}{{sat_end_time}}
+            </p>
+
+      <p *ngIf="value6==false " (click)="timepicker6()" class="time_select_div" >  
+          Not Working
+            </p>
+  
+
+    </ion-label>
+
+    <ion-checkbox *ngIf="value6==true" [(ngModel)]="value6"  (click)="update6()" ></ion-checkbox>
+   
+    <ion-checkbox *ngIf="value6==undefined " [(ngModel)]="value6"  (click)="timepicker6()" checked="true" ></ion-checkbox>
+
+   <ion-checkbox *ngIf="value6==false " [(ngModel)]="value6"  (click)="timepicker6()" ></ion-checkbox>
+     </ion-item>
+
+
+
+<ion-item >
+    <ion-label>Sunday
+     
+    <p *ngIf="value7==undefined &&sun_start_time==undefined" (click)="timepicker7()" class="time_select_div" >  
+            StartTime-EndTime
+            </p>
+
+               <p *ngIf="value7==true &&sun_start_time!=null" (click)="timepicker7()" class="time_select_div" >  
+            {{sun_start_time}}{{sun_end_time}}
+            </p>
+
+      <p *ngIf="value7==false " (click)="timepicker7()" class="time_select_div" >  
+          Not Working
+            </p>
+  
+
+    </ion-label>
+
+    <ion-checkbox *ngIf="value7==true" [(ngModel)]="value7"  (click)="update7()" ></ion-checkbox>
+   
+    <ion-checkbox *ngIf="value7==undefined " [(ngModel)]="value7"  (click)="timepicker7()" checked="true" ></ion-checkbox>
+
+   <ion-checkbox *ngIf="value7==false " [(ngModel)]="value7"  (click)="timepicker7()" ></ion-checkbox>
+     </ion-item>
+<br>
+<div style="text-align: center" >
+  
+<button ion-button block style="width: 30%;margin: 0 31%" (click)="save()"> SAVE</button>
+
+</div>
+
+
+
+<!-- <div style="text-align: center" >
+  
+<button-ion button block> </button-ion>
+
+</div> -->
+
+
+         
+</ion-content>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+
+
+
+
+<!-- <ion-list>
+
+ <ion-item style= "color: #909090">
+  <ion-label>Monday</ion-label>
+  
+    <ion-select [(ngModel)]="monday_value"  multiple="false">
+    <div *ngFor="let m of time1">
+  <div *ngFor="let n of time2">
+             <ion-option *ngIf="m.value<=n.value" [value]="m.time1" >MON-{{m.time}} to {{n.time}}</ion-option>
+          
+ 
+  </div>
+  </div>
+   </ion-select>
+  </ion-item>
+
+<ion-item style= "color: #909090">
+  <ion-label>Tuesday</ion-label>
+  
+    <ion-select [(ngModel)]="tuesday_value"  multiple="false">
+    <div *ngFor="let m of time1">
+  <div *ngFor="let n of time2">
+             <ion-option *ngIf="m.value<=n.value" [value]="m.time2" >TUE-{{m.time}} to {{n.time}} </ion-option>
+           
+ 
+  </div>
+  </div>
+   </ion-select>
+  </ion-item>
+
+
+
+  <ion-item style= "color: #909090">
+  <ion-label>Wednesday</ion-label>
+  
+    <ion-select [(ngModel)]="wednesday_value"  multiple="false">
+    <div *ngFor="let m of time1">
+  <div *ngFor="let n of time2">
+             <ion-option *ngIf=" m.value <= n.value " [value]="m.time3" >WED- {{m.time}} to {{n.time}} </ion-option>
+           
+ 
+  </div>
+  </div>
+   </ion-select>
+  </ion-item>
+
+
+<ion-item style= "color: #909090">
+  <ion-label>Thursday</ion-label>
+  
+    <ion-select [(ngModel)]="thursday_value"  multiple="false">
+    <div *ngFor="let m of time1">
+  <div *ngFor="let n of time2">
+             <ion-option *ngIf=" m.value <= n.value " [value]="m.time4" >THU-{{m.time}} to {{n.time}} </ion-option>
+           
+ 
+  </div>
+  </div>
+   </ion-select>
+  </ion-item>
+
+
+<ion-item style= "color: #909090">
+  <ion-label>Friday</ion-label>
+  
+    <ion-select [(ngModel)]="friday_value"  multiple="false">
+    <div *ngFor="let m of time1">
+  <div *ngFor="let n of time2">
+             <ion-option *ngIf="m.value<=n.value" [value]="m.time5" >FRI- {{m.time}} to {{n.time}} </ion-option>
+           
+ 
+  </div>
+  </div>
+   </ion-select>
+  </ion-item>
+
+
+  <ion-item style= "color: #909090">
+  <ion-label>Saturday</ion-label>
+  
+    <ion-select [(ngModel)]="saturday_value"  multiple="false">
+    <div *ngFor="let m of time1">
+  <div *ngFor="let n of time2">
+             <ion-option *ngIf="m.value<=n.value " [value]="m.time6" > SAT-{{m.time}} to {{n.time}} </ion-option>
+           
+ 
+  </div>
+  </div>
+   </ion-select>
+  </ion-item>
+
+
+  <ion-item style= "color: #909090">
+  <ion-label>Sunday</ion-label>
+  
+    <ion-select [(ngModel)]="sunday_value"  multiple="false">
+    <div *ngFor="let m of time1">
+  <div *ngFor="let n of time2">
+             <ion-option *ngIf=" m.value <= n.value " [value]="m.time7" >SUN-{{m.time}} to {{n.time}} </ion-option>
+           
+ 
+  </div>
+  </div>
+   </ion-select>
+  </ion-item>
+
+
+
+
+
+</ion-list> -->
+
+ 
+
+        
+
+  
+
+
+
+               
+<!-- <div style="text-align:center">
+	<button ion-button block (click)="submit()"  >SAVE</button>
+</div> -->
+
+
+
+
+
+

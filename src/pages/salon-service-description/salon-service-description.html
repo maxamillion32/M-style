@@ -1,0 +1,94 @@
+<ion-header>
+
+  <ion-navbar color="purple">
+    <ion-title >SERVICE DESCRIPTION</ion-title>
+   <!--  <span (click)="editprofile()" class="editclass"></span> -->
+    <ion-buttons right (click)="editprofile()">
+<button ion-button>
+EDIT
+   </button>
+       </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+    <div style="width: 100%">
+	<img style="width: 100%;height: 200px" src="assets/img/tiles1.jpg">
+
+    </div>
+ 
+    <form [formGroup]="addservice">
+
+
+<ion-item >
+  <ion-label>TITLE</ion-label>
+</ion-item>
+
+<ion-item style="font-size:16px;font-weight: lighter;color:#000">
+ <ion-input    placeholder="Service Title"  formControlName= "title" [(ngModel)]="title" [disabled]="v==false" ></ion-input>
+ </ion-item>
+ <p style="color:red;margin-left:19px "  *ngIf="!addservice.controls.title.valid && 
+ (addservice.controls.title.dirty )">*Invalid field . </p>
+
+<ion-item style="border-bottom: 1px solid #9C9C9B ">
+  <ion-label>COST(In $)</ion-label>
+</ion-item>
+<ion-item style="background-color: #FFF;font-size:16px;font-weight: lighter;color:#000">
+ <ion-input    placeholder="Service Cost"  formControlName="cost" [(ngModel)]="cost" [disabled]="v==false" ></ion-input>
+
+ </ion-item>
+
+ <p style="color:red;margin-left:19px"  *ngIf="!addservice.controls.cost.valid && 
+ (addservice.controls.cost.dirty )">*Invalid field. </p>
+
+<!-- {{time}} -->
+<ion-item>
+  <ion-label>DURATION</ion-label>
+</ion-item>   
+
+<ion-item  style="background-color: #FFF;font-size:16px;font-weight: lighter;color:#000">
+  
+ <ion-datetime displayFormat="HH:mm"  min="00:15" max="03:00" formControlName="time" [(ngModel)]="time" [disabled]="v==false" > </ion-datetime>
+   
+
+
+ </ion-item>
+
+
+
+
+
+
+
+
+
+<ion-item>
+  <ion-label>DESCRIPTION</ion-label>
+</ion-item >
+<ion-item text-wrap  style="background-color: #FFF;font-size:16px;font-weight: lighter;color:#000">
+ 
+ <ion-input  type="text"  placeholder="Service description"  formControlName= "description" [(ngModel)]="description" [disabled]="v==false" ></ion-input>
+ </ion-item>
+  <p style="color:red;margin-left:19px"  *ngIf="!addservice.controls.description.valid && 
+ (addservice.controls.description.dirty )">*Invalid field. </p>
+    </form>
+             <br>
+<ion-item style="border-bottom: 1px solid #9C9C9B ">
+  <ion-label>SERVICE PROVIDED BY</ion-label>
+</ion-item>
+<ion-item style="background-color: #FFF;font-size:16px;font-weight: lighter;color:#000">
+ <ion-input readonly  placeholder=" No Employee Selected"  [(ngModel)]="employee_name" [disabled]="v==false" ></ion-input>
+
+ </ion-item>
+
+        <div style="width:100%;text-align: center">
+  
+    <button ion-button *ngIf="v==true" (click) ="submit()" [disabled]=!addservice.valid >SAVE CHANGES</button>
+     
+    </div>
+
+
+
+</ion-content>

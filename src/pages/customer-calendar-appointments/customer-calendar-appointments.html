@@ -1,0 +1,89 @@
+<!--
+  Generated template for the CustomerCalendarAppointmentsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+ <ion-navbar color="appheader">
+  <button ion-button menuToggle start>
+  <ion-icon name="menu" style="color:#fff"></ion-icon></button>
+  <!-- <ion-title class="title">{{viewTitle }}</ion-title> -->
+    <ion-buttons right>
+   <button ion-button (click)="loadEvents()">SHOW APPOINTMENTS</button>
+    </ion-buttons>
+         
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+<div class="title">{{viewTitle }}</div>
+<calendar class="cal" [eventSource]="eventSource"
+              [calendarMode]="calendar.mode"
+              [currentDate]="calendar.currentDate"
+              (onCurrentDateChanged)="onCurrentDateChanged($event)"
+              (onEventSelected)="onEventSelected($event)"
+              (onTitleChanged)="onViewTitleChanged($event)"
+              (onTimeSelected)="onTimeSelected($event)"
+              step="30">
+    </calendar>
+
+
+    <div class="head">BOOKING BY SALONS</div>
+
+    <ion-list *ngFor="let m of mydata">
+
+      
+       <div  *ngIf="m.date==current_date" class="main_div" >
+       <ion-grid>
+       <ion-row>
+      <ion-col col-2 >
+        <div class="container">
+        <div class="date-format">
+        <p>{{ current_date | date:'MMM' }}    </p>
+        <p>{{ current_date | date:'dd' }}</p>
+        <p>{{ current_date | date:'Z' }}</p>
+      </div>
+      </div>
+</ion-col>
+   
+
+
+<ion-col col-2 >
+        <div class="img-div" *ngIf="m.position=='salonbooked'">
+        <img  *ngIf="m.salonimage!=null" style="border-radius: 50%;width:100px;height:50px;object-fit:cover" src = 'http://gagandeepsethi.com/salonDirectory/img/salonownerprofileimage/{{m.salonimage}}' >
+         <img  style="border-radius: 50%;width:100px;height:50px;object-fit:cover" *ngIf="m.salonimage==null" src="assets/img/user.jpg">
+        </div>
+         <div class="img-div" *ngIf="m.position=='employeebooked'">
+        <img  *ngIf="m.salonimage!=null" style="border-radius: 50%;width:100px;height:50px;object-fit:cover" src = 'http://gagandeepsethi.com/salonDirectory/img/employeeprofileimage/{{m.salonimage}}' >
+         <img  style="border-radius: 50%;width:100px;height:50px;object-fit:cover" *ngIf="m.salonimage==null" src="assets/img/user.jpg">
+        </div>
+</ion-col>
+<ion-col col-8 >
+        <p style="margin-left: -4px;padding-left: 0px;width: 100%">Salon Name:{{m.salonname}}</p>
+
+   <p style="margin-left: -4px;padding-top: 0;width: 100%;text-transform: capitalize;"> 
+
+    Service:<span *ngFor="let n of m.service "><span>{{n.title}} </span>
+    </span>
+    </p>
+
+
+     <p style="margin-left: -4px;
+    padding-top: 0"> Employee:{{m.employeename}}</p>
+      <p style="margin-left: -4px;
+    padding-top: 0"> Time:{{m.starttime}}-{{m.endtime}}</p>
+    </ion-col>
+    </ion-row>
+    
+
+   
+      </ion-grid>     
+      
+   </div>
+    
+   </ion-list>
+</ion-content>

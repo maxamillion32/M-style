@@ -1,0 +1,122 @@
+<ion-header>
+  <ion-navbar color="appheader">
+    <ion-title>REGISTRATION</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding class="cust-reg">
+<div class="regheading">
+<h3> Tell Us About your Business</h3>
+</div>
+<div class="list">
+<form [formGroup]="custregister">
+       <ion-list >
+
+           <ion-item class="input-field">
+			<ion-input type="text" placeholder="Business Name" 
+			formControlName="buisnessname" [(ngModel)]="salonname"></ion-input>
+			</ion-item>   
+ <p style="color:red"  *ngIf="!custregister.controls.buisnessname.valid && 
+ (custregister.controls.buisnessname.dirty )">*Invalid Name </p>
+
+  
+
+			 <ion-item class="input-field">
+			<ion-input type="text" placeholder="About your Business" 
+			formControlName="aboutbuisness"
+			 [(ngModel)]="salondescription"></ion-input>
+			</ion-item>   
+<p style="color:red"  *ngIf="!custregister.controls.aboutbuisness.valid && 
+ (custregister.controls.aboutbuisness.dirty )">*Invalid About </p>
+
+
+
+
+			<ion-item class="input-field">
+			<ion-input type="text" formControlName="fullname" 
+			placeholder="Full Name" [(ngModel)]="name"></ion-input>
+			</ion-item>
+<p style="color:red"  *ngIf="!custregister.controls.fullname.valid && 
+ (custregister.controls.fullname.dirty )">*Invalid Name </p>
+
+			<ion-item class="input-field">
+			<ion-input type="email" formControlName="salonemail" placeholder="E-Mail: This will be your Login" [(ngModel)]="email"></ion-input>
+			</ion-item>
+<p style="color:red"  *ngIf="!custregister.controls.salonemail.valid && 
+ (custregister.controls.salonemail.dirty )">*Invalid E-mail </p>			
+             
+             <ion-item class="input-field">
+			<ion-input type="password" formControlName="salonpassword" placeholder="Password" [(ngModel)]="password"></ion-input>
+			</ion-item>
+
+	<p style="color:red" *ngIf="!custregister.controls.salonpassword.valid && (custregister.controls.salonpassword.dirty )" >*Password should be in range of 3-12 character
+	</p>
+
+			<ion-item class="input-field">
+			<ion-input type="password" formControlName="saloncpass" placeholder="Confirm Password" [(ngModel)]="cpass"></ion-input>
+			</ion-item>
+
+
+	<p style="color:red" *ngIf="!custregister.controls.saloncpass.valid && (custregister.controls.saloncpass.dirty )" >*Input field required
+	</p>
+
+			<ion-item class="input-field">
+			<ion-input type="text" formControlName="salonphone" placeholder="Mobile Phone: For Text Notifications " 
+			[(ngModel)]="number"></ion-input>
+			</ion-item>
+<p style="color:red"  *ngIf="!custregister.controls.salonphone.valid && 
+ (custregister.controls.salonphone.dirty )">*Invalid number </p>	
+
+
+	<!--  <button ion-button [disabled]="v==false"  (click)="show_category_modal()" block class="btn" color="appcolor" >
+                  SELECT SERVICE CATEGORIES 
+        <ion-icon class="pin" name="pin"></ion-icon></button>  -->
+
+          <!--   <ion-item class="input-field">
+     <ion-input   placeholder="Service Categoies " formControlName="services_selected" [(ngModel)]="services_selected" readonly  disabled ></ion-input>
+			</ion-item> -->
+<!-- <p style="color:red"  *ngIf="!custregister.controls.services_selected.valid && 
+ (custregister.controls.services_selected.dirty )">*Field Required </p -->
+			</ion-list>
+  </form>
+    <button ion-button [disabled]="v==false"  (click)="showModal()" block class="btn" color="appcolor" >
+  SELECT ADDRESS <ion-icon class="pin" name="pin"></ion-icon></button>
+   <div id="map"></div>
+
+              <ion-item class="input-field">
+<ion-input   placeholder="Business Address" 	
+		
+			[(ngModel)]="placedetails.address" readonly  disabled ></ion-input>
+			</ion-item>
+
+		<!-- 	 <button ion-button [disabled]="v==false"  (click)="show_category_modal()" block class="btn" color="appcolor" >
+                  SELECT SERVICE CATEGORIES 
+                      <ion-icon class="pin" name="pin"></ion-icon></button> --> 
+
+          <!--   <ion-item class="input-field">
+     <ion-input   placeholder="Business Address" [(ngModel)]="services_selected" readonly  disabled ></ion-input>
+			</ion-item> -->
+                        </div>
+
+
+     <div class="check">
+      <ion-checkbox color="dark" ng-true-value="'1'" ng-false-value="'0'" 
+       [(ngModel)]="check" ></ion-checkbox>
+        </div>
+      <div class="agree">I Agree to Accept<a 
+      (tap)="terms()" 
+      class="terms">Terms & Conditions</a></div>
+              	
+ 
+      <!--  <div class="check">
+      <ion-checkbox color="dark" ng-true-value="'1'" ng-false-value="'0'" 
+      [(ngModel)]="check"></ion-checkbox><span class="agree">I Agree to Accept</span><a (tap)="terms()" 
+      class="terms">Terms & Conditions</a>
+	  </div> -->
+
+
+			<button ion-button color="appheader" [disabled]="!custregister.valid" 
+			 (click)="reg()" class="reg">Proceed</button>
+
+</ion-content>

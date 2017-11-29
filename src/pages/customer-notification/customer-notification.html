@@ -1,0 +1,99 @@
+<!--
+  Generated template for the CustomerNotification page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="appheader">
+  <button ion-button menuToggle start>
+  <ion-icon name="menu" style="color:#fff"></ion-icon></button>
+    <ion-title>NOTIFICATION</ion-title>
+
+  </ion-navbar>
+
+</ion-header>
+
+
+
+<ion-content >
+ 
+<ion-segment  [(ngModel)]="Notiseg" color="primary" >
+    <ion-segment-button value="accepted">
+      Booking Notifications
+    </ion-segment-button>
+    <ion-segment-button value="declined">
+      Messages
+    </ion-segment-button>
+  </ion-segment>
+<div [ngSwitch]="Notiseg">
+
+<div *ngSwitchCase="'accepted'">
+<div *ngFor="let data of notificationdata;let i=index">
+<ion-list>
+  <ion-item class="item-client" id="var_{{i}}" (click)="selectedtime(i)">
+    <ion-avatar item-start *ngIf="data.booked_status=='employeebooked'">
+      <img *ngIf="data.profile_image!=null" src="http://gagandeepsethi.com/salonDirectory/img/employeeprofileimage/{{data.profile_image}}">
+      <img *ngIf="data.profile_image==null" src="assets/img/user.jpg">
+    </ion-avatar>
+    <ion-avatar item-start *ngIf="data.booked_status=='salonbooked'">
+      <img *ngIf="data.profile_image!=null" src="http://gagandeepsethi.com/salonDirectory/img/salonownerprofileimage/{{data.profile_image}}">
+      <img *ngIf="data.profile_image==null" src="assets/img/user.jpg">
+    </ion-avatar>
+ <div class="content">
+    <div>Your Booking has Confirmed </div>
+     <div> with {{data.salonname}}</div>
+    <div>  {{data.name}}</div>
+     <div>Date-{{data.bookingdate | date}}</div>
+    <div>Time-{{data.bookingtime}}</div>
+     <div>Address-{{data.salonaddress}}</div>
+    <!--  <button ion-button small class="btn" (click)="pay(data.payment_id,data.cost)" color="appcolor">Pay $ {{data.cost}}</button>
+      <button ion-button small class="btn" color="appcolor" (click)="cancelbooking(data.payment_id,data.bookingdate)">Cancel Booking</button> -->
+     </div>
+  </ion-item>
+</ion-list>
+</div>
+
+ <div *ngIf="nodata=='true'" class="past">
+<img src="assets/icon/bell.png">
+<div>Sorry!No New Booking  Accepted</div>
+</div>
+</div>
+</div>
+
+
+
+<div [ngSwitch]="Notiseg">
+
+<div *ngSwitchCase="'declined'">
+<div *ngFor="let data of declined;let i=index">
+<ion-list>
+  <ion-item  id="var_{{i}}" >
+  <ion-avatar item-start *ngIf="data.booked_status=='employeebooked'">
+      <img *ngIf="data.profile_image!=null" src="http://gagandeepsethi.com/salonDirectory/img/employeeprofileimage/{{data.profile_image}}">
+      <img *ngIf="data.profile_image==null" src="assets/img/user.jpg">
+    </ion-avatar>
+    <ion-avatar item-start *ngIf="data.booked_status=='salonbooked'">
+      <img *ngIf="data.profile_image!=null" src="http://gagandeepsethi.com/salonDirectory/img/salonownerprofileimage/{{data.profile_image}}">
+      <img *ngIf="data.profile_image==null" src="assets/img/user.jpg">
+    </ion-avatar>
+ <div class="content">
+    <div>Your Booking has Cancelled </div>
+     <div> with {{data.salonname}}</div>
+     <div>  {{data.name}}</div>
+     <div>Date-{{data.bookingdate |date }}</div>
+    <div>Time-{{data.bookingtime}}</div>
+     <div>Address-{{data.salonaddress}}</div>
+     </div>
+  </ion-item>
+</ion-list>
+</div>
+
+ <div *ngIf="nodecline=='true'" class="past">
+<img src="assets/icon/bell.png">
+<div>Sorry!No  New Booking  Cancelled</div>
+</div>
+</div>
+</div>
+</ion-content>

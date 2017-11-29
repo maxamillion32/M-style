@@ -1,0 +1,18 @@
+
+<ion-header>
+  <ion-navbar color="appheader">
+    <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+        </button>
+    <ion-title>SET AVAILABILITY</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+<div class="status">
+<ion-item>
+	<ion-label>STATUS:  <b>{{status_text}}</b></ion-label>
+	<ion-toggle [(ngModel)]="status" (ionChange)="Status()"></ion-toggle>
+</ion-item>
+</div>
+</ion-content>

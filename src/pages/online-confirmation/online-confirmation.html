@@ -1,0 +1,34 @@
+
+<div class="divclass">
+  <div class ="alertclass">
+
+
+<ion-list radio-group [(ngModel)]="selected_value">
+
+    <div style="text-align: center;margin-top: 14px;font-family:open-sans;color:black">
+  Choose To Allow Booking To Be Made By Client With Payment Or Without It
+      </div>
+      <br>
+
+
+  <ion-item>
+    <ion-label>With Payment</ion-label>
+    <ion-radio value="with payment"></ion-radio>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Without Payment</ion-label>
+    <ion-radio value="without payment"></ion-radio>
+  </ion-item>
+
+  
+
+</ion-list>
+  <div style="text-align:center">
+<button ion-button (click)="accept()">Save</button>
+        <button ion-button (click)="cancel()">Cancel</button>
+        </div>
+
+
+     </div>
+       </div>

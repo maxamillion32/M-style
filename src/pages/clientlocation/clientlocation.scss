@@ -1,0 +1,98 @@
+page-clientlocation {
+    #mapsearch {
+        height: 100%;
+         opacity: 1;
+      }
+     .toolbar-ios ion-title {
+  
+    padding: 0 80px 1px;
+    
+}
+      #description {
+        font-family: Roboto;
+        font-size: 15px;
+        font-weight: 300;
+      }
+
+      #infowindow-content .title {
+        font-weight: bold;
+      }
+
+      #infowindow-content {
+        display: none;
+      }
+
+      #mapsearch #infowindow-content {
+        display: inline;
+      }
+
+      .pac-card {
+         margin-top: 11px;
+          background-color: #fff;
+    border-radius: 2px 0 0 2px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+    
+    left: -1px;
+    margin: 10px 10px 0 0;
+    outline: medium none;
+    top: -10px !important;
+    width: 107%;
+        z-index: 1 !important;
+        text-align: center;
+      }
+
+      #pac-container {
+        padding-bottom: 12px;
+        margin-right: 12px;
+         margin-top: 6px;
+         text-align: center;
+      }
+
+      // .pac-controls {
+      //    display: flex;
+      //    padding-left: 38%;
+
+   
+      // }
+  .main{
+    text-align: center;
+  }
+      .pac-controls label {
+        font-family: Roboto;
+        font-size: 13px;
+        font-weight: 300;
+
+      }
+
+      #pac-input {
+     background-color: #fff;
+    border: 1px solid #ff0000;
+    border-radius: 20px;
+    font-size: 15px;
+    font-weight: 300;
+    height: 33px;
+    margin-left: -2px;
+    padding: 0 11px 0 13px;
+    text-overflow: ellipsis;
+    width: 264px;
+      }
+
+      #pac-input:focus {
+        border-color: #4d90fe;
+      }
+
+      #title {
+        color: #fff;
+        background-color: #5B3162;
+        font-size: 25px;
+        font-weight: 500;
+        padding: 6px 12px;
+      }
+    .toolbar-title-ios {
+   font-size: 13px;
+    font-family: Open Sans !important;
+    
+ }
+ 
+}

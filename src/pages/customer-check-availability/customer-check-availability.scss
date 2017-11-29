@@ -1,0 +1,366 @@
+page-customer-check-availability {
+
+  .calender {
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  height: 67%;
+  width: 100%;
+}
+  .calender-content-text span {
+    /*background-color: #c72228;
+    border-radius: 100px;
+    width: 18px;
+    display: inline-block;
+    height: 18px;
+    line-height: 1.6;*/
+    font-weight: normal;
+    
+  }
+
+  .calender-header{
+    height: 45px;
+    width: 100%;
+    background-color: #C72228;
+    float: left;
+    text-align: center;
+    color:white;
+    display: flex;
+  }
+  .calender-sebheader{
+    color: #000;
+    float: left;
+    height: 40px;
+    text-align: center;
+    width: 100%;
+  }
+  .calender-subheader-text{
+    color: #000;
+    float: left;
+    font-size: 0.8em;
+    height: 100%;
+    margin: 0;
+    padding: 14px 0;
+    width: calc(14.2858%);
+  }
+  .calender-content-text {
+    float: left;
+    border-radius: 0;
+    color: #000;
+    font-size: 0.8em;
+    margin: 0;
+    padding: 15px 0;
+    width: calc(14.2858%);
+  }
+  .calender-content{
+    float: left;
+    width: 100%;
+    text-align: center;
+  }
+  .calender-header-text{
+    width: calc( 100% - 40px ) ;
+    margin: auto; 
+    float: left;
+    align-self: center;
+  }
+  .left-arrow{
+    width:20px;
+    float: left;
+    align-self: center;
+  }
+  .right-arrow{
+    width:20px;
+    float: right;
+    align-self: center;
+  }
+  .mainbody{
+    background-color: #eee;
+  }
+  .full-date-slot{
+    background: #E4E9F3;
+  }
+
+
+
+
+
+
+
+
+.div-booking {
+    border-bottom: 1px solid #d7d7d7;
+    font-size: 16px;
+    padding: 10px;
+}
+.div-time {
+    padding: 7px 25px 0;
+}
+.head {
+    background:#FF0000;
+    color: rgb(255, 255, 255);
+    height: 34px;
+    text-align: center;
+    padding:8px;
+    font-family: 'OpenSans-Regular';
+}
+.list-ios {
+    margin: 0;
+}
+.button-close {
+  background-color: transparent;
+  color: #000;
+  font-size: 1.4rem;
+  font-weight: 500;
+  height: 3.6rem;
+  margin: 0.4rem 0.2rem;
+  overflow: hidden;
+  padding: 0 1.1em;
+  text-transform: uppercase;
+  border: none !important;
+  box-shadow: none !important;  
+}
+.icon-delete{
+  color: rgb(255, 0, 0);
+    float: right;
+    font-size: 20px;
+    margin-right: 15px;
+    margin-top: 15px;
+}
+.button-ios {
+    
+    height: 3.2rem;
+    
+}
+.active {
+        background-color:#FF0000;
+        color:#fff;
+    }
+	.booked-slot{
+		font-family: "OpenSans-Regular";
+        margin-left: 11%;
+        margin-top: 15px;
+		font-family: 'OpenSans-Regular';
+	}
+ .calender {
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  height: 65%;
+  width: 100%;
+}
+	.calender-content-text span {
+	  /*background-color: #c72228;
+	  border-radius: 100px;
+	  width: 18px;
+	  display: inline-block;
+	  height: 18px;
+	  line-height: 1.6;*/
+	  font-weight: normal;
+	  
+	}
+
+	.calender-header{
+		height: 45px;
+		width: 100%;
+		background-color: #FF0000;
+		float: left;
+		text-align: center;
+		color:white;
+		display: flex;
+	}
+	.calender-sebheader{
+		color: #000;
+		float: left;
+		height: 40px;
+		text-align: center;
+		width: 100%;
+	}
+	.calender-subheader-text{
+		color: #000;
+		float: left;
+		font-size: 0.8em;
+		height: 100%;
+		margin: 0;
+		padding: 14px 0;
+		width: calc(14.2858%);
+	}
+	.calender-content-text {
+		float: left;
+		border-radius: 0;
+		color: #000;
+		font-size: 0.8em;
+		margin: 0;
+		padding: 15px 0;
+		width: calc(14.2858%);
+	}
+	.calender-content{
+		/*background-color: #dddddd;*/
+		/*border: 1px solid rgba(0,0,0,0.1);*/
+		float: left;
+		width: 100%;
+		text-align: center;
+	}
+	.calender-header-text{
+		width: calc( 100% - 40px ) ;
+		margin: auto; 
+		float: left;
+		align-self: center;
+	}
+	.left-arrow{
+		width:20px;
+		float: left;
+		align-self: center;
+	}
+	.right-arrow{
+		width:20px;
+		float: right;
+		align-self: center;
+	}
+	.mainbody{
+		background-color: #eee;
+	}
+	.full-date-slot{
+		background: #E4E9F3;
+	}
+	.timetext{
+	     float:left;
+	      font-family: 'OpenSans-Regular';
+	}
+	.add{
+	    float:right;
+	     font-family: 'OpenSans-Regular';
+	     margin-right: 12px;
+	}
+	.icon-add{
+      padding-left: 5px;
+	}
+	.div-images {
+    display: inline-flex;
+    margin-left: 5px;
+    position: relative;
+    
+    }
+    .abc{
+    	background: #E4E9F3;
+    	color: #222;
+    }
+    .without{
+    	background:black;
+    }
+    .confirm{
+    	border-radius: 20px;
+       
+       /*width: 50%;*/
+    }
+	/*.row {
+    display: inline-block;
+    flex-wrap: wrap;
+    }*/
+    .staff-img{
+      float:left;
+    }
+    .time-details{
+    	margin-top: 2px;
+    }
+    .service{
+        font-size: 10px;
+    margin-left: 29px;
+    margin-top: 5px;
+    width: 40%;
+    float: left;
+    }
+     .img-div > img {
+    border-radius: 100%;
+    height: 38px;
+    max-width: 36px;
+    width: 100%;
+    float:left;
+    margin-left: 20px;
+  
+}
+    /*.selected-item{
+    	margin-top: -28px;
+    }*/
+    .timer {
+   
+    position: relative;
+}
+    [_nghost-c1] > div[_ngcontent-c1] {
+    height: auto;
+}
+
+.no-events-label[_ngcontent-c1] {
+    color:#fff;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 0%;
+}
+.monthview-selected[_ngcontent-c2] {
+    background-color: #FF0000;
+    color: rgb(255, 255, 255);
+}
+.title-cal{
+	text-align: center;
+	margin-top:4%;
+	font-family: 'OpenSans-Regular';
+	color:red;
+}
+    .employeename{
+          
+           float: left;
+    font-family: "OpenSans-Regular";
+    font-size: 10px;
+    margin-left: 29px;
+    margin-top: 4px;
+    width: 40%;
+    }
+    .no-services{
+    	 text-align:center;
+    	 font-family: 'OpenSans-Regular';
+    	 margin-top: 25px;
+    }
+    .choosen-cost{
+        margin-right: 15px;
+         /*margin-top: -17px;*/
+         float: right;
+          /*margin-top: -35px;*/
+    }
+    .main {
+    height: 5%;
+    margin-top: 26px;
+    width: 100%;
+}
+    .time{
+      float: right;
+    font-size: 11px;
+    margin-right: 15px;
+    margin-top: 3px;
+        /*margin-top: -18px;*/
+    }
+    .delete{
+      color: rgb(255, 0, 0);
+    float: right;
+    margin-right: 45px;
+    margin-top: 10px;
+    }
+    .choosen-service{
+          margin-left: 35px;
+    }
+    .service-div{
+        margin-left: 35px;
+        margin-top: 5px;
+        font-family: 'OpenSans-Regular';
+    }
+    .toolbar-title-md {
+     font-size: 1.2em;
+    text-transform: uppercase;
+}
+.toolbar-title-ios {
+   font-size: 13px;
+  font-family: Open Sans !important;
+    
+ }
+}
+.toolbar-md {
+  
+    font-family: 'OpenSans-Regular';
+
+}

@@ -1,0 +1,70 @@
+page-salon-online-booking {
+
+.toolbar-title-md {
+  
+ font-family: Open Sans !important;
+    font-size:16px
+   
+}
+.bar-button-ios {
+    margin-top: 13px;
+   
+}
+
+.toolbar-title-ios {
+  
+ font-family: Open Sans !important;
+    font-size:12px
+   
+}
+
+.item-md.item-toggle ion-label {
+    // font-size: 11px;
+    margin-left: 0;
+    font-family:open-sense;
+    font-size: 14px
+}
+.item-md {
+    background-color: #fff;
+    border-bottom: 1px solid #A2AFC0;
+    box-shadow: none;
+    color: #000;
+    font-size: 1.6rem;
+    font-weight: normal;
+    padding-left: 6px;
+   
+}
+.item-ios {
+    background-color: #fff;
+    border-bottom: 1px solid #A2AFC0;
+    box-shadow: none;
+    color: #000;
+    font-size: 1.6rem;
+    font-weight: normal;
+    padding-left: 6px;
+   
+}
+.list-ios > .item-block:first-child {
+    border-top: 0;
+}
+
+.toolbar-ios ion-title {
+    height: 100%;
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    transform: translateZ(0px);
+    width: 100%;
+}
+
+.list-ios {
+    margin: 18px 0 32px;
+}
+
+  .item-ios.item-block .item-inner {
+    border-bottom: 0px solid #c8c7cc;
+    padding-right: 8px;
+}
+
+}

@@ -1,0 +1,66 @@
+page-faq {
+	.content-about{
+		background:#fff;
+	}
+   
+.ion-md-menu::before {
+    color: #fff;
+    content: "";
+}
+
+
+.pull-right{
+	float:right;
+}
+.ion-md-arrow-back::before {
+    color: #fff;
+    content: "";
+}
+.answer {
+    background: #fff none repeat scroll 0 0;
+   padding: 10px;
+   font-family: 'OpenSans-Regular';
+   font-size: 13px;
+}
+.question {
+    background:#E1E1E1 none repeat scroll 0 0;
+    border-bottom: 4px solid #efefef;
+     padding: 8px;
+     font-family: 'OpenSans-Regular';
+}
+.full {
+    background: #222 none repeat scroll 0 0;
+      margin-bottom: 15px;
+}
+
+.ion-md-add::before {
+    content: "";
+    font-size: 22px;
+}
+
+.ion-ios-add::before {
+    content: "";
+      font-size: 27px;
+}
+
+
+.ion-ios-add::before {
+    content: "";
+    font-size: 28px;
+}
+
+.ion-ios-remove::before {
+    content: "";
+      font-size: 27px;
+}
+.toolbar-title-ios {
+   font-size: 13px;
+    font-family: Open Sans !important;
+    
+ }
+   .toolbar-ios ion-title {
+    padding: 10px 90px 1px;
+    font-family: 'OpenSans-Regular';
+    font-size:13px;
+}
+}

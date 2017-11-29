@@ -1,0 +1,39 @@
+page-customer-add-review-model {
+
+.rating{
+  font-size: 30px;
+  text-align: center;
+}
+.add-review{
+	text-align: center;
+}
+.review{
+	text-align: center;
+}
+.btn-review{
+	border-radius: 20px;
+}
+ .textarea-text {
+  	
+    height: 120px;
+    overflow: auto;
+    background-color:#E1E1E1;
+  
+    width: 100%;
+    font-size: 1.6rem;
+     padding: 6px;
+    font-weight: normal;
+    font-family: 'OpenSans-Regular';
+}
+.toolbar-title-ios {
+   font-size: 13px;
+  font-family: Open Sans !important;
+    
+ }
+}
+.alert-sub-title {
+    font-weight: normal;
+    margin: 5px 4px 0;
+    padding: 0;
+    text-align: center;
+}

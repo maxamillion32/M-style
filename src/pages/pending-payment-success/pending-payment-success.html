@@ -1,0 +1,60 @@
+<!--
+  Generated template for the PendingPaymentSuccessPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="appheader">
+    <ion-title>DONE!</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<div class="icon">
+<ion-icon  class="check-icon" name="checkmark-circle"></ion-icon>
+<div class="amount-text"><i>Payment Successful</i></div>
+<div class="amount">${{totalamount}}</div>
+<div class="btn">
+<button ion-button color="appcolor" (click)="viewbooking()" small>View your Booking</button>
+<button ion-button color="appcolor" (click)="givereview()" small>Give Review</button>
+</div>
+
+</div>
+
+
+<div  class="main">
+<div class="payment-data" >Payment Details</div>
+		<div class="heading">
+		<ion-icon ios="ios-book" md="md-book" color="appheader"></ion-icon>
+			<span class="field">Order Id--</span>
+			<span class="field-value">{{orderid}}</span>
+		</div>
+		<div class="heading">
+		 <ion-icon ios="logo-usd" md="logo-usd" color="appheader"></ion-icon>
+			<span class="field">Transaction id--</span>
+			<span class="field-value">{{transactionid}}</span>
+		</div>
+		
+        <div class="heading">
+        <ion-icon ios="ios-calendar" md="md-calendar" color="appheader"></ion-icon>
+			<span class="field">Payment Date--</span>
+			<span class="field-value">{{paymentdate}}</span>
+		</div>
+
+		<div class="heading">
+			
+			 <ion-icon ios="ios-clock" md="md-clock" color="appheader"></ion-icon>
+			 <span class="field">Payment Time--</span>
+			<span class="field-value">{{paymenttime}}</span>
+		</div>
+		<div class="heading">
+		 <ion-icon ios="logo-usd" md="logo-usd" color="appheader"></ion-icon>
+			<span class="field">Total Cost--</span>
+			<span class="field-value">{{totalamount}}</span>
+		</div>
+</div>
+</ion-content>

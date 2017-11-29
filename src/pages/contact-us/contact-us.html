@@ -1,0 +1,78 @@
+<!--
+  Generated template for the ContactUs page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="appheader">
+  <button ion-button menuToggle start>
+  <ion-icon name="menu" style="color:#fff"></ion-icon></button>
+    <ion-title>CONTACT US</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <div class="heading">
+    <div class="text">WE ARE HAPPY TO HEAR FROM YOU!</div>
+    </div>
+
+
+  
+
+    <form [formGroup]="contactus">
+    <ion-list no-lines>
+
+     <div  class="item1">
+    <ion-item class="itemdata">
+    <ion-input class="input-text" type="text" [(ngModel)]="name" 
+    formControlName="username"  placeholder="Name"></ion-input>
+    </ion-item>
+    <p style="color:red"  *ngIf="!contactus.controls.username.valid && (contactus.controls.username.dirty )">*Invalid Name </p>
+     </div>
+
+
+  <div class="item2">
+    <ion-item class="itemdata">
+    <ion-input type="text" formControlName="useremail" placeholder="E-mail" [(ngModel)]="email"></ion-input>
+    </ion-item>
+<p style="color:red"  *ngIf="!contactus.controls.useremail.valid && (contactus.controls.useremail.dirty )">*Invalid E-mail </p>  
+
+   </div>
+
+<!-- <div class="item3">
+    <ion-item class="itemdata">
+    <ion-input type="text" placeholder="123" formControlName="countrycode" 
+    [(ngModel)]="code"></ion-input>
+    </ion-item>
+    <p style="color:red"  *ngIf="!contactus.controls.countrycode.valid && (contactus.controls.countrycode.dirty )">*Invalid code</p>  
+   </div> -->
+
+<div class="item4">
+    <ion-item class="itemdata">
+    <ion-input type="text" placeholder="Number" formControlName="usernumber" 
+    [(ngModel)]="number"></ion-input>
+    </ion-item>
+
+    <p style="color:red"  *ngIf="!contactus.controls.usernumber.valid && (contactus.controls.usernumber.dirty )">*Invalid Number</p>  
+   </div>
+
+
+
+	
+			
+			<textarea class="textarea-text" [(ngModel)]="message" formControlName="usermessage"  placeholder="Message"></textarea>
+			
+    <p style="color:red"  *ngIf="!contactus.controls.usermessage.valid && (contactus.controls.usermessage.dirty )">*Invalid Message</p>  
+			
+
+
+   </ion-list>
+   
+
+   <button class="contact-btn" [disabled]="!contactus.valid"  (click)="Contact()" ion-button color="appcolor">SUBMIT</button>
+    </form>
+</ion-content>

@@ -1,0 +1,74 @@
+page-my-salon-image-upload {
+.card {
+/*   
+    */
+    display: table;
+    height: 145px;
+    margin: -21px auto;
+    position: relative;
+    text-align: center;
+    width: 248px;
+}
+
+ .card1 {
+/*   
+    */
+    display: table;
+    height: 145px;
+    margin: 25% auto;
+    position: relative;
+    text-align: center;
+    width: 248px;
+}
+
+// .back-button-ios {
+//     -moz-box-ordinal-group: 1;
+//     line-height: 1;
+//     margin: 9px 0 0;
+//     min-height: 3.2rem;
+//     order: 0;
+//     overflow: visible;
+//     transform: translateZ(0px);
+//     z-index: 99;
+// }
+
+.toolbar-title-md {
+    // color: #424242;
+    font-family: Open Sans !important;
+    // font-size: 16px;
+   
+    // margin-left: -20px;
+    // pointer-events: auto;
+    // text-align: center;
+}
+.toolbar-title-ios {
+  
+    font-family: Open Sans !important;
+    font-size: 13px;
+
+}
+.cust1{
+	 text-align: center;
+	 background:#fff none repeat scroll 0 0;
+	border:1px solid #6D0710;
+	border-style: dashed;
+	   position: absolute;
+	   font-family: "OpenSans-Regular";
+	  width:50%;
+	  right:23%;
+	  top:87%;
+
+}
+.cust2{
+	 text-align: center;
+	 background:#fff none repeat scroll 0 0;
+	border:1px solid #6D0710;
+	border-style: dashed;
+	   position: absolute;
+	   font-family: "OpenSans-Regular";
+	   width:50%;
+	   right:23%;
+	   top:85%;
+
+}
+}

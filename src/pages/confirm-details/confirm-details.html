@@ -1,0 +1,67 @@
+<!--
+  Generated template for the ConfirmDetails page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="appheader">
+    <ion-title>CONFIRM DETAILS</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<div class="main-div">
+<img class="salon-img" src="http://gagandeepsethi.com/salonDirectory/img/salonimage/{{salonimg}}">
+</div>
+<div class="salon-detail">
+	<div><b>{{salonname}}</b></div>
+	<div>{{salonaddress}}</div>
+</div>
+
+
+<div class="time"><b>{{exactday}},{{exactmonth}} {{exactdate}},{{exactyear}},
+{{starttime}}:{{addzero(starttime2)}} -{{endtime1}}:{{addzero2(endtime2)}}</b></div>
+<div class="second-div" *ngFor="let service of multipleservice">
+       <div class="imgs" *ngIf="employeebook==1">
+        <img class="emp-img" *ngIf="employeepic==null" src="assets/img/user.jpg">
+       <img class="emp-img" *ngIf="employeepic!=null" src="http://gagandeepsethi.com/salonDirectory/img/employeeprofileimage/{{employeepic}}">
+       </div>
+
+       <div class="imgs" *ngIf="salonownerbook==1">
+        <img class="emp-img" *ngIf="salonownerpic==null" src="assets/img/user.jpg">
+       <img class="emp-img" *ngIf="salonownerpic!=null" src="http://gagandeepsethi.com/salonDirectory/img/salonownerprofileimage/{{salonownerpic}}">
+       </div>
+
+<div class="details-emp">
+<div class="name-emp" *ngIf="salonownerbook==1">{{salonownername}}</div>
+<div class="name-emp" *ngIf="employeebook==1">{{employeename}}</div>
+<div class="service" >{{service.title}} </div>
+<div class="costt"> ${{service.cost}}</div>
+</div>
+	
+
+</div>
+<div class="total"><b>Total ${{totalcostcalculated}}</b></div>
+<div class="client">
+<div>Your Details</div>
+<div>{{username}}</div>
+<div>{{usernumber}},{{useremail}}</div>
+
+</div>
+
+<textarea class="textarea-text"  [(ngModel)]="note"  placeholder="Note to BarberBeauty(optional)"></textarea>
+
+
+ <div class="terms">
+ <div>Clicking Below you agree to Barber&Beauty <u style="color:red">Terms of Service</u> </div>
+
+ </div>
+
+<div class="cnf-btn">
+ <button ion-button color="appcolor" class="btn" block (click)="checkout()" >CONFIRM-{{exactday}},{{exactmonth}} {{exactdate}},{{exactyear}},{{starttime}}:{{addzero3(starttime2)}}</button>
+ </div>
+</ion-content>

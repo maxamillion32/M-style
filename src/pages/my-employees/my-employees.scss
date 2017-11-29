@@ -1,0 +1,207 @@
+page-my-employees {
+.list-img{
+	border-radius: 100%;
+	height: 55px;
+    width: 50px;
+}
+.salon-img{
+	width:100%;
+}
+.chip-md {
+    background: #6d0710 none repeat scroll 0 0;
+    border-radius: 16px;
+    color: #fff;
+    font-size: 13px;
+    height: 32px;
+    line-height: 32px;
+    margin: 2px 0;
+}
+
+
+
+
+.main-div{
+	width:100%;
+	margin-top: 10px;
+}
+.text{
+		font-family:'OpenSans-Regular';
+}
+
+
+.toolbar-title-md {
+  
+    font-family: open-sense;
+   
+}
+.item-md ion-avatar ion-img, .item-md ion-avatar img {
+    border-radius: 50%;
+    height: 55px;
+    overflow: hidden;
+    width: 55px;
+}
+
+.item-ios ion-avatar ion-img, .item-ios ion-avatar img {
+    border-radius: 50%;
+    height: 55px;
+    overflow: hidden;
+    width: 55px;
+}
+.textclass{
+font-family: open-sense;
+font-size: 13px;
+text-transform: uppercase
+
+}
+
+.item-md.item-block .item-inner {
+    border-bottom: 0px solid #dedede;
+    padding-right: 8px;
+}
+.item-ios.item-block .item-inner {
+    border-bottom: 0px solid #dedede;
+    padding-right: 8px;
+}
+
+.item-md {
+    background-color: #fff;
+    border-bottom: 3px solid #e9e9e9;
+    box-shadow: none;
+    color: #000;
+    font-size: 1.6rem;
+    font-weight: normal;
+    padding-left: 16px;
+    padding-right: 0;
+    position: relative;
+    text-transform: none;
+    transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
+}
+
+
+.item-ios {
+    background-color: #fff;
+    border-bottom: 3px solid #e9e9e9;
+    box-shadow: none;
+    color: #000;
+    font-size: 1.6rem;
+    font-weight: normal;
+    padding-left: 16px;
+    padding-right: 0;
+    position: relative;
+    text-transform: none;
+    transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
+}
+.noti-bttnn {
+ 
+
+    bottom: 6px;
+    color: #fff;
+    height: 40px;
+    line-height: 40px;
+    position: absolute;
+    right: 5%;
+    text-align: center;
+    font-size: 30px;
+    width: 40px;
+    z-index: 1;
+}
+.add-new-bttnn {
+ 
+    background: transparent none repeat scroll 0 0;
+    color: #fff;
+    font-family: open-sense;
+    font-size: 10px;
+    height: 40px;
+    position: absolute;
+    right: 9px;
+    text-align: center;
+    top: 36px;
+    width: 56px;
+    z-index: 1;
+}
+
+.past {
+   color: red;
+    font-family: "OpenSans-Regular";
+    font-size: 19px;
+    margin-top: 50%;
+    text-align: center;
+}
+
+
+
+.toolbar-title-ios {
+      font-size: 13px;
+    font-family: open-sans;
+
+    }
+
+
+
+
+.list-img{
+    border-radius: 100%;
+    height: 55px;
+    width: 50px;
+    object-fit: cover;
+    border: 5px solid #fff;
+    box-shadow: 0px 1px 4px 2px rgba(0,0,0,0.12);
+}
+.salon-img{
+    width:100%;
+}
+.chip-md {
+    background: #FF0000 none repeat scroll 0 0;
+    border-radius: 16px;
+    color: #fff;
+    font-size: 13px;
+    height: 32px;
+    line-height: 32px;
+    margin: 2px 0;
+    width:100%;
+    text-align: center;
+}
+.profile-img{
+    position: absolute;
+    left:0;
+    top:-15%;
+    right:0;
+
+}
+.btn{
+   border-radius: 20px;
+}
+.div-one{
+    float: left;
+    margin: 30px 5%;
+    width: 32%;
+    background-color: #fff;
+    position: relative;
+    height: 112px;
+}
+.div-two{
+    width:40%;
+    float:right;
+    text-align: center;
+}
+.main-div{
+    width:100%;
+    height: auto;
+    text-align: center;
+    margin:0 6%;
+    
+}
+.text{
+        font-family:'OpenSans-Regular';
+        margin-top: 49px;
+}
+
+.staff{
+    text-align:center;
+    font-family:'OpenSans-Regular';
+    margin-top: 26px;
+}
+.status{
+    color:green;
+}
+}

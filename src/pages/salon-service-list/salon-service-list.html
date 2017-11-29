@@ -1,0 +1,32 @@
+<ion-header>
+
+  <ion-navbar color="purple">
+    <ion-title>MY SERVICE LIST</ion-title>
+<ion-buttons right (click)= "add_service()">
+<button ion-button>
+<!-- <img src ="img/ring.png" > -->
+<ion-icon name= "add" ></ion-icon>
+   </button>
+       </ion-buttons>
+     <!--   <ion-icon (tap) ="add_service()" name="add" class="noti-bttnn"></ion-icon>  -->
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+<ion-list *ngFor="let m of printdata">
+	<div *ngIf="show!='Something Wrong' " style="border-bottom :1px solid #AEB5BF;height: 40px;position: relative;">
+		<p (click)= "myservicedescrptn(m)" style=" padding-top: 6px;margin-left:12px;font-family: open-sans;"> {{m.title}}</p>
+
+   <ion-icon (click)= "delete(m.id)" name="trash" class="noti-bttnn1"></ion-icon>
+<span class="remove-bttnn">REMOVE</span>  
+<!-- <div style="clear:both;"></div> -->
+	</div>
+
+</ion-list>
+
+  <div *ngIf="show=='Something Wrong' " class="past">
+       <img src="assets/icon/smile.png">
+         <div>Sorry!Nothing to Display</div>
+              </div>

@@ -1,0 +1,118 @@
+page-salon-image-gallery {
+
+.textdiv{
+    text-align: center;
+    width: 100%;
+    font-family: open-sans;
+    font-size: 16px;
+    height: 43px;
+    background-color:#CDCDD7;
+    padding-top: 12px ;
+    margin-top: -7px
+
+
+}
+.iconclass{
+    height:35px; 
+	width:35px;
+	float: left;
+	margin-left: 5px;
+	margin-top: -7px
+}
+.textdiv2{
+    text-align: center;
+    width: 100%;
+    font-family: open-sans;
+    font-size: 16px;
+    height: 43px;
+    background-color:#CDCDD7;
+    padding-top: 12px ;
+    margin-top: 0px
+}
+.iconclass2{
+    height:35px; 
+    width:35px;
+    float:right;
+    margin-right: 5px;
+    margin-top: -7px
+}
+
+.col {
+    -moz-box-flex: 1;
+    flex-basis: 0;
+    flex-grow: 1;
+    margin: 0;
+    max-width: 45%;
+    min-height: 1px;
+    padding: 5px;
+    position: relative;
+    width: 100%;
+}
+.maindiv{
+
+    display: block;
+    float: left;
+    height: 107px;
+    margin-left: 8px;
+    margin-top: 9px;
+    top: 8px;
+    width: 95%;  
+
+}
+.imagediv{
+
+    display: inline-block;
+    float: left;
+    height: 100%;
+    width: 47%;
+    margin-left: 6px;
+   
+    margin-top: 8px
+
+}
+
+.toolbar-title-md {
+  
+    font-family: Open Sans !important;
+   
+}
+.noti-bttnn1 {
+   color: orange;
+    float: right;
+    font-size: 23px;
+     position: absolute;
+    right: 15px;
+      top: 25px;
+  z-index: 1;
+}
+.noti-bttnn2
+ {
+   color: orange;
+    float: right;
+    font-size: 23px;
+     position: relative;
+    right: 11px;
+      bottom: 108px;
+  z-index: 1;
+}
+.toolbar-title-ios {
+
+    font-family: Open Sans !important;
+    font-size: 13px;
+   
+}
+.bar-button-menutoggle-ios {
+  
+    margin: -9px 7px -24px;
+   
+}
+
+.past {
+   color: red;
+    font-family: "OpenSans-Regular";
+    font-size: 19px;
+    margin-top: 71px;
+    text-align: center;
+}
+
+}
